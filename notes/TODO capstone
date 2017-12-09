@@ -1,0 +1,11 @@
+create dash/hub
+finish implementing employeeList
+implement update
+implement delete
+
+try to omit the array conversion in factories, to keep code clean
+
+refactor all
+
+test if guake theme sticks after a reboot
+

@@ -1,0 +1,107 @@
+{
+  "users": {
+    "1": {
+      "email": "jane@email.com"
+    },
+    "2": {
+      "email": "john@email.com"
+    }
+  },
+  "children": {
+    "1": {
+      "parentId": "1",
+      "avatarSrc": "https://robohash.org/hello.png"
+    },
+    "2": {
+      "parentId": "1",
+      "avatarSrc": "https://robohash.org/bye.png"
+    },
+    "3": {
+      "parentId": "2",
+      "avatarSrc": "https://robohash.org/test.png"
+    }
+  },
+  "images": {
+    "1": {
+      "name": "hexagon",
+      "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f4/Hexagon.png/553px-Hexagon.png",
+      "description": "a png of a hexagon"
+    },
+    "2": {
+      "name": "triangle",
+      "src": "https://images.vexels.com/media/users/3/139383/isolated/preview/c2f9e8c51e089b29c2011e1f2c00ffdf-triangle-stroke-by-vexels.png",
+      "description": "a png of a triangle"
+    }
+  },
+  "icons": {
+    "1": {
+      "name": "fa-smile-o",
+      "classes": ["fa", "fa-smile-o"],
+      "description": "a font awesome icon of a smiley face"
+    },
+    "2": {
+      "name": "fa-plane",
+      "classes": ["fa", "fa-plane"],
+      "description": "a font awesome icon of a plane"
+    }
+  },
+  "problems": {
+    "1": {
+      "categoryId": "",
+      "question": "How many more smiley faces are there than planes?",
+      "answer": 5
+    },
+    "2": {
+      "categoryId": "",
+      "question": "which number is missing from the sequence?",
+      "answer": 103
+    },
+    "3": {
+      "categoryId": "",
+      "question": "Which of the following is a hexagon?",
+      "answer": "b"
+    }
+  },
+  "problemsImages": {
+    "1": {
+      "problemId": "3",
+      "imageId": "2"
+    },
+    "2": {
+      "problemId": "3",
+      "imageId": "1"
+    }
+  },
+  "problemsIcons": {
+    "1": {
+      "problemId": "1",
+      "iconId": "1"
+    },
+    "2": {
+      "problemId": "1",
+      "iconId": "2"
+    }
+  },
+  "categories": {
+    "1": {
+      "name": "Place Values",
+      "rank": "1",
+      "description": "Counting, number sequencing, tens and ones, etc."
+    },
+    "2": {
+      "name": "Addition and Subtraction",
+      "rank": "1",
+      "description": "1st grade level addition and subtraction problems"
+    },
+    "3": {
+      "name": "Measurement and Data",
+      "rank": "1",
+      "description": "Basic problems relating to measuring and graphs"
+    },
+    "4": {
+      "name": "Geometry",
+      "rank": "1",
+      "description": "Basic problems relating to geometric shapes"
+    }
+  }
+}

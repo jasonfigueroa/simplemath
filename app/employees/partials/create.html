@@ -1,0 +1,17 @@
+<div>
+  <a href="#!/">Back to Login Screen</a>
+  <hr>
+</div>
+<h1>Add Employee</h1>
+<input type="text" ng-model="employee.fname" placeholder="First Name">
+<input type="text" ng-model="employee.lname" placeholder="Last Name">
+<button ng-click="addEmployee()">Add</button>
+<hr>
+<h1>Employee List</h1>
+<ul>
+  <li ng-repeat="employee in employeeList" ng-class="{red: employee.fired}" class="listStyleNone">
+    {{employee.fname}} {{employee.lname}}<br>
+      <button ng-click="removeEmployee(employee)">Delete</button>
+      <button ng-if="!employee.fired"ng-click="fireEmployee(employee)">Fire</button>
+  </li>
+</ul>

@@ -1,0 +1,30 @@
+.hidden {
+  display: none;
+}
+
+.listStyleNone {
+  list-style-type: none;
+}
+
+.red {
+  color: red;
+}
+
+#nav {
+  display: flex;
+  flex-direction: row-reverse;
+}
+
+#nav a {
+  padding: 10px;
+}
+
+a[ng-click] {
+  cursor: pointer;
+  color: blue;
+  text-decoration: underline;
+}
+
+a[ng-click]:hover {
+  color: lightblue;
+}

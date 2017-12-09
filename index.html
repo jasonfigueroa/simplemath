@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <link rel="stylesheet" href="styles/main.css">
+</head>
+<body ng-app="NgBoilerApp">
+
+  <nav ng-include="'app/navigation/partials/navigation.html'"></nav>
+  
+  <div ng-view></div>
+
+  <script src="lib/node_modules/angular/angular.min.js"></script>
+  <script src="lib/node_modules/angular-route/angular-route.min.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/4.7.0/firebase.js"></script>
+  
+
+  <!-- app scripts -->
+  <script src="app/app.js"></script>
+  <script src="app/app.config.js"></script>
+  <script src="app/login/controllers/LoginCtrl.js"></script>
+  <script src="app/login/factories/LoginFactory.js"></script>
+  <script src="app/navigation/controllers/NavigationCtrl.js"></script>
+  <script src="app/navigation/factories/NavigationFactory.js"></script>
+  <script src="app/dash/controllers/DashCtrl.js"></script>
+  <script src="app/dash/factories/DashFactory.js"></script>
+  <script src="app/dash/controllers/AddChildCtrl.js"></script>
+  <script src="app/dash/factories/AddChildFactory.js"></script>
+  <script src="app/dash/controllers/ViewChildrenCtrl.js"></script>
+  <script src="app/dash/factories/ViewChildrenFactory.js"></script>
+</body>
+</html>
