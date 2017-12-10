@@ -2,31 +2,26 @@ angular
 // TODO change NgBoilerApp to app name
 .module("NgBoilerApp")
 // TODO change LoginCtrl to controller name
-.controller("ViewChildrenCtrl", function ($scope, ViewChildrenFactory) {
+.controller("ChildDashCtrl", function ($scope, ChildDashFactory) {
   let userId = null;
-  $scope.childrenList = null;
-  
-  $scope.removeChild = (child) => {
-    console.log('in remove child');
-    ViewChildrenFactory.removeChild(userId, child.id).then(() => {
-      console.log('in removeChild.then')
-      ViewChildrenFactory.listChildren(userId).then(childrenArray => {
-        $scope.$apply(() => {
-          $scope.childrenList = childrenArray;
-        });
-      });
-    });
-  };
+  $scope.activeChild = null;
 
   // // add a realtime listener
   firebase.auth().onAuthStateChanged(firebaseUser => {
     if(firebaseUser) {
       // TODO capture the userId here
-      ViewChildrenFactory.getUserId(firebaseUser.email).then(key => {
+      ChildDashFactory.getUserId(firebaseUser.email).then(key => {
         userId = key;
-        ViewChildrenFactory.listChildren(userId).then(childrenArray => {
+        ChildDashFactory.listChildren(userId).then(childrenArray => {
           $scope.$apply(() => {
             $scope.childrenList = childrenArray;
+            childrenArray.forEach(child => {
+              if(child.active) {
+                $scope.activeChild = child;
+              }
+            });
+            // $scope.activeChild = $scope.childrenList.availableOptions[0];
+            console.log($scope.activeChild)
           });
         });
       });

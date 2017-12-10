@@ -1,0 +1,17 @@
+<!-- this is to be used for pushing math problems to the database -->
+<h1>Submit a New Problem</h1>
+<form>
+  <label for="mySelect">Select Problem Category:</label>
+  <br>
+  <select name="mySelect" id="mySelect"
+    ng-options="category.name for category in categoryList.availableOptions track by category.id"
+    ng-model="categoryList.selectedOption"></select>
+  <br>
+  <label for="questionTextArea"></label>
+  <textarea id="questionTextArea" cols="30" rows="10" ng-model="problem.question"></textarea>
+  <!-- <input type="text" ng-model="question" placeholder="Question"> -->
+  <br>
+  <input type="text" ng-model="problem.answer" placeholder="Answer">
+  <br>
+  <button ng-click="addProblem()">Submit</button>
+</form>

@@ -2,7 +2,7 @@ angular
 // TODO change name of app
 .module("NgBoilerApp")
 // TODO change name of factory
-.factory("ViewChildrenFactory", function ($http) {
+.factory("SelectChildFactory", function ($http) {
   return Object.create(null, {
     "cache": {
       value: null,
@@ -34,11 +34,30 @@ angular
         });
       }
     },
-    "removeChild": {
+    "selectChild": {
       value: function (userId, childId) {
-        console.log('test')
-        return firebase.database().ref(`/users/${userId}/children`).child(childId).remove();
+        var updates = {};
+        updates[`/users/${userId}/children/${childId}/active`] = true;      
+        return firebase.database().ref().update(updates);
       }
     },
+    "deactivate": {
+      value: function (userId, childId) {
+        var updates = {};
+        updates[`/users/${userId}/children/${childId}/active`] = false;      
+        return firebase.database().ref().update(updates);
+      }
+    },
+    // "getActiveChild": {
+    //   value: function (userId) {
+
+    //   }
+    // }
+    // "removeChild": {
+    //   value: function (userId, childId) {
+    //     console.log('test')
+    //     return firebase.database().ref(`/users/${userId}/children`).child(childId).remove();
+    //   }
+    // },
   })
 })

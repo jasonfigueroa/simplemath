@@ -4,12 +4,6 @@ angular
 // TODO change LoginCtrl to controller name
 .controller("AddChildCtrl", function ($scope, AddChildFactory) {
   let userEmail = null;
-  // AddChildFactory.list(userEmail).then((users) => {
-  //   // users.forEach((user) => {
-  //   //   console.log(user);
-  //   // });
-  //   // console.log(users);
-  // });
 
   $scope.newChild = {};
 
@@ -25,13 +19,7 @@ angular
       userEmail = firebaseUser.email;
       console.log(firebaseUser.email);
       console.log('logged in');
-      // AddChildFactory.list(userEmail)
-      // .then((users) => {
-      //   // users.forEach((user) => {
-      //   //   console.log(user);
-      //   // });
-      //   // console.log(users);
-      // });
+      
     } else {
       // TODO add redirect here
       console.log('not logged in');
