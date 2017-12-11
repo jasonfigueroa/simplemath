@@ -1,8 +1,4 @@
-angular
-// TODO change NgBoilerApp to app name
-.module("NgBoilerApp")
-// TODO change LoginCtrl to controller name
-.controller("DashCtrl", function ($scope) {
+app.controller("DashCtrl", function ($scope) {
   
   $scope.displayAddChild = false;
   $scope.displayViewChildren = false;

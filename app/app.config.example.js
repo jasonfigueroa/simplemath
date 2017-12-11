@@ -1,5 +1,5 @@
 // change NgBoilerApp to name of app
-angular.module("NgBoilerApp").constant("FIREBASE_CONFIG", {
+app.constant("FIREBASE_CONFIG", {
   apiKey: "", // TODO fill this in
   authDomain: "", // TODO fill this in
   databaseURL: "", // TODO fill this in
@@ -9,6 +9,6 @@ angular.module("NgBoilerApp").constant("FIREBASE_CONFIG", {
 });
 
 // change NgBoilerApp to name of app
-angular.module("NgBoilerApp").run(function (FIREBASE_CONFIG) {
+app.run(function (FIREBASE_CONFIG) {
   firebase.initializeApp(FIREBASE_CONFIG);
 });

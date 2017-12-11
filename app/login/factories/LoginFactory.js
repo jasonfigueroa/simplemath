@@ -1,7 +1,4 @@
-angular
-// TODO change name of app
-.module("NgBoilerApp")
-.factory("LoginFactory", function ($http) {
+app.factory("LoginFactory", function ($http) {
   return Object.create(null, {
     // post
     "add": {

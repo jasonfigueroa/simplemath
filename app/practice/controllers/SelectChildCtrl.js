@@ -1,8 +1,4 @@
-angular
-// TODO change NgBoilerApp to app name
-.module("NgBoilerApp")
-// TODO change LoginCtrl to controller name
-.controller("SelectChildCtrl", function ($scope, $location, SelectChildFactory) {
+app.controller("SelectChildCtrl", function ($scope, $location, SelectChildFactory) {
   let userId = null;
   $scope.childrenList = {};
   let activeChild = null;

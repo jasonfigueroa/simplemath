@@ -1,0 +1,9 @@
+<h1>Place Value Practice</h1>
+<p>
+  What number is right after <span class="bold">110</span>? <span id="message" class="hidden">{{ message }}</span>
+</p>
+<p>
+  <input type="text" size="5" ng-model="userAnswer">
+</p>
+<button ng-click="checkAnswer()">Submit</button>
+<button id="nextBtn" ng-click="nextQuestion()" class="hidden">Next</button>

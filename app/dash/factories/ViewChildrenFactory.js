@@ -1,8 +1,4 @@
-angular
-// TODO change name of app
-.module("NgBoilerApp")
-// TODO change name of factory
-.factory("ViewChildrenFactory", function ($http) {
+app.factory("ViewChildrenFactory", function ($http) {
   return Object.create(null, {
     "cache": {
       value: null,

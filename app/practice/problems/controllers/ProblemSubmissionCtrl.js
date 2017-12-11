@@ -1,8 +1,4 @@
-angular
-  // TODO change NgBoilerApp to app name
-  .module("NgBoilerApp")
-  // TODO change LoginCtrl to controller name
-  .controller("ProblemSubmissionCtrl", function ($scope, ProblemSubmissionFactory, CategorySubmissionFactory) {
+app.controller("ProblemSubmissionCtrl", function ($scope, ProblemSubmissionFactory, CategorySubmissionFactory) {
     $scope.categoryList = {
       availableOptions: null,
       selectedOption: null

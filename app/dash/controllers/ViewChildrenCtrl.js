@@ -1,8 +1,4 @@
-angular
-// TODO change NgBoilerApp to app name
-.module("NgBoilerApp")
-// TODO change LoginCtrl to controller name
-.controller("ViewChildrenCtrl", function ($scope, ViewChildrenFactory) {
+app.controller("ViewChildrenCtrl", function ($scope, ViewChildrenFactory) {
   let userId = null;
   $scope.childrenList = null;
   

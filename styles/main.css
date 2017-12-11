@@ -2,12 +2,44 @@
   display: none;
 }
 
+.red {
+  color: red;
+}
+
+.green {
+  color: green;
+}
+
+.bold {
+  font-weight: bold;
+}
+
 .listStyleNone {
   list-style-type: none;
 }
 
 .red {
   color: red;
+}
+
+.black-background {
+  background-color: black;
+}
+
+table {
+  border: 1px solid black;
+  max-width: 60%;
+  border-collapse: collapse;
+}
+
+tr {
+  border: 1px solid black;
+}
+
+td {
+  border: 1px solid black;
+  padding: 5px 10px;
+  margin: 0;
 }
 
 #nav {

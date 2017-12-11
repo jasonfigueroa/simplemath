@@ -1,8 +1,4 @@
-angular
-// TODO change NgBoilerApp to app name
-.module("NgBoilerApp")
-// TODO change LoginCtrl to controller name
-.controller("ChildDashCtrl", function ($scope, ChildDashFactory) {
+app.controller("ChildDashCtrl", function ($scope, ChildDashFactory) {
   let userId = null;
   $scope.activeChild = null;
 

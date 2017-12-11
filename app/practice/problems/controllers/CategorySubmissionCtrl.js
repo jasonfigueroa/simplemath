@@ -1,8 +1,4 @@
-angular
-// TODO change NgBoilerApp to app name
-.module("NgBoilerApp")
-// TODO change LoginCtrl to controller name
-.controller("CategorySubmissionCtrl", function ($scope, CategorySubmissionFactory) {
+app.controller("CategorySubmissionCtrl", function ($scope, CategorySubmissionFactory) {
   $scope.category = {
     name: '',
     rank: '',
