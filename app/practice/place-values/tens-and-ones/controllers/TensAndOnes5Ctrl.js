@@ -1,7 +1,11 @@
 app.controller("TensAndOnes5Ctrl", function ($scope, $location) {
 
+  $scope.tenFrame = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+  $scope.tens = [1, 2, 3, 4, 5];
+  $scope.ones = [1, 2];
+
   $scope.userAnswer = '';
-  const answer = '9';
+  const answer = '52';
   const wrongAnswer = "Sorry that is incorrect, please try agin.";
   const correctAnswer = "That's correct, awesome job!"
   $scope.message = null;

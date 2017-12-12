@@ -1,7 +1,11 @@
 app.controller("TensAndOnes8Ctrl", function ($scope, $location) {
 
+  $scope.tenFrame = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+  $scope.tens = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11];
+  $scope.ones = [1, 2, 3, 4, 5, 6, 7, 8, 9];
+
   $scope.userAnswer = '';
-  const answer = '10';
+  const answer = '119';
   const wrongAnswer = "Sorry that is incorrect, please try agin.";
   const correctAnswer = "That's correct, awesome job!"
   $scope.message = null;
@@ -36,6 +40,6 @@ app.controller("TensAndOnes8Ctrl", function ($scope, $location) {
   }
 
   $scope.nextQuestion = () => {
-    $location.url('practice/place-values/tens-and-ones/tens-and-ones-9');
+    $location.url('practice/place-values/tens-and-ones/tens-and-ones-complete');
   };
 });

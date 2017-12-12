@@ -1,10 +1,17 @@
 <h1>Place Value Practice</h1>
 
-<h2>Groups of 10</h2>
+<h2>Tens and Ones</h2>
 
-<p>
-  How many groups of ten are in 107
-</p>
+<p>How many bicycles are there below?</p>
+  <br>
+  <div class="ten-frame-container">
+    <div ng-repeat="value in tens" class="ten-frame">
+      <i ng-repeat="value in tenFrame" class="fa fa-bicycle fa-2x pad-5" aria-hidden="true"></i>
+    </div>
+    <div class="ten-frame">
+        <i ng-repeat="value in tenFrame" ng-class="{transparent : !ones[$index]}" class="fa fa-bicycle fa-2x pad-5" aria-hidden="true"></i>
+    </div>
+  </div>
 <p>
   <input type="text" size="5" ng-model="userAnswer"> <span id="message" class="hidden">{{ message }}</span>
 </p>

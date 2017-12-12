@@ -120,48 +120,40 @@ app.config(function ($routeProvider) {
         templateUrl: 'app/practice/place-values/groups-of-ten/partials/groups-of-ten-complete',
         controller: 'GroupsOfTenCompleteCtrl'
     })
-    .when('practice/place-values/tens-and-ones/tens-and-ones-1', {
-        templateUrl: 'app/practice/place-values/tens-and-ones/tens-and-ones-1',
+    .when('/practice/place-values/tens-and-ones/tens-and-ones-1', {
+        templateUrl: 'app/practice/place-values/tens-and-ones/partials/tens-and-ones-1',
         controller: 'TensAndOnes1Ctrl'
     })
-    .when('practice/place-values/tens-and-ones/tens-and-ones-2', {
-        templateUrl: 'app/practice/place-values/tens-and-ones/tens-and-ones-2',
+    .when('/practice/place-values/tens-and-ones/tens-and-ones-2', {
+        templateUrl: 'app/practice/place-values/tens-and-ones/partials/tens-and-ones-2',
         controller: 'TensAndOnes2Ctrl'
     })
-    .when('practice/place-values/tens-and-ones/tens-and-ones-3', {
-        templateUrl: 'app/practice/place-values/tens-and-ones/tens-and-ones-3',
+    .when('/practice/place-values/tens-and-ones/tens-and-ones-3', {
+        templateUrl: 'app/practice/place-values/tens-and-ones/partials/tens-and-ones-3',
         controller: 'TensAndOnes3Ctrl'
     })
-    .when('practice/place-values/tens-and-ones/tens-and-ones-4', {
-        templateUrl: 'app/practice/place-values/tens-and-ones/tens-and-ones-4',
+    .when('/practice/place-values/tens-and-ones/tens-and-ones-4', {
+        templateUrl: 'app/practice/place-values/tens-and-ones/partials/tens-and-ones-4',
         controller: 'TensAndOnes4Ctrl'
     })
-    .when('practice/place-values/tens-and-ones/tens-and-ones-5', {
-        templateUrl: 'app/practice/place-values/tens-and-ones/tens-and-ones-5',
+    .when('/practice/place-values/tens-and-ones/tens-and-ones-5', {
+        templateUrl: 'app/practice/place-values/tens-and-ones/partials/tens-and-ones-5',
         controller: 'TensAndOnes5Ctrl'
     })
-    .when('practice/place-values/tens-and-ones/tens-and-ones-6', {
-        templateUrl: 'app/practice/place-values/tens-and-ones/tens-and-ones-6',
+    .when('/practice/place-values/tens-and-ones/tens-and-ones-6', {
+        templateUrl: 'app/practice/place-values/tens-and-ones/partials/tens-and-ones-6',
         controller: 'TensAndOnes6Ctrl'
     })
-    .when('practice/place-values/tens-and-ones/tens-and-ones-7', {
-        templateUrl: 'app/practice/place-values/tens-and-ones/tens-and-ones-7',
+    .when('/practice/place-values/tens-and-ones/tens-and-ones-7', {
+        templateUrl: 'app/practice/place-values/tens-and-ones/partials/tens-and-ones-7',
         controller: 'TensAndOnes7Ctrl'
     })
-    .when('practice/place-values/tens-and-ones/tens-and-ones-8', {
-        templateUrl: 'app/practice/place-values/tens-and-ones/tens-and-ones-8',
+    .when('/practice/place-values/tens-and-ones/tens-and-ones-8', {
+        templateUrl: 'app/practice/place-values/tens-and-ones/partials/tens-and-ones-8',
         controller: 'TensAndOnes8Ctrl'
     })
-    .when('practice/place-values/tens-and-ones/tens-and-ones-9', {
-        templateUrl: 'app/practice/place-values/tens-and-ones/tens-and-ones-9',
-        controller: 'TensAndOnes9Ctrl'
-    })
-    .when('practice/place-values/tens-and-ones/tens-and-ones-10', {
-        templateUrl: 'app/practice/place-values/tens-and-ones/tens-and-ones-10',
-        controller: 'TensAndOnes10Ctrl'
-    })
-    .when('practice/place-values/tens-and-ones/tens-and-ones-complete', {
-        templateUrl: 'app/practice/place-values/tens-and-ones/tens-and-ones-complete',
+    .when('/practice/place-values/tens-and-ones/tens-and-ones-complete', {
+        templateUrl: 'app/practice/place-values/tens-and-ones/partials/tens-and-ones-complete',
         controller: 'TensAndOnesCompleteCtrl'
     })
     // NOTE: uncomment the following to add a new category for problems

@@ -1,7 +1,7 @@
 app.controller("TensAndOnes3Ctrl", function ($scope, $location) {
 
   $scope.userAnswer = '';
-  const answer = '30';
+  const answer = '11';
   const wrongAnswer = "Sorry that is incorrect, please try agin.";
   const correctAnswer = "That's correct, awesome job!"
   $scope.message = null;
