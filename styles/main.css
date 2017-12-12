@@ -22,8 +22,26 @@
   color: red;
 }
 
+
 .black-background {
   background-color: black;
+}
+
+.ten-frame {
+  border: 1px solid black;
+  margin-bottom: 5px;
+}
+
+.ten-frame-container {
+  display: inline-block;
+}
+
+.pad-5 {
+  padding: 5px;
+}
+
+.transparent {
+  opacity: 0;
 }
 
 table {
