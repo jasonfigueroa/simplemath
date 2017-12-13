@@ -228,6 +228,10 @@ app.config(function ($routeProvider) {
         templateUrl: 'app/practice/place-values/two-digit-comparison/partials/two-digit-comparison-complete',
         controller: 'TwoDigitComparisonCompleteCtrl'
     })
+    .when('/practice/addition-subtraction/adding-within-twenty/adding-within-twenty-1', {
+        templateUrl: 'app/practice/addition-subtraction/adding-within-twenty/partials/adding-within-twenty-1',
+        controller: 'AddingWithinTwenty1Ctrl'
+    })
     // NOTE: uncomment the following to add a new category for problems
     // .when('/practice/problems/category/add', {
     //     templateUrl: 'app/practice/problems/partials/category-submission',
