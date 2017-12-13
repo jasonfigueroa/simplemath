@@ -156,6 +156,18 @@ app.config(function ($routeProvider) {
         templateUrl: 'app/practice/place-values/tens-and-ones/partials/tens-and-ones-complete',
         controller: 'TensAndOnesCompleteCtrl'
     })
+    .when('/practice/place-values/two-digit-place-value/two-digit-place-value-1', {
+        templateUrl: 'app/practice/place-values/two-digit-place-value/partials/two-digit-place-value-1',
+        controller: 'TwoDigitPlaceValue1Ctrl'
+    })
+    .when('/practice/place-values/two-digit-place-value/two-digit-place-value-2', {
+        templateUrl: 'app/practice/place-values/two-digit-place-value/partials/two-digit-place-value-2',
+        controller: 'TwoDigitPlaceValue2Ctrl'
+    })
+    .when('/practice/place-values/two-digit-place-value/two-digit-place-value-3', {
+        templateUrl: 'app/practice/place-values/two-digit-place-value/partials/two-digit-place-value-3',
+        controller: 'TwoDigitPlaceValue3Ctrl'
+    })
     // NOTE: uncomment the following to add a new category for problems
     // .when('/practice/problems/category/add', {
     //     templateUrl: 'app/practice/problems/partials/category-submission',
