@@ -168,6 +168,30 @@ app.config(function ($routeProvider) {
         templateUrl: 'app/practice/place-values/two-digit-place-value/partials/two-digit-place-value-3',
         controller: 'TwoDigitPlaceValue3Ctrl'
     })
+    .when('/practice/place-values/two-digit-place-value/two-digit-place-value-4', {
+        templateUrl: 'app/practice/place-values/two-digit-place-value/partials/two-digit-place-value-4',
+        controller: 'TwoDigitPlaceValue4Ctrl'
+    })
+    .when('/practice/place-values/two-digit-place-value/two-digit-place-value-5', {
+        templateUrl: 'app/practice/place-values/two-digit-place-value/partials/two-digit-place-value-5',
+        controller: 'TwoDigitPlaceValue5Ctrl'
+    })
+    .when('/practice/place-values/two-digit-place-value/two-digit-place-value-6', {
+        templateUrl: 'app/practice/place-values/two-digit-place-value/partials/two-digit-place-value-6',
+        controller: 'TwoDigitPlaceValue6Ctrl'
+    })
+    .when('/practice/place-values/two-digit-place-value/two-digit-place-value-7', {
+        templateUrl: 'app/practice/place-values/two-digit-place-value/partials/two-digit-place-value-7',
+        controller: 'TwoDigitPlaceValue7Ctrl'
+    })
+    .when('/practice/place-values/two-digit-place-value/two-digit-place-value-8', {
+        templateUrl: 'app/practice/place-values/two-digit-place-value/partials/two-digit-place-value-8',
+        controller: 'TwoDigitPlaceValue8Ctrl'
+    })
+    .when('/practice/place-values/two-digit-place-value/two-digit-place-value-complete', {
+        templateUrl: 'app/practice/place-values/two-digit-place-value/partials/two-digit-place-value-complete',
+        controller: 'TwoDigitPlaceValueCompleteCtrl'
+    })
     // NOTE: uncomment the following to add a new category for problems
     // .when('/practice/problems/category/add', {
     //     templateUrl: 'app/practice/problems/partials/category-submission',

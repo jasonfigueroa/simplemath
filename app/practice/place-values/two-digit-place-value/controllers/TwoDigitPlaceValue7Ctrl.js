@@ -1,4 +1,4 @@
-app.controller("TwoDigitPlaceValue3Ctrl", function ($scope, $location) {
+app.controller("TwoDigitPlaceValue7Ctrl", function ($scope, $location) {
   const answer = 'true';
   $scope.userAnswer = null;
   
@@ -25,6 +25,6 @@ app.controller("TwoDigitPlaceValue3Ctrl", function ($scope, $location) {
   }
 
   $scope.nextQuestion = () => {
-    $location.url('practice/place-values/two-digit-place-value/two-digit-place-value-4');
+    $location.url('practice/place-values/two-digit-place-value/two-digit-place-value-8');
   };
 });

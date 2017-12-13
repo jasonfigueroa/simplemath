@@ -1,0 +1,22 @@
+<h1>Place Value Practice</h1>
+
+<h2>2 Digit Place Value</h2>
+
+<p>Which are the same as the number 34? <span id="message" class="hidden">{{ message }}</span></p>
+
+<div ng-repeat="availableAnswer in availableAnswers">
+  <label>
+  <input
+    type="checkbox"
+    name="selectedAnswers[]"
+    value="{{availableAnswer}}"
+    ng-checked="userAnswers.indexOf(availableAnswer) > -1"
+    ng-click="toggleSelection(availableAnswer)"> 
+      {{availableAnswer}}
+  </label>  
+</div>
+
+<br />
+<button ng-click="checkAnswer()">Submit</button>
+<button id="nextBtn" ng-click="nextQuestion()" class="hidden">Next</button>
+</div>
