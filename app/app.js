@@ -192,6 +192,42 @@ app.config(function ($routeProvider) {
         templateUrl: 'app/practice/place-values/two-digit-place-value/partials/two-digit-place-value-complete',
         controller: 'TwoDigitPlaceValueCompleteCtrl'
     })
+    .when('/practice/place-values/two-digit-comparison/two-digit-comparison-1', {
+        templateUrl: 'app/practice/place-values/two-digit-comparison/partials/two-digit-comparison-1',
+        controller: 'TwoDigitComparison1Ctrl'
+    })
+    .when('/practice/place-values/two-digit-comparison/two-digit-comparison-2', {
+        templateUrl: 'app/practice/place-values/two-digit-comparison/partials/two-digit-comparison-2',
+        controller: 'TwoDigitComparison2Ctrl'
+    })
+    .when('/practice/place-values/two-digit-comparison/two-digit-comparison-3', {
+        templateUrl: 'app/practice/place-values/two-digit-comparison/partials/two-digit-comparison-3',
+        controller: 'TwoDigitComparison3Ctrl'
+    })
+    .when('/practice/place-values/two-digit-comparison/two-digit-comparison-4', {
+        templateUrl: 'app/practice/place-values/two-digit-comparison/partials/two-digit-comparison-4',
+        controller: 'TwoDigitComparison4Ctrl'
+    })
+    .when('/practice/place-values/two-digit-comparison/two-digit-comparison-5', {
+        templateUrl: 'app/practice/place-values/two-digit-comparison/partials/two-digit-comparison-5',
+        controller: 'TwoDigitComparison5Ctrl'
+    })
+    .when('/practice/place-values/two-digit-comparison/two-digit-comparison-6', {
+        templateUrl: 'app/practice/place-values/two-digit-comparison/partials/two-digit-comparison-6',
+        controller: 'TwoDigitComparison6Ctrl'
+    })
+    .when('/practice/place-values/two-digit-comparison/two-digit-comparison-7', {
+        templateUrl: 'app/practice/place-values/two-digit-comparison/partials/two-digit-comparison-7',
+        controller: 'TwoDigitComparison7Ctrl'
+    })
+    .when('/practice/place-values/two-digit-comparison/two-digit-comparison-8', {
+        templateUrl: 'app/practice/place-values/two-digit-comparison/partials/two-digit-comparison-8',
+        controller: 'TwoDigitComparison8Ctrl'
+    })
+    .when('/practice/place-values/two-digit-comparison/two-digit-comparison-complete', {
+        templateUrl: 'app/practice/place-values/two-digit-comparison/partials/two-digit-comparison-complete',
+        controller: 'TwoDigitComparisonCompleteCtrl'
+    })
     // NOTE: uncomment the following to add a new category for problems
     // .when('/practice/problems/category/add', {
     //     templateUrl: 'app/practice/problems/partials/category-submission',
