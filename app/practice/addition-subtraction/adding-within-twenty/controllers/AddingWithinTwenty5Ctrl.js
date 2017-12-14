@@ -1,4 +1,4 @@
-app.controller("AddingWithinTwenty1Ctrl", function ($scope, $location) {
+app.controller("AddingWithinTwenty5Ctrl", function ($scope, $location) {
 
   function getRandomInt(min, max) {
     min = Math.ceil(min);
@@ -8,7 +8,7 @@ app.controller("AddingWithinTwenty1Ctrl", function ($scope, $location) {
 
   $scope.set = {};
 
-  let c = getRandomInt(0, 11);
+  let c = getRandomInt(8, 21);
   $scope.set.c = c
   let a = getRandomInt(0, c)
   $scope.set.a = a
@@ -52,6 +52,6 @@ app.controller("AddingWithinTwenty1Ctrl", function ($scope, $location) {
   }
 
   $scope.nextQuestion = () => {
-    $location.url('/practice/addition-subtraction/adding-within-twenty/adding-within-twenty-2');
+    $location.url('/practice/addition-subtraction/adding-within-twenty/adding-within-twenty-6');
   };
 });

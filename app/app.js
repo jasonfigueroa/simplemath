@@ -232,6 +232,46 @@ app.config(function ($routeProvider) {
         templateUrl: 'app/practice/addition-subtraction/adding-within-twenty/partials/adding-within-twenty-1',
         controller: 'AddingWithinTwenty1Ctrl'
     })
+    .when('/practice/addition-subtraction/adding-within-twenty/adding-within-twenty-2', {
+        templateUrl: 'app/practice/addition-subtraction/adding-within-twenty/partials/adding-within-twenty-2',
+        controller: 'AddingWithinTwenty2Ctrl'
+    })
+    .when('/practice/addition-subtraction/adding-within-twenty/adding-within-twenty-3', {
+        templateUrl: 'app/practice/addition-subtraction/adding-within-twenty/partials/adding-within-twenty-3',
+        controller: 'AddingWithinTwenty3Ctrl'
+    })
+    .when('/practice/addition-subtraction/adding-within-twenty/adding-within-twenty-4', {
+        templateUrl: 'app/practice/addition-subtraction/adding-within-twenty/partials/adding-within-twenty-4',
+        controller: 'AddingWithinTwenty4Ctrl'
+    })
+    .when('/practice/addition-subtraction/adding-within-twenty/adding-within-twenty-5', {
+        templateUrl: 'app/practice/addition-subtraction/adding-within-twenty/partials/adding-within-twenty-5',
+        controller: 'AddingWithinTwenty5Ctrl'
+    })
+    .when('/practice/addition-subtraction/adding-within-twenty/adding-within-twenty-6', {
+        templateUrl: 'app/practice/addition-subtraction/adding-within-twenty/partials/adding-within-twenty-6',
+        controller: 'AddingWithinTwenty6Ctrl'
+    })
+    .when('/practice/addition-subtraction/adding-within-twenty/adding-within-twenty-7', {
+        templateUrl: 'app/practice/addition-subtraction/adding-within-twenty/partials/adding-within-twenty-7',
+        controller: 'AddingWithinTwenty7Ctrl'
+    })
+    .when('/practice/addition-subtraction/adding-within-twenty/adding-within-twenty-8', {
+        templateUrl: 'app/practice/addition-subtraction/adding-within-twenty/partials/adding-within-twenty-8',
+        controller: 'AddingWithinTwenty8Ctrl'
+    })
+    .when('/practice/addition-subtraction/adding-within-twenty/adding-within-twenty-9', {
+        templateUrl: 'app/practice/addition-subtraction/adding-within-twenty/partials/adding-within-twenty-9',
+        controller: 'AddingWithinTwenty9Ctrl'
+    })
+    .when('/practice/addition-subtraction/adding-within-twenty/adding-within-twenty-10', {
+        templateUrl: 'app/practice/addition-subtraction/adding-within-twenty/partials/adding-within-twenty-10',
+        controller: 'AddingWithinTwenty10Ctrl'
+    })
+    .when('/practice/addition-subtraction/adding-within-twenty/adding-within-twenty-complete', {
+        templateUrl: 'app/practice/addition-subtraction/adding-within-twenty/partials/adding-within-twenty-complete',
+        controller: 'AddingWithinTwentyCompleteCtrl'
+    })
     // NOTE: uncomment the following to add a new category for problems
     // .when('/practice/problems/category/add', {
     //     templateUrl: 'app/practice/problems/partials/category-submission',
