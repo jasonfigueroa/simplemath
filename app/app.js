@@ -316,6 +316,50 @@ app.config(function ($routeProvider) {
         templateUrl: 'app/practice/addition-subtraction/add-three-numbers/partials/add-three-numbers-complete',
         controller: 'AddThreeNumbersCompleteCtrl'
     })
+    .when('/practice/addition-subtraction/subtract-within-twenty/subtract-within-twenty-1', {
+        templateUrl: 'app/practice/addition-subtraction/subtract-within-twenty/partials/subtract-within-twenty-1',
+        controller: 'SubtractWithinTwenty1Ctrl'
+    })
+    .when('/practice/addition-subtraction/subtract-within-twenty/subtract-within-twenty-2', {
+        templateUrl: 'app/practice/addition-subtraction/subtract-within-twenty/partials/subtract-within-twenty-2',
+        controller: 'SubtractWithinTwenty2Ctrl'
+    })
+    .when('/practice/addition-subtraction/subtract-within-twenty/subtract-within-twenty-3', {
+        templateUrl: 'app/practice/addition-subtraction/subtract-within-twenty/partials/subtract-within-twenty-3',
+        controller: 'SubtractWithinTwenty3Ctrl'
+    })
+    .when('/practice/addition-subtraction/subtract-within-twenty/subtract-within-twenty-4', {
+        templateUrl: 'app/practice/addition-subtraction/subtract-within-twenty/partials/subtract-within-twenty-4',
+        controller: 'SubtractWithinTwenty4Ctrl'
+    })
+    .when('/practice/addition-subtraction/subtract-within-twenty/subtract-within-twenty-5', {
+        templateUrl: 'app/practice/addition-subtraction/subtract-within-twenty/partials/subtract-within-twenty-5',
+        controller: 'SubtractWithinTwenty5Ctrl'
+    })
+    .when('/practice/addition-subtraction/subtract-within-twenty/subtract-within-twenty-6', {
+        templateUrl: 'app/practice/addition-subtraction/subtract-within-twenty/partials/subtract-within-twenty-6',
+        controller: 'SubtractWithinTwenty6Ctrl'
+    })
+    .when('/practice/addition-subtraction/subtract-within-twenty/subtract-within-twenty-7', {
+        templateUrl: 'app/practice/addition-subtraction/subtract-within-twenty/partials/subtract-within-twenty-7',
+        controller: 'SubtractWithinTwenty7Ctrl'
+    })
+    .when('/practice/addition-subtraction/subtract-within-twenty/subtract-within-twenty-8', {
+        templateUrl: 'app/practice/addition-subtraction/subtract-within-twenty/partials/subtract-within-twenty-8',
+        controller: 'SubtractWithinTwenty8Ctrl'
+    })
+    .when('/practice/addition-subtraction/subtract-within-twenty/subtract-within-twenty-9', {
+        templateUrl: 'app/practice/addition-subtraction/subtract-within-twenty/partials/subtract-within-twenty-9',
+        controller: 'SubtractWithinTwenty9Ctrl'
+    })
+    .when('/practice/addition-subtraction/subtract-within-twenty/subtract-within-twenty-10', {
+        templateUrl: 'app/practice/addition-subtraction/subtract-within-twenty/partials/subtract-within-twenty-10',
+        controller: 'SubtractWithinTwenty10Ctrl'
+    })
+    .when('/practice/addition-subtraction/subtract-within-twenty/subtract-within-twenty-complete', {
+        templateUrl: 'app/practice/addition-subtraction/subtract-within-twenty/partials/subtract-within-twenty-complete',
+        controller: 'SubtractWithinTwentyCompleteCtrl'
+    })
     // NOTE: uncomment the following to add a new category for problems
     // .when('/practice/problems/category/add', {
     //     templateUrl: 'app/practice/problems/partials/category-submission',
