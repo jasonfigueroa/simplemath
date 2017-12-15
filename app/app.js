@@ -272,6 +272,50 @@ app.config(function ($routeProvider) {
         templateUrl: 'app/practice/addition-subtraction/adding-within-twenty/partials/adding-within-twenty-complete',
         controller: 'AddingWithinTwentyCompleteCtrl'
     })
+    .when('/practice/addition-subtraction/add-three-numbers/add-three-numbers-1', {
+        templateUrl: 'app/practice/addition-subtraction/add-three-numbers/partials/add-three-numbers-1',
+        controller: 'AddThreeNumbers1Ctrl'
+    })
+    .when('/practice/addition-subtraction/add-three-numbers/add-three-numbers-2', {
+        templateUrl: 'app/practice/addition-subtraction/add-three-numbers/partials/add-three-numbers-2',
+        controller: 'AddThreeNumbers2Ctrl'
+    })
+    .when('/practice/addition-subtraction/add-three-numbers/add-three-numbers-3', {
+        templateUrl: 'app/practice/addition-subtraction/add-three-numbers/partials/add-three-numbers-3',
+        controller: 'AddThreeNumbers3Ctrl'
+    })
+    .when('/practice/addition-subtraction/add-three-numbers/add-three-numbers-4', {
+        templateUrl: 'app/practice/addition-subtraction/add-three-numbers/partials/add-three-numbers-4',
+        controller: 'AddThreeNumbers4Ctrl'
+    })
+    .when('/practice/addition-subtraction/add-three-numbers/add-three-numbers-5', {
+        templateUrl: 'app/practice/addition-subtraction/add-three-numbers/partials/add-three-numbers-5',
+        controller: 'AddThreeNumbers5Ctrl'
+    })
+    .when('/practice/addition-subtraction/add-three-numbers/add-three-numbers-6', {
+        templateUrl: 'app/practice/addition-subtraction/add-three-numbers/partials/add-three-numbers-6',
+        controller: 'AddThreeNumbers6Ctrl'
+    })
+    .when('/practice/addition-subtraction/add-three-numbers/add-three-numbers-7', {
+        templateUrl: 'app/practice/addition-subtraction/add-three-numbers/partials/add-three-numbers-7',
+        controller: 'AddThreeNumbers7Ctrl'
+    })
+    .when('/practice/addition-subtraction/add-three-numbers/add-three-numbers-8', {
+        templateUrl: 'app/practice/addition-subtraction/add-three-numbers/partials/add-three-numbers-8',
+        controller: 'AddThreeNumbers8Ctrl'
+    })
+    .when('/practice/addition-subtraction/add-three-numbers/add-three-numbers-9', {
+        templateUrl: 'app/practice/addition-subtraction/add-three-numbers/partials/add-three-numbers-9',
+        controller: 'AddThreeNumbers9Ctrl'
+    })
+    .when('/practice/addition-subtraction/add-three-numbers/add-three-numbers-10', {
+        templateUrl: 'app/practice/addition-subtraction/add-three-numbers/partials/add-three-numbers-10',
+        controller: 'AddThreeNumbers10Ctrl'
+    })
+    .when('/practice/addition-subtraction/add-three-numbers/add-three-numbers-complete', {
+        templateUrl: 'app/practice/addition-subtraction/add-three-numbers/partials/add-three-numbers-complete',
+        controller: 'AddThreeNumbersCompleteCtrl'
+    })
     // NOTE: uncomment the following to add a new category for problems
     // .when('/practice/problems/category/add', {
     //     templateUrl: 'app/practice/problems/partials/category-submission',
