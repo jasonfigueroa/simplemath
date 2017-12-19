@@ -57,8 +57,8 @@ app.controller("Equality1Ctrl", function ($scope, $location) {
   }
   
   // You would use this like: swapArrayElements(myArray, 3, 7);
-  var swapArrayElements = function(arr, indexA, indexB) {
-    var temp = arr[indexA];
+  const swapArrayElements = function(arr, indexA, indexB) {
+    const temp = arr[indexA];
     arr[indexA] = arr[indexB];
     arr[indexB] = temp;
   };
