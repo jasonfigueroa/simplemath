@@ -1,8 +1,4 @@
-angular
-// TODO change NgBoilerApp to app name
-.module("NgBoilerApp")
-// TODO change LoginCtrl to controller name
-.controller("LoginCtrl", function ($scope, $location, LoginFactory) {
+app.controller("LoginCtrl", function ($scope, $location, LoginFactory) {
   $scope.employee = {};
 
   $scope.loginEmail = '';

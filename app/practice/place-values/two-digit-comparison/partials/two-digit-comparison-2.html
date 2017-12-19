@@ -1,0 +1,29 @@
+<h1>Place Value Practice</h1>
+
+<h2>2 Digit Comparison</h2>
+
+<p>
+  57 is ______ 36 <span id="message" class="hidden">{{ message }}</span></p>
+</p>
+
+<label>
+  <input type="radio" ng-model="userAnswer" value="less than">
+  less than
+</label>
+<br>
+
+<label>
+  <input type="radio" ng-model="userAnswer" value="equal to">
+  equal to
+</label>
+<br>
+
+<label>
+  <input type="radio" ng-model="userAnswer" value="greater than">
+  greater than
+</label>
+<br>
+
+<button ng-click="checkAnswer()">Submit</button>
+<button id="nextBtn" ng-click="nextQuestion()" class="hidden">Next</button>
+

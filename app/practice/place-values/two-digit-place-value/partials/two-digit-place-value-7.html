@@ -1,0 +1,23 @@
+<h1>Place Value Practice</h1>
+
+<h2>2 Digit Place Value</h2>
+
+<p>
+  80 = 7 tens + 10 ones
+</p>
+
+<label>
+  <input type="radio" ng-model="userAnswer" value="true">
+  True <span id="correct_message" class="red bold hidden">{{ correctMessage }}</span> 
+</label>
+<br>
+
+<label>
+  <input type="radio" ng-model="userAnswer" value="false">
+  False <span id="incorrect_message" class="greeen bold hidden">{{ incorrectMessage }}</span>
+</label>
+<br>
+
+<button ng-click="checkAnswer()">Submit</button>
+<button id="nextBtn" ng-click="nextQuestion()" class="hidden">Next</button>
+

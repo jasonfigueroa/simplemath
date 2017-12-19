@@ -1,8 +1,4 @@
-angular
-// TODO change name of app
-.module("NgBoilerApp")
-// TODO change name of factory
-.factory("AddChildFactory", function ($http) {
+app.factory("AddChildFactory", function ($http) {
   return Object.create(null, {
     "cache": {
       value: null,
@@ -22,7 +18,7 @@ angular
               userId = key;
             }
           }
-          return key;
+          return userId;
           // // converting returned object to array and storing it in cache
           // this.cache = Object.keys(data).map(key => {
           //   data[key].id = key
@@ -63,6 +59,7 @@ angular
           // Write the new post's data simultaneously in the posts list and the user's post list.
           var updates = {};
           updates[`/users/${userId}/children/${newPostKey}/username/`] = childUserName;
+          updates[`/users/${userId}/children/${newPostKey}/active/`] = false;
         
           return firebase.database().ref().update(updates);
         });
