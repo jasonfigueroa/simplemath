@@ -1,6 +1,12 @@
-<h1>Place Value Practice</h1>
+<!-- modal -->
+<div id="congratsModal" class="green hidden">
+  <p>Congratulations you have completed this section!</p>
+  <button id="completeSectionBtn" ng-click="completeSection()">Continue</button>
+</div>
 
-<h2>2 Digit Comparison</h2>
+<h1>Addition and Subtraction Practice</h1>
+
+<h2>Equality</h2>
 
 <p>
   Select the true equation. <span id="message" class="hidden">{{ message }}</span></p>
@@ -49,4 +55,5 @@
 
 <button ng-click="checkAnswer()">Submit</button>
 <button id="nextBtn" ng-click="nextQuestion()" class="hidden">Next</button>
+<button id="showModalBtn" ng-click="showModalBtn()" class="hidden">Complete</button>
 
