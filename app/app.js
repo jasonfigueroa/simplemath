@@ -360,10 +360,17 @@ app.config(function ($routeProvider) {
         templateUrl: 'app/practice/addition-subtraction/subtract-within-twenty/partials/subtract-within-twenty-complete',
         controller: 'SubtractWithinTwentyCompleteCtrl'
     })
-    .when('/practice/addition-subtraction/equality/equality-1', {
-        templateUrl: 'app/practice/addition-subtraction/equality/partials/equality-1',
-        controller: 'Equality1Ctrl'
+    .when('/practice/addition-subtraction/equality', {
+        templateUrl: 'app/practice/addition-subtraction/equality/partials/equality',
+        controller: 'EqualityCtrl'
     })
+
+    // NOTE: uncomment the following to add a new concept for problems
+    .when('/practice/problems/concept/add', {
+        templateUrl: 'app/practice/problems/partials/concept-submission',
+        controller: 'ConceptSubmissionCtrl'
+    })
+
     // NOTE: uncomment the following to add a new category for problems
     // .when('/practice/problems/category/add', {
     //     templateUrl: 'app/practice/problems/partials/category-submission',

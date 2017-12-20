@@ -8,20 +8,14 @@
 
 <h2>Equality</h2>
 
+<p>Question {{correctAnswerCount + 1}} of {{totalQuestions}}.</p>
+
 <p>
   Select the true equation. <span id="message" class="hidden">{{ message }}</span></p>
 </p>
 <p>
   Choose only one.
 </p>
-
-<!-- <div ng-repeat="equality in equality_set">
-  <label>
-    <input type="radio" ng-model="userAnswer" value="true">
-    {{equality.equation_a}} = {{equality.equation_b}}
-  </label>
-  <br>  
-</div> -->
 
 <label>
   <input type="radio" ng-model="userAnswer" value="{{equality_set[0].equation_a}} = {{equality_set[0].equation_b}}">
@@ -40,18 +34,6 @@
   {{equality_set[2].equation_a}} = {{equality_set[2].equation_b}}
 </label>
 <br>
-
-<!-- <label>
-  <input type="radio" ng-model="userAnswer" value="{{answers.answer_b}}">
-  {{equality.equation_a}} = {{equality.equation_b}}
-</label>
-<br>
-
-<label>
-  <input type="radio" ng-model="userAnswer" value="{{answers.answer_c}}">
-  {{equality.equation_a}} = {{equality.equation_b}}
-</label>
-<br> -->
 
 <button ng-click="checkAnswer()">Submit</button>
 <button id="nextBtn" ng-click="nextQuestion()" class="hidden">Next</button>
