@@ -15,7 +15,7 @@
 </p>
 
 <p>
-  {{set.a}} - {{set.b}} = <input type="text" size="5" ng-model="userAnswer"> <!-- <span id="message" class="hidden">{{ message }}</span> -->
+  {{set.a}} - {{set.b}} = <input id="userInput"type="text" size="5" ng-model="userAnswer" ng-enter="checkAnswer()"> <!-- <span id="message" class="hidden">{{ message }}</span> -->
 </p>
 
 <button ng-click="checkAnswer()">Submit</button>

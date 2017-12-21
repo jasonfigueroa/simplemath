@@ -11,6 +11,8 @@ app.controller("AddingWithinTwentyCtrl", function ($scope, $location) {
   }
 
   function reset_template() {
+    document.getElementById('userInput').focus();
+
     $scope.set = {};
     answer = null;    
     
@@ -51,6 +53,7 @@ app.controller("AddingWithinTwentyCtrl", function ($scope, $location) {
 
   $scope.showModalBtn = () => {
     congratsModal.removeClass('hidden');
+    document.getElementById('completeSectionBtn').focus();
   };
 
   /********************/
@@ -72,7 +75,7 @@ app.controller("AddingWithinTwentyCtrl", function ($scope, $location) {
 
   let answer = null;
 
-  $scope.totalQuestions = 2;
+  $scope.totalQuestions = 10;
   $scope.correctAnswerCount = 0;
   
   const wrongAnswer = "Sorry that is incorrect, please try agin.";
@@ -102,10 +105,12 @@ app.controller("AddingWithinTwentyCtrl", function ($scope, $location) {
       if($scope.correctAnswerCount + 1 >= $scope.totalQuestions) {
         // display complete section button
         showModalBtn.removeClass('hidden');
+        document.getElementById('showModalBtn').focus();
         // redirect here
       } else {
         // display next button
         nextBtn.removeClass('hidden');
+        document.getElementById('nextBtn').focus();
       }
 
       // change color of message span to green

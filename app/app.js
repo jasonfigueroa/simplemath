@@ -233,64 +233,27 @@ app.config(function ($routeProvider) {
         templateUrl: 'app/practice/addition-subtraction/adding-within-twenty/partials/adding-within-twenty',
         controller: 'AddingWithinTwentyCtrl'
     })
-    .when('/practice/addition-subtraction/add-three-numbers/add-three-numbers-1', {
-        templateUrl: 'app/practice/addition-subtraction/add-three-numbers/partials/add-three-numbers-1',
-        controller: 'AddThreeNumbers1Ctrl'
+    // add three numbers
+    .when('/practice/addition-subtraction/add-three-numbers', {
+        templateUrl: 'app/practice/addition-subtraction/add-three-numbers/partials/add-three-numbers',
+        controller: 'AddThreeNumbersCtrl'
     })
-    .when('/practice/addition-subtraction/add-three-numbers/add-three-numbers-2', {
-        templateUrl: 'app/practice/addition-subtraction/add-three-numbers/partials/add-three-numbers-2',
-        controller: 'AddThreeNumbers2Ctrl'
-    })
-    .when('/practice/addition-subtraction/add-three-numbers/add-three-numbers-3', {
-        templateUrl: 'app/practice/addition-subtraction/add-three-numbers/partials/add-three-numbers-3',
-        controller: 'AddThreeNumbers3Ctrl'
-    })
-    .when('/practice/addition-subtraction/add-three-numbers/add-three-numbers-4', {
-        templateUrl: 'app/practice/addition-subtraction/add-three-numbers/partials/add-three-numbers-4',
-        controller: 'AddThreeNumbers4Ctrl'
-    })
-    .when('/practice/addition-subtraction/add-three-numbers/add-three-numbers-5', {
-        templateUrl: 'app/practice/addition-subtraction/add-three-numbers/partials/add-three-numbers-5',
-        controller: 'AddThreeNumbers5Ctrl'
-    })
-    .when('/practice/addition-subtraction/add-three-numbers/add-three-numbers-6', {
-        templateUrl: 'app/practice/addition-subtraction/add-three-numbers/partials/add-three-numbers-6',
-        controller: 'AddThreeNumbers6Ctrl'
-    })
-    .when('/practice/addition-subtraction/add-three-numbers/add-three-numbers-7', {
-        templateUrl: 'app/practice/addition-subtraction/add-three-numbers/partials/add-three-numbers-7',
-        controller: 'AddThreeNumbers7Ctrl'
-    })
-    .when('/practice/addition-subtraction/add-three-numbers/add-three-numbers-8', {
-        templateUrl: 'app/practice/addition-subtraction/add-three-numbers/partials/add-three-numbers-8',
-        controller: 'AddThreeNumbers8Ctrl'
-    })
-    .when('/practice/addition-subtraction/add-three-numbers/add-three-numbers-9', {
-        templateUrl: 'app/practice/addition-subtraction/add-three-numbers/partials/add-three-numbers-9',
-        controller: 'AddThreeNumbers9Ctrl'
-    })
-    .when('/practice/addition-subtraction/add-three-numbers/add-three-numbers-10', {
-        templateUrl: 'app/practice/addition-subtraction/add-three-numbers/partials/add-three-numbers-10',
-        controller: 'AddThreeNumbers10Ctrl'
-    })
-    .when('/practice/addition-subtraction/add-three-numbers/add-three-numbers-complete', {
-        templateUrl: 'app/practice/addition-subtraction/add-three-numbers/partials/add-three-numbers-complete',
-        controller: 'AddThreeNumbersCompleteCtrl'
-    })
+    // subtract within twenty
     .when('/practice/addition-subtraction/subtract-within-twenty', {
         templateUrl: 'app/practice/addition-subtraction/subtract-within-twenty/partials/subtract-within-twenty',
         controller: 'SubtractWithinTwentyCtrl'
     })
+    // equality
     .when('/practice/addition-subtraction/equality', {
         templateUrl: 'app/practice/addition-subtraction/equality/partials/equality',
         controller: 'EqualityCtrl'
     })
 
     // NOTE: uncomment the following to add a new concept for problems
-    .when('/practice/problems/concept/add', {
-        templateUrl: 'app/practice/problems/partials/concept-submission',
-        controller: 'ConceptSubmissionCtrl'
-    })
+    // .when('/practice/problems/concept/add', {
+    //     templateUrl: 'app/practice/problems/partials/concept-submission',
+    //     controller: 'ConceptSubmissionCtrl'
+    // })
 
     // NOTE: uncomment the following to add a new category for problems
     // .when('/practice/problems/category/add', {
@@ -306,4 +269,18 @@ app.config(function ($routeProvider) {
     // TODO the following is old code
     // default route
     .otherwise({redirectTo: '/'});
+});
+
+app.directive('ngEnter', function () {
+    return function (scope, element, attrs) {
+        element.bind("keydown keypress", function (event) {
+            if(event.which === 13) {
+                scope.$apply(function (){
+                    scope.$eval(attrs.ngEnter);
+                });
+ 
+                event.preventDefault();
+            }
+        });
+    };
 });

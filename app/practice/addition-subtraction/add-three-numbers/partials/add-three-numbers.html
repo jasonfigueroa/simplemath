@@ -6,7 +6,7 @@
 
 <h1>Addition and Subtraction</h1>
 
-<h2>Adding Within 20</h2>
+<h2>Adding Three Numbers</h2>
 
 <p>Question {{correctAnswerCount + 1}} of {{totalQuestions}}.</p>
 
@@ -15,7 +15,7 @@
 </p>
 
 <p>
-  {{set.a}} + {{set.b}} = <input id="userInput" type="text" size="5" ng-model="userAnswer" ng-enter="checkAnswer()"> <!-- <span id="message" class="hidden">{{ message }}</span> -->
+  {{set.a}} + {{set.b}} + {{set.c}} = <input id="userInput" type="text" size="5" ng-model="userAnswer" ng-enter="checkAnswer()"> <!-- <span id="message" class="hidden">{{ message }}</span> -->
 </p>
 
 <button ng-click="checkAnswer()">Submit</button>

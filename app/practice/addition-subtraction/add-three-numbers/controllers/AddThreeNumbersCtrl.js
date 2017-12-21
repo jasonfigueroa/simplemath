@@ -1,5 +1,5 @@
-app.controller("SubtractWithinTwentyCtrl", function ($scope, $location) {
-  
+app.controller("AddThreeNumbersCtrl", function ($scope, $location) {
+
   /*************/
   /* Functions */
   /*************/
@@ -12,32 +12,42 @@ app.controller("SubtractWithinTwentyCtrl", function ($scope, $location) {
 
   function reset_template() {
     document.getElementById('userInput').focus();
-
+    
     $scope.set = {};
     answer = null;    
     
     $scope.userAnswer = '';
     
-    
-    // subtracting within 20
-    a = getRandomInt(8, 21);
+    // making sure that values a, b and c are all greater than 1
+    // while(a <= 1 || b <= 1 || c <= 1) {
+    //   d = getRandomInt(8, 21);
+    //   $scope.set.d = d;
+      
+    //   a = getRandomInt(d/4, d);
+    //   $scope.set.a = a;  
+      
+    //   b = getRandomInt(0, d - a);
+    //   $scope.set.b = b;
+      
+    //   c = d - a - b;
+    // }
+
+    d = getRandomInt(8, 21);
+    $scope.set.d = d;
+
+    const divisor = getRandomInt(2, 5);
+
+    a = Math.floor(d/divisor);
     $scope.set.a = a;
-    
-    b = getRandomInt(0, a);
-    
-    // don't want b to be 1 or 0
-    while(b <= 1) {
-      b = getRandomInt(0, a);
-    } 
-    
+
+    b = getRandomInt(2, ((d - a) - 1));
     $scope.set.b = b;
-    
-    c = a - b;
-    
+
+    c = d - (a + b);
     $scope.set.c = c;
-    answer = $scope.set.c;
-  
-    // $scope.userAnswer = '';
+
+    answer = d;
+    console.log(`${$scope.set.a} + ${$scope.set.b} + ${$scope.set.c} = ${$scope.set.d}`);
   }
 
   $scope.nextQuestion = () => {
@@ -77,22 +87,24 @@ app.controller("SubtractWithinTwentyCtrl", function ($scope, $location) {
   // following are not in use yet
   let userId = null;
   let activeChildId = null;
-  
-  $scope.set = null;
+
+  $scope.set = {};
+
   let a = 0;
   let b = 0;
   let c = 0;
+  let d = 0;
 
   let answer = null;
 
   $scope.totalQuestions = 10;
   $scope.correctAnswerCount = 0;
-  
+
   const wrongAnswer = "Sorry that is incorrect, please try agin.";
   const correctAnswer = "That's correct, awesome job!"
   
   $scope.message = null;
-  
+
   // target elements
   const messageSpan = angular.element(document.querySelector('#message'));
   const nextBtn = angular.element(document.querySelector('#nextBtn'));
@@ -108,10 +120,6 @@ app.controller("SubtractWithinTwentyCtrl", function ($scope, $location) {
   /****************************/ 
 
   reset_template();
-
-  // target elements
-  // const messageSpan = angular.element(document.querySelector('#message'));
-  // const nextBtn = angular.element(document.querySelector('#nextBtn'));
 
   $scope.checkAnswer = () => {
     messageSpan.attr('class', 'hidden');
@@ -137,7 +145,6 @@ app.controller("SubtractWithinTwentyCtrl", function ($scope, $location) {
       messageSpan.removeClass('hidden');
       // display next button
       // nextBtn.removeClass('hidden');
-
     } else {
       // change color of message span to red
       messageSpan.addClass('red');
@@ -149,25 +156,4 @@ app.controller("SubtractWithinTwentyCtrl", function ($scope, $location) {
       messageSpan.removeClass('hidden');
     }
   }
-
-  // TODO 12-21-2017 haven't done anything to the following
-  // // // add a realtime listener
-  // firebase.auth().onAuthStateChanged(firebaseUser => {
-  //   if(firebaseUser) {
-  //     EqualityFactory.getUserId(firebaseUser.email).then(data => {
-  //       console.log(`data: ${data}`);
-  //       userId = data;
-  //       console.log(`userId: ${userId}`)
-  //       EqualityFactory.getActiveChildId(userId).then(data => activeChildId = data);
-  //     });
-  //     // console.log(firebaseUser.email);
-  //     // console.log('logged in');
-  //     // console.log(`userId: ${userId}`);
-      
-  //   } else {
-  //     // TODO add redirect here
-  //     console.log('not logged in');
-      
-  //   }
-  // });
 });
