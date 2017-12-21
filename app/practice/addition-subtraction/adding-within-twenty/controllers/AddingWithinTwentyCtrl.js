@@ -1,5 +1,5 @@
-app.controller("SubtractWithinTwentyCtrl", function ($scope, $location) {
-  
+app.controller("AddingWithinTwentyCtrl", function ($scope, $location) {
+
   /*************/
   /* Functions */
   /*************/
@@ -17,25 +17,15 @@ app.controller("SubtractWithinTwentyCtrl", function ($scope, $location) {
     $scope.userAnswer = '';
     
     
-    // subtracting within 20
-    a = getRandomInt(8, 21);
-    $scope.set.a = a;
-    
-    b = getRandomInt(0, a);
-    
-    // don't want b to be 1 or 0
-    while(b <= 1) {
-      b = getRandomInt(0, a);
-    } 
-    
-    $scope.set.b = b;
-    
-    c = a - b;
-    
-    $scope.set.c = c;
-    answer = $scope.set.c;
-  
-    // $scope.userAnswer = '';
+    // adding within 20
+    c = getRandomInt(8, 21);
+    $scope.set.c = c
+    a = getRandomInt(2, c) 
+    $scope.set.a = a
+    b = c - a
+    $scope.set.b = b
+    console.log(`${a} + ${b} = ${c}`)
+    answer = c;
   }
 
   $scope.nextQuestion = () => {
@@ -106,10 +96,6 @@ app.controller("SubtractWithinTwentyCtrl", function ($scope, $location) {
 
   reset_template();
 
-  // target elements
-  // const messageSpan = angular.element(document.querySelector('#message'));
-  // const nextBtn = angular.element(document.querySelector('#nextBtn'));
-
   $scope.checkAnswer = () => {
     messageSpan.attr('class', 'hidden');
     if ($scope.userAnswer == answer) {
@@ -132,7 +118,6 @@ app.controller("SubtractWithinTwentyCtrl", function ($scope, $location) {
       messageSpan.removeClass('hidden');
       // display next button
       // nextBtn.removeClass('hidden');
-
     } else {
       // change color of message span to red
       messageSpan.addClass('red');

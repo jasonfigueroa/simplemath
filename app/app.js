@@ -228,49 +228,10 @@ app.config(function ($routeProvider) {
         templateUrl: 'app/practice/place-values/two-digit-comparison/partials/two-digit-comparison-complete',
         controller: 'TwoDigitComparisonCompleteCtrl'
     })
-    .when('/practice/addition-subtraction/adding-within-twenty/adding-within-twenty-1', {
-        templateUrl: 'app/practice/addition-subtraction/adding-within-twenty/partials/adding-within-twenty-1',
-        controller: 'AddingWithinTwenty1Ctrl'
-    })
-    .when('/practice/addition-subtraction/adding-within-twenty/adding-within-twenty-2', {
-        templateUrl: 'app/practice/addition-subtraction/adding-within-twenty/partials/adding-within-twenty-2',
-        controller: 'AddingWithinTwenty2Ctrl'
-    })
-    .when('/practice/addition-subtraction/adding-within-twenty/adding-within-twenty-3', {
-        templateUrl: 'app/practice/addition-subtraction/adding-within-twenty/partials/adding-within-twenty-3',
-        controller: 'AddingWithinTwenty3Ctrl'
-    })
-    .when('/practice/addition-subtraction/adding-within-twenty/adding-within-twenty-4', {
-        templateUrl: 'app/practice/addition-subtraction/adding-within-twenty/partials/adding-within-twenty-4',
-        controller: 'AddingWithinTwenty4Ctrl'
-    })
-    .when('/practice/addition-subtraction/adding-within-twenty/adding-within-twenty-5', {
-        templateUrl: 'app/practice/addition-subtraction/adding-within-twenty/partials/adding-within-twenty-5',
-        controller: 'AddingWithinTwenty5Ctrl'
-    })
-    .when('/practice/addition-subtraction/adding-within-twenty/adding-within-twenty-6', {
-        templateUrl: 'app/practice/addition-subtraction/adding-within-twenty/partials/adding-within-twenty-6',
-        controller: 'AddingWithinTwenty6Ctrl'
-    })
-    .when('/practice/addition-subtraction/adding-within-twenty/adding-within-twenty-7', {
-        templateUrl: 'app/practice/addition-subtraction/adding-within-twenty/partials/adding-within-twenty-7',
-        controller: 'AddingWithinTwenty7Ctrl'
-    })
-    .when('/practice/addition-subtraction/adding-within-twenty/adding-within-twenty-8', {
-        templateUrl: 'app/practice/addition-subtraction/adding-within-twenty/partials/adding-within-twenty-8',
-        controller: 'AddingWithinTwenty8Ctrl'
-    })
-    .when('/practice/addition-subtraction/adding-within-twenty/adding-within-twenty-9', {
-        templateUrl: 'app/practice/addition-subtraction/adding-within-twenty/partials/adding-within-twenty-9',
-        controller: 'AddingWithinTwenty9Ctrl'
-    })
-    .when('/practice/addition-subtraction/adding-within-twenty/adding-within-twenty-10', {
-        templateUrl: 'app/practice/addition-subtraction/adding-within-twenty/partials/adding-within-twenty-10',
-        controller: 'AddingWithinTwenty10Ctrl'
-    })
-    .when('/practice/addition-subtraction/adding-within-twenty/adding-within-twenty-complete', {
-        templateUrl: 'app/practice/addition-subtraction/adding-within-twenty/partials/adding-within-twenty-complete',
-        controller: 'AddingWithinTwentyCompleteCtrl'
+    // adding within twenty
+    .when('/practice/addition-subtraction/adding-within-twenty', {
+        templateUrl: 'app/practice/addition-subtraction/adding-within-twenty/partials/adding-within-twenty',
+        controller: 'AddingWithinTwentyCtrl'
     })
     .when('/practice/addition-subtraction/add-three-numbers/add-three-numbers-1', {
         templateUrl: 'app/practice/addition-subtraction/add-three-numbers/partials/add-three-numbers-1',
@@ -316,49 +277,9 @@ app.config(function ($routeProvider) {
         templateUrl: 'app/practice/addition-subtraction/add-three-numbers/partials/add-three-numbers-complete',
         controller: 'AddThreeNumbersCompleteCtrl'
     })
-    .when('/practice/addition-subtraction/subtract-within-twenty/subtract-within-twenty-1', {
-        templateUrl: 'app/practice/addition-subtraction/subtract-within-twenty/partials/subtract-within-twenty-1',
-        controller: 'SubtractWithinTwenty1Ctrl'
-    })
-    .when('/practice/addition-subtraction/subtract-within-twenty/subtract-within-twenty-2', {
-        templateUrl: 'app/practice/addition-subtraction/subtract-within-twenty/partials/subtract-within-twenty-2',
-        controller: 'SubtractWithinTwenty2Ctrl'
-    })
-    .when('/practice/addition-subtraction/subtract-within-twenty/subtract-within-twenty-3', {
-        templateUrl: 'app/practice/addition-subtraction/subtract-within-twenty/partials/subtract-within-twenty-3',
-        controller: 'SubtractWithinTwenty3Ctrl'
-    })
-    .when('/practice/addition-subtraction/subtract-within-twenty/subtract-within-twenty-4', {
-        templateUrl: 'app/practice/addition-subtraction/subtract-within-twenty/partials/subtract-within-twenty-4',
-        controller: 'SubtractWithinTwenty4Ctrl'
-    })
-    .when('/practice/addition-subtraction/subtract-within-twenty/subtract-within-twenty-5', {
-        templateUrl: 'app/practice/addition-subtraction/subtract-within-twenty/partials/subtract-within-twenty-5',
-        controller: 'SubtractWithinTwenty5Ctrl'
-    })
-    .when('/practice/addition-subtraction/subtract-within-twenty/subtract-within-twenty-6', {
-        templateUrl: 'app/practice/addition-subtraction/subtract-within-twenty/partials/subtract-within-twenty-6',
-        controller: 'SubtractWithinTwenty6Ctrl'
-    })
-    .when('/practice/addition-subtraction/subtract-within-twenty/subtract-within-twenty-7', {
-        templateUrl: 'app/practice/addition-subtraction/subtract-within-twenty/partials/subtract-within-twenty-7',
-        controller: 'SubtractWithinTwenty7Ctrl'
-    })
-    .when('/practice/addition-subtraction/subtract-within-twenty/subtract-within-twenty-8', {
-        templateUrl: 'app/practice/addition-subtraction/subtract-within-twenty/partials/subtract-within-twenty-8',
-        controller: 'SubtractWithinTwenty8Ctrl'
-    })
-    .when('/practice/addition-subtraction/subtract-within-twenty/subtract-within-twenty-9', {
-        templateUrl: 'app/practice/addition-subtraction/subtract-within-twenty/partials/subtract-within-twenty-9',
-        controller: 'SubtractWithinTwenty9Ctrl'
-    })
-    .when('/practice/addition-subtraction/subtract-within-twenty/subtract-within-twenty-10', {
-        templateUrl: 'app/practice/addition-subtraction/subtract-within-twenty/partials/subtract-within-twenty-10',
-        controller: 'SubtractWithinTwenty10Ctrl'
-    })
-    .when('/practice/addition-subtraction/subtract-within-twenty/subtract-within-twenty-complete', {
-        templateUrl: 'app/practice/addition-subtraction/subtract-within-twenty/partials/subtract-within-twenty-complete',
-        controller: 'SubtractWithinTwentyCompleteCtrl'
+    .when('/practice/addition-subtraction/subtract-within-twenty', {
+        templateUrl: 'app/practice/addition-subtraction/subtract-within-twenty/partials/subtract-within-twenty',
+        controller: 'SubtractWithinTwentyCtrl'
     })
     .when('/practice/addition-subtraction/equality', {
         templateUrl: 'app/practice/addition-subtraction/equality/partials/equality',
