@@ -1,7 +1,13 @@
 <div id="nav-div" ng-controller="NavigationCtrl" ng-hide="locationIsRoot()">
   <div id="nav">
-    <a href="#!/login" ng-click="logout()">Logout</a>
-    <a href="#!/dash" ng-click="">Dash</a>
+    <div>
+      <a href="#!/login" ng-click="logout()">Logout</a>
+      <a href="#!/dash" ng-click="">Dash</a>
+      <a href="#!/dash/select-child" ng-click="">Switch User</a>
+    </div>
+    <!-- <h1 id="nav_active_child_username">Logged in as {{ activeChildUsername }}</h1> -->
+    <h1 id="nav_active_child_username">Logged in as {{ activeChildUsername }}</h1>
+    <h1 id="nav_brand_logo">S1mple Math</h1>
   </div>
   <hr>
 </div>

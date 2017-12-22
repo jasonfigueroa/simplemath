@@ -162,7 +162,7 @@ app.controller("EqualityCtrl", function ($scope, $location, EqualityFactory) {
 
   let answer = null;
 
-  $scope.totalQuestions = 2;
+  $scope.totalQuestions = 10;
   $scope.correctAnswerCount = 0;
   
   const correctAnswerIndex = 0;

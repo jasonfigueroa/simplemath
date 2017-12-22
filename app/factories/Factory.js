@@ -1,4 +1,4 @@
-app.factory("NavigationFactory", function () {
+app.factory("Factory", function () {
   return Object.create(null, {
     logout: {
         value: () => firebase.auth().signOut()

@@ -63,6 +63,7 @@ td {
 #nav {
   display: flex;
   flex-direction: row-reverse;
+  justify-content: space-between;
 }
 
 #nav a {
@@ -77,4 +78,14 @@ a[ng-click] {
 
 a[ng-click]:hover {
   color: lightblue;
+}
+
+#nav_active_child_username,
+#nav_brand_logo {
+  margin: 0;
+  align-self: center;
+}
+
+#nav_active_child_username {
+  color: mediumpurple;
 }
