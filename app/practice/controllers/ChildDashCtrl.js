@@ -25,6 +25,12 @@ app.controller("ChildDashCtrl", function ($scope, $rootScope, Factory) {
               Factory.getActiveChildUsername($rootScope.userId, $rootScope.activeChildId).then(data => {
                 $scope.$apply($rootScope.activeChildUsername = data);
               });
+            } else if(!$rootScope.activeChild && $rootScope.activeChildId !== data) {
+              console.log("$rootScope.activeChildId was NOT defined and it changed!");
+              $rootScope.activeChildId = data  
+              Factory.getActiveChildUsername($rootScope.userId, $rootScope.activeChildId).then(data => {
+                $scope.$apply($rootScope.activeChildUsername = data);
+              });
             } else {
               console.log('$rootScope.activeChildId has NOT changed');
             }

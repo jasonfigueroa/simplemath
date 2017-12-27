@@ -22,11 +22,15 @@ app.factory("ViewChildrenFactory", function ($http) {
       value: function (userId) {
         return firebase.database().ref(`/users/${userId}/children`).once('value').then(function(snapshot) {
           const data = snapshot.val();
-          this.cache = Object.keys(data).map(key => {
-            data[key].id = key
-            return data[key]
-          });
-          return this.cache
+          if(data) {
+            this.cache = Object.keys(data).map(key => {
+              data[key].id = key
+              return data[key]
+            });
+          } else {
+            this.cache = null;
+          }
+          return this.cache;
         });
       }
     },

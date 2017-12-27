@@ -24,7 +24,7 @@ app.config(function ($routeProvider) {
         templateUrl: 'app/practice/partials/select-child',
         controller: 'SelectChildCtrl'
     })
-    .when('/practice/child-dash', {
+    .when('/child-dash', {
         templateUrl: 'app/practice/partials/child-dash',
         controller: 'ChildDashCtrl'
     })

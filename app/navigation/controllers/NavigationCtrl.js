@@ -25,11 +25,21 @@ app.controller("NavigationCtrl", function ($scope, $rootScope, $location, Factor
       Factory.getUserId(firebaseUser.email).then(data => {
         $rootScope.userId = data;
         Factory.getActiveChildId($rootScope.userId).then(data => {
-          $rootScope.activeChildId = data
-          Factory.getActiveChildUsername($rootScope.userId, $rootScope.activeChildId).then(data => {
-            $scope.$apply($rootScope.activeChildUsername = data);
-            // $rootScope.activeChildUsername = data;
-          });
+          // if active child
+          if(data) {
+            $rootScope.activeChildId = data
+            Factory.getActiveChildUsername($rootScope.userId, $rootScope.activeChildId).then(data => {
+              $scope.$apply(() => {
+                $rootScope.activeChildUsername = data
+                $location.path("/child-dash");
+              });
+              // $rootScope.activeChildUsername = data;
+            });            
+          } else {
+            $scope.$apply(() => {
+              $location.path("/dash");
+            });
+          }
         });
       });
       

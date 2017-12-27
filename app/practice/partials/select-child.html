@@ -10,5 +10,6 @@
   <select name="mySelect" id="mySelect"
     ng-options="child.username for child in childrenList.availableOptions track by child.id"
     ng-model="childrenList.selectedOption"></select>
+    <!-- TODO 12-23-2017 deactivate this button if there are no registered children -->
     <button ng-click="activateChild()">Submit</button>
 </form>
