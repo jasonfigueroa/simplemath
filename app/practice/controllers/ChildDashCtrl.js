@@ -1,8 +1,11 @@
-app.controller("ChildDashCtrl", function ($scope, $rootScope, Factory) {
+app.controller("ChildDashCtrl", function ($scope, $rootScope, Factory, $location) {
   // $rootScope.test = 'changed';
   // console.log($rootScope.test);
   // NavigationCtrl.$scope.activeChildUsernmame = 'hello';
   // let userId = null;
+  
+  $rootScope.currentPath = $location.path();
+  
   $scope.activeChild = null;
 
   // // add a realtime listener
@@ -22,15 +25,47 @@ app.controller("ChildDashCtrl", function ($scope, $rootScope, Factory) {
             if($rootScope.activeChildId && $rootScope.activeChildId !== data) {
               console.log("$rootScope.activeChildId was defined and it changed!");
               $rootScope.activeChildId = data  
-              Factory.getActiveChildUsername($rootScope.userId, $rootScope.activeChildId).then(data => {
-                $scope.$apply($rootScope.activeChildUsername = data);
+              
+              // new block
+              Factory.getActiveChildObj($rootScope.userId).then(childObj => {
+                console.log(childObj)
+      
+                $scope.$apply(() => {
+                  // rootscope the child username
+                  $rootScope.activeChildUsername = childObj.username;
+        
+                  // rootscope the child avatar src
+                  $rootScope.activeChildAvatarSrc = childObj.avatar;
+                });
               });
+              
+              // this block needs to change to change the avatar
+              // Factory.getActiveChildUsername($rootScope.userId, $rootScope.activeChildId).then(data => {
+              //   $scope.$apply($rootScope.activeChildUsername = data);
+              // });
+
             } else if(!$rootScope.activeChild && $rootScope.activeChildId !== data) {
               console.log("$rootScope.activeChildId was NOT defined and it changed!");
               $rootScope.activeChildId = data  
-              Factory.getActiveChildUsername($rootScope.userId, $rootScope.activeChildId).then(data => {
-                $scope.$apply($rootScope.activeChildUsername = data);
+              
+              // new block
+              Factory.getActiveChildObj($rootScope.userId).then(childObj => {
+                console.log(childObj)
+      
+                $scope.$apply(() => {
+                  // rootscope the child username
+                  $rootScope.activeChildUsername = childObj.username;
+        
+                  // rootscope the child avatar src
+                  $rootScope.activeChildAvatarSrc = childObj.avatar;
+                });
               });
+
+              // this block needs to change to change the avatar
+              // Factory.getActiveChildUsername($rootScope.userId, $rootScope.activeChildId).then(data => {
+              //   $scope.$apply($rootScope.activeChildUsername = data);
+              // });
+
             } else {
               console.log('$rootScope.activeChildId has NOT changed');
             }

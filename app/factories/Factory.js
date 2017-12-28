@@ -18,6 +18,20 @@ app.factory("Factory", function () {
         });
       }
     },
+    "getActiveChildObj": {
+      value: function(userId) {
+        return firebase.database().ref(`/users/${userId}/children`).once('value').then(function(snapshot) {
+          const data = snapshot.val();
+          let activeChildObj = null;
+          for(key in data) {
+            if(data[key].active) {
+              activeChildObj = data[key];
+            }
+          }
+          return activeChildObj;
+        });
+      }
+    },
     "getActiveChildId": {
       value: function(userId) {
         return firebase.database().ref(`/users/${userId}/children`).once('value').then(function(snapshot) {

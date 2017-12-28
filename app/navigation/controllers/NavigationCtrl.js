@@ -1,4 +1,6 @@
 app.controller("NavigationCtrl", function ($scope, $rootScope, $location, Factory) {
+  $rootScope.currentPath = $location.path();
+  
   // $rootScope.test = 'hello';
   // console.log($rootScope.test);
   // let userId = null;
@@ -24,6 +26,36 @@ app.controller("NavigationCtrl", function ($scope, $rootScope, $location, Factor
     if(firebaseUser) {
       Factory.getUserId(firebaseUser.email).then(data => {
         $rootScope.userId = data;
+        
+        /* Working New Block */
+        Factory.getActiveChildId($rootScope.userId).then(data => {
+          // if active child
+          if(data) {
+            $rootScope.activeChildId = data
+                        
+            Factory.getActiveChildObj($rootScope.userId).then(childObj => {
+              console.log(childObj)
+    
+              $scope.$apply(() => {
+                // rootscope the child username
+                $rootScope.activeChildUsername = childObj.username;
+      
+                // rootscope the child avatar src
+                $rootScope.activeChildAvatarSrc = childObj.avatar;
+              });
+            });
+
+          } else {
+            $scope.$apply(() => {
+              $location.path("/dash");
+            });
+          }
+        });
+        /* End Working New Block */
+
+
+        // change this block to pull active child object
+        // LEAVE THIS IN HERE FOR NOW
         Factory.getActiveChildId($rootScope.userId).then(data => {
           // if active child
           if(data) {

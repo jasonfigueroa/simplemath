@@ -1,4 +1,7 @@
 app.controller("SelectChildCtrl", function ($scope, $rootScope, $location, SelectChildFactory) {
+  
+  $rootScope.currentPath = $location.path();
+  
   let userId = null;
   $scope.childrenList = {};
   let activeChild = null;
