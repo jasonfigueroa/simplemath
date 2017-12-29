@@ -4,6 +4,18 @@ app.factory("ViewChildrenFactory", function ($http) {
       value: null,
       writable: true
     },
+    "conceptsCache": {
+      value: null,
+      writable: true
+    },
+    "categoriesCache": {
+      value: null,
+      writable: true
+    },
+    "childConceptsCache": {
+      value: null,
+      writable: true
+    },
     "getUserId": {
       value: function (email) {
         return firebase.database().ref('/users/').once('value').then(function(snapshot) {
@@ -38,6 +50,54 @@ app.factory("ViewChildrenFactory", function ($http) {
       value: function (userId, childId) {
         console.log('test')
         return firebase.database().ref(`/users/${userId}/children`).child(childId).remove();
+      }
+    },
+    "getConcepts": {
+      value: function() {
+        return firebase.database().ref(`/concepts`).once('value').then(function(snapshot) {
+          const data = snapshot.val();
+          if(data) {
+            this.conceptsCache = Object.keys(data).map(key => {
+              data[key].id = key
+              return data[key]
+            });
+          } else {
+            this.conceptsCache = null;
+          }
+          return this.conceptsCache;
+        });
+      }
+    },
+    "getCategories": {
+      value: function() {
+        return firebase.database().ref(`/categories`).once('value').then(function(snapshot) {
+          const data = snapshot.val();
+          if(data) {
+            this.categoriesCache = Object.keys(data).map(key => {
+              data[key].id = key
+              return data[key]
+            });
+          } else {
+            this.categoriesCache = null;
+          }
+          return this.categoriesCache;
+        });
+      }
+    },
+    "getChildConcepts": {
+      value: function() {
+        return firebase.database().ref(`/childConcepts`).once('value').then(function(snapshot) {
+          const data = snapshot.val();
+          if(data) {
+            this.childConceptsCache = Object.keys(data).map(key => {
+              data[key].id = key
+              return data[key]
+            });
+          } else {
+            this.childConceptsCache = null;
+          }
+          return this.childConceptsCache;
+        });
       }
     },
   })
