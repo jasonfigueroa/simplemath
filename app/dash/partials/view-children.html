@@ -9,7 +9,7 @@
     <h3>Place Value</h3>
     <p style="color: red;" ng-hide="child.completedConcepts.placevalue.length">{{child.username}} hasn't completed any Place Value concepts.</p>
     <ul ng-show="child.completedConcepts.placevalue.length">
-      <li ng-repeat="concept in child.completedConcepts.placevalue">{{concept.Title}}</li>
+      <li ng-repeat="concept in child.completedConcepts.placevalue">{{concept.conceptTitle}}</li>
     </ul>
     
     <h3>Addition and Subtraction</h3>

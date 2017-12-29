@@ -1,4 +1,4 @@
-app.controller("PlaceValueProblem10Ctrl", function ($scope, $location) {
+app.controller("PlaceValueProblem10Ctrl", function ($scope, $rootScope, $location, Factory) {
 
   $scope.values = [
     [1, 2, 3, 4, 5, 6, 7, 8, 9, 10],
@@ -38,7 +38,9 @@ app.controller("PlaceValueProblem10Ctrl", function ($scope, $location) {
       // show message
       messageSpan.removeClass('hidden');
       // display next button
-      nextBtn.removeClass('hidden');
+      // nextBtn.removeClass('hidden');
+      showModalBtn.removeClass('hidden');
+      document.getElementById('showModalBtn').focus();
     } else {
       // change color of message span to red
       messageSpan.addClass('red');
@@ -51,9 +53,40 @@ app.controller("PlaceValueProblem10Ctrl", function ($scope, $location) {
     }
   }
 
-  $scope.nextQuestion = () => {
-    // 12-11-2017 - may end this section here
-    // $location.url('practice/place-value/place-values-completed');
-    $location.url('practice/place-values-complete');
+  // $scope.nextQuestion = () => {
+  //   // 12-11-2017 - may end this section here
+  //   // $location.url('practice/place-value/place-values-completed');
+  //   $location.url('practice/place-values-complete');
+  // };
+
+  const showModalBtn = angular.element(document.querySelector('#showModalBtn'));
+
+  // modal variables
+  const completeSectionBtn = angular.element(document.querySelector('#completeSectionBtn'));
+  const congratsModal = angular.element(document.querySelector('#congratsModal'));
+
+  $scope.showModalBtn = () => {
+    congratsModal.removeClass('hidden');
+    document.getElementById('completeSectionBtn').focus();
+  };
+
+  $scope.completeSection = () => {
+    // console.log(`activeChildId: ${activeChildId}`);
+    // // EqualityFactory.markAsComplete(userId, activeChildId);
+    // // log to db
+    
+    
+    // // TODO 12-19-2017 mark this section as complete in the db for the active user
+    // console.log('TODO 12-19-2017 mark this section as complete in the db for the active user');
+    
+    // WORKING HERE
+    const childConceptObj = {
+      childId: $rootScope.activeChildId,
+      conceptId: $rootScope.activeConceptId
+    };
+    // Factory.addConceptToChildConcepts($rootScope.activeChildId, $rootScope.activeConceptId);
+    Factory.addConceptToChildConcepts(childConceptObj);
+    // the following probably doesn't have to be here
+    $location.url('child-dash');
   };
 });
