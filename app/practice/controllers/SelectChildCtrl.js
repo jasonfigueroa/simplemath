@@ -1,4 +1,7 @@
-app.controller("SelectChildCtrl", function ($scope, $location, SelectChildFactory) {
+app.controller("SelectChildCtrl", function ($scope, $rootScope, $location, SelectChildFactory) {
+  
+  $rootScope.currentPath = $location.path();
+  
   let userId = null;
   $scope.childrenList = {};
   let activeChild = null;
@@ -30,18 +33,23 @@ app.controller("SelectChildCtrl", function ($scope, $location, SelectChildFactor
       }
     });
     const childId = $scope.childrenList.selectedOption.id;
+    // console.log(`childId: ${childId}`);
+    // added the following to capture the assignment of active child
+    // $scope.$apply(() => {
+    //   $rootScope.activeChildId = childId;
+    // });
     if(activeChild) {
       SelectChildFactory.deactivate(userId, activeChild.id).then(() => {
         SelectChildFactory.selectChild(userId, childId).then(() => {
           $scope.$apply(() => {
-            $location.url('practice/child-dash');  
+            $location.url('child-dash');  
           });
         });
       });
     } else {
       SelectChildFactory.selectChild(userId, childId).then(() => {
         $scope.$apply(() => {
-          $location.url('practice/child-dash');
+          $location.url('child-dash');
         });
       });
     }

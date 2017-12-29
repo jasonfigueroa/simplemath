@@ -48,7 +48,7 @@ app.factory("AddChildFactory", function ($http) {
     // // post
     // // need user id and new child id
     "addChild": {
-      value: function (userEmail, childUserName) {
+      value: function (userEmail, childUserName, childAvatar) {
         let userId = null;
         this.getUserId(userEmail).then(key => {
           userId = key
@@ -59,6 +59,7 @@ app.factory("AddChildFactory", function ($http) {
           // Write the new post's data simultaneously in the posts list and the user's post list.
           var updates = {};
           updates[`/users/${userId}/children/${newPostKey}/username/`] = childUserName;
+          updates[`/users/${userId}/children/${newPostKey}/avatar/`] = childAvatar;
           updates[`/users/${userId}/children/${newPostKey}/active/`] = false;
         
           return firebase.database().ref().update(updates);

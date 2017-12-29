@@ -22,10 +22,14 @@ app.factory("SelectChildFactory", function ($http) {
       value: function (userId) {
         return firebase.database().ref(`/users/${userId}/children`).once('value').then(function(snapshot) {
           const data = snapshot.val();
-          this.cache = Object.keys(data).map(key => {
-            data[key].id = key
-            return data[key]
-          });
+          if(!data) {
+            this.cache = null;
+          } else {
+            this.cache = Object.keys(data).map(key => {
+              data[key].id = key
+              return data[key]
+            });
+          }
           return this.cache
         });
       }

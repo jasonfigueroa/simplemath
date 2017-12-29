@@ -1,10 +1,21 @@
 app.controller("LoginCtrl", function ($scope, $location, LoginFactory) {
+  $scope.existingUser = false;
+  // $scope.userSignUp = false;
+
   $scope.employee = {};
 
   $scope.loginEmail = '';
   $scope.loginPassword = '';
 
-    // add login event
+  $scope.loginSignUp = () => {
+    if($scope.existingUser) {
+      $scope.login();
+    } else {
+      $scope.signUp();
+    }
+  };
+
+  // add login event
   $scope.login = () => {
     const email = $scope.loginEmail;
     const pass = $scope.loginPassword;
@@ -30,16 +41,21 @@ app.controller("LoginCtrl", function ($scope, $location, LoginFactory) {
     firebase.auth().signOut();
   };
 
-  // // add a realtime listener
+  // add a realtime listener
   firebase.auth().onAuthStateChanged(firebaseUser => {
     if(firebaseUser) {
       console.log(firebaseUser);
       console.log('logged in');
 
       // redirect user
-      $scope.$apply(() => {
-        $location.path("/dash");
-      });
+
+      // if actvie child associated with user account
+      
+
+      // if no active child for user account
+      // $scope.$apply(() => {
+      //   $location.path("/dash");
+      // });
 
       // display hidden items
       // angular.element(document.querySelector('#createEmployeeAnchor')).removeClass('hidden');

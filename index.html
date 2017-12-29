@@ -5,8 +5,12 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Document</title>
+  <!-- temp cdn's -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-  <link rel="stylesheet" href="styles/main.css">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.css" rel="stylesheet">
+
+  <link rel="stylesheet" href="./styles/main.css">
+  <link rel="stylesheet" href="styles/avatar-selection.css">
 </head>
 <body ng-app="NgBoilerApp">
 
@@ -16,7 +20,12 @@
 
   <script src="lib/node_modules/angular/angular.min.js"></script>
   <script src="lib/node_modules/angular-route/angular-route.min.js"></script>
+  <!-- temp cdn -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.6.5/angular-animate.js"></script>
   <script src="lib/node_modules/angular-sanitize/angular-sanitize.min.js"></script>  
+  <!-- temp cdn's -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.6.5/angular-touch.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-bootstrap/2.5.0/ui-bootstrap-tpls.js"></script>
   <!-- TODO get rid of the following -->
   <!-- <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/angularjs/1.2.10/angular-sanitize.js"></script> -->
   
@@ -26,6 +35,9 @@
   <!-- app scripts -->
   <script src="app/app.js"></script>
   <script src="app/app.config.js"></script>
+
+  <script src="app/factories/Factory.js"></script>
+
   <script src="app/login/controllers/LoginCtrl.js"></script>
   <script src="app/login/factories/LoginFactory.js"></script>
   <script src="app/navigation/controllers/NavigationCtrl.js"></script>
@@ -43,7 +55,9 @@
   <script src="app/practice/problems/controllers/ProblemSubmissionCtrl.js"></script>
   <script src="app/practice/problems/factories/ProblemSubmissionFactory.js"></script>
   <!-- <script src="app/practice/problems/controllers/CategorySubmissionCtrl.js"></script> -->
-  <script src="app/practice/problems/factories/CategorySubmissionFactory.js"></script>
+  <!-- <script src="app/practice/problems/factories/CategorySubmissionFactory.js"></script> -->
+  <script src="app/practice/problems/controllers/ConceptSubmissionCtrl.js"></script>
+  <script src="app/practice/problems/factories/ConceptSubmissionFactory.js"></script>
   <script src="app/practice/place-values/controllers/PlaceValueProblem1Ctrl.js"></script>
   <!-- <script src="app/practice/place-values/factories/PlaceValueProblemFactory.js"></script> -->
   <script src="app/practice/place-values/controllers/PlaceValueProblem2Ctrl.js"></script>
@@ -104,45 +118,16 @@
   <script src="app/practice/place-values/two-digit-comparison/controllers/TwoDigitComparisonCompleteCtrl.js"></script>
 
   <!-- adding withing twenty -->
-  <script src="app/practice/addition-subtraction/adding-within-twenty/controllers/AddingWithinTwenty1Ctrl.js"></script>
-  <script src="app/practice/addition-subtraction/adding-within-twenty/controllers/AddingWithinTwenty2Ctrl.js"></script>
-  <script src="app/practice/addition-subtraction/adding-within-twenty/controllers/AddingWithinTwenty3Ctrl.js"></script>
-  <script src="app/practice/addition-subtraction/adding-within-twenty/controllers/AddingWithinTwenty4Ctrl.js"></script>
-  <script src="app/practice/addition-subtraction/adding-within-twenty/controllers/AddingWithinTwenty5Ctrl.js"></script>
-  <script src="app/practice/addition-subtraction/adding-within-twenty/controllers/AddingWithinTwenty6Ctrl.js"></script>
-  <script src="app/practice/addition-subtraction/adding-within-twenty/controllers/AddingWithinTwenty7Ctrl.js"></script>
-  <script src="app/practice/addition-subtraction/adding-within-twenty/controllers/AddingWithinTwenty8Ctrl.js"></script>
-  <script src="app/practice/addition-subtraction/adding-within-twenty/controllers/AddingWithinTwenty9Ctrl.js"></script>
-  <script src="app/practice/addition-subtraction/adding-within-twenty/controllers/AddingWithinTwenty10Ctrl.js"></script>
-  <script src="app/practice/addition-subtraction/adding-within-twenty/controllers/AddingWithinTwentyCompleteCtrl.js"></script>
+  <script src="app/practice/addition-subtraction/adding-within-twenty/controllers/AddingWithinTwentyCtrl.js"></script>
 
   <!-- add three numbers -->
-  <script src="app/practice/addition-subtraction/add-three-numbers/controllers/AddThreeNumbers1Ctrl.js"></script>
-  <script src="app/practice/addition-subtraction/add-three-numbers/controllers/AddThreeNumbers2Ctrl.js"></script>
-  <script src="app/practice/addition-subtraction/add-three-numbers/controllers/AddThreeNumbers3Ctrl.js"></script>
-  <script src="app/practice/addition-subtraction/add-three-numbers/controllers/AddThreeNumbers4Ctrl.js"></script>
-  <script src="app/practice/addition-subtraction/add-three-numbers/controllers/AddThreeNumbers5Ctrl.js"></script>
-  <script src="app/practice/addition-subtraction/add-three-numbers/controllers/AddThreeNumbers6Ctrl.js"></script>
-  <script src="app/practice/addition-subtraction/add-three-numbers/controllers/AddThreeNumbers7Ctrl.js"></script>
-  <script src="app/practice/addition-subtraction/add-three-numbers/controllers/AddThreeNumbers8Ctrl.js"></script>
-  <script src="app/practice/addition-subtraction/add-three-numbers/controllers/AddThreeNumbers9Ctrl.js"></script>
-  <script src="app/practice/addition-subtraction/add-three-numbers/controllers/AddThreeNumbers10Ctrl.js"></script>
-  <script src="app/practice/addition-subtraction/add-three-numbers/controllers/AddThreeNumbersCompleteCtrl.js"></script>
+  <script src="app/practice/addition-subtraction/add-three-numbers/controllers/AddThreeNumbersCtrl.js"></script>
 
   <!-- subtract within twenty -->
-  <script src="app/practice/addition-subtraction/subtract-within-twenty/controllers/SubtractWithinTwenty1Ctrl.js"></script>
-  <script src="app/practice/addition-subtraction/subtract-within-twenty/controllers/SubtractWithinTwenty2Ctrl.js"></script>
-  <script src="app/practice/addition-subtraction/subtract-within-twenty/controllers/SubtractWithinTwenty3Ctrl.js"></script>
-  <script src="app/practice/addition-subtraction/subtract-within-twenty/controllers/SubtractWithinTwenty4Ctrl.js"></script>
-  <script src="app/practice/addition-subtraction/subtract-within-twenty/controllers/SubtractWithinTwenty5Ctrl.js"></script>
-  <script src="app/practice/addition-subtraction/subtract-within-twenty/controllers/SubtractWithinTwenty6Ctrl.js"></script>
-  <script src="app/practice/addition-subtraction/subtract-within-twenty/controllers/SubtractWithinTwenty7Ctrl.js"></script>
-  <script src="app/practice/addition-subtraction/subtract-within-twenty/controllers/SubtractWithinTwenty8Ctrl.js"></script>
-  <script src="app/practice/addition-subtraction/subtract-within-twenty/controllers/SubtractWithinTwenty9Ctrl.js"></script>
-  <script src="app/practice/addition-subtraction/subtract-within-twenty/controllers/SubtractWithinTwenty10Ctrl.js"></script>
-  <script src="app/practice/addition-subtraction/subtract-within-twenty/controllers/SubtractWithinTwentyCompleteCtrl.js"></script>
+  <script src="app/practice/addition-subtraction/subtract-within-twenty/controllers/SubtractWithinTwentyCtrl.js"></script>
 
   <!-- equality -->
-  <script src="app/practice/addition-subtraction/equality/controllers/Equality1Ctrl.js"></script>
+  <script src="app/practice/addition-subtraction/equality/controllers/EqualityCtrl.js"></script>
+  <script src="app/practice/addition-subtraction/equality/factories/EqualityFactory.js"></script>
 </body>
 </html>

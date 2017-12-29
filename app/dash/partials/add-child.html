@@ -1,5 +1,70 @@
 <form>
     <label for="newChildUsername">Add Child</label>
-    <input type="text" ng-model="newChild.username" id="newChildUsername">
+    <input type="text" ng-model="newChild.username" id="newChildUsername" ng-enter="addChild()">
+    <hr>
+    <form name="myForm">
+        <label for="typeSelect">Choose Type:</label>
+        <select name="typeSelect" id="typeSelect" class="form-control"
+        ng-options="type.name for type in avatar.types track by type.id"
+        ng-model="avatar.selectedType"
+        ng-change="reloadImages()"></select>
+    
+        <label for="backgroundSelect">Choose Background:</label>
+        <select name="backgroundSelect" id="backgroundSelect" class="form-control"
+        ng-options="background.name for background in avatar.backgrounds track by background.id"
+        ng-model="avatar.selectedBackground"
+        ng-change="reloadImages()"></select>
+      </form>
+      <hr>
+      
+      <!-- following block is probably not needed -->
+      <!-- <tt>type = {{avatar.selectedType}}</tt><br/>
+      <tt>background = {{avatar.selectedBackground}}</tt><br/> -->
+    
+      <!-- temp off -->
+      <!-- <img ng-repeat="avatarStr in avatarArray" ng-src="./assets/clear.png" alt="random avatar"/> -->
+      <form name="avatarForm">
+        <label>
+          <input type="radio" ng-model="image.name" value="image_1">
+          <img src="./assets/clear.png"></img><span class="glyphicon" ng-class="images.one.selected ? 'glyphicon-ok' : ''" id="span_1"></span>
+        </label>
+        <label>
+          <input type="radio" ng-model="image.name" value="image_2">
+          <img src="./assets/clear.png"></img><span class="glyphicon" ng-class="images.two.selected ? 'glyphicon-ok' : ''" id="span_2"></span>
+        </label>
+        <label>
+          <input type="radio" ng-model="image.name" value="image_3">
+          <img src="./assets/clear.png"></img><span class="glyphicon" ng-class="images.three.selected ? 'glyphicon-ok' : ''" id="span_3"></span>
+        </label>
+        <br>
+        <!-- <tt>color = {{image.name | json}}</tt><br/> -->
+       </form>
+      <div class="images-div">
+        <!-- <div id="image-div_1" class="wrapper"><img src="./assets/clear.png" ng-click="selectImage(1)"></img><span class="glyphicon" ng-class="{'glyphicon-ok' : images.1.selected}" id="span_1"></span></div>
+        <div id="image-div_2" class="wrapper"><img src="./assets/clear.png" ng-click="selectImage(2)"></img><span class="glyphicon" ng-class="{'glyphicon-ok' : images.2.selected}" id="span_2"></span></div>
+        <div id="image-div_3" class="wrapper"><img src="./assets/clear.png" ng-click="selectImage(3)"></img><span class="glyphicon" ng-class="{'glyphicon-ok' : images.3.selected}" id="span_3"></span></div>
+        <div id="image-div_4" class="wrapper"><img src="./assets/clear.png" ng-click="selectImage(4)"></img><span class="glyphicon" ng-class="{'glyphicon-ok' : images.4.selected}" id="span_4"></span></div>
+        <div id="image-div_5" class="wrapper"><img src="./assets/clear.png" ng-click="selectImage(5)"></img><span class="glyphicon" ng-class="{'glyphicon-ok' : images.5.selected}" id="span_5"></span></div>
+        <div id="image-div_6" class="wrapper"><img src="./assets/clear.png" ng-click="selectImage(6)"></img><span class="glyphicon" ng-class="{'glyphicon-ok' : images.6.selected}" id="span_6"></span></div>
+        <div id="image-div_7" class="wrapper"><img src="./assets/clear.png" ng-click="selectImage(7)"></img><span class="glyphicon" ng-class="{'glyphicon-ok' : images.7.selected}" id="span_7"></span></div>
+        <div id="image-div_8" class="wrapper"><img src="./assets/clear.png" ng-click="selectImage(8)"></img><span class="glyphicon" ng-class="{'glyphicon-ok' : images.8.selected}" id="span_8"></span></div>
+        <div id="image-div_9" class="wrapper"><img src="./assets/clear.png" ng-click="selectImage(9)"></img><span class="glyphicon" ng-class="{'glyphicon-ok' : images.9.selected}" id="span_9"></span></div>
+        <div id="image-div_10" class="wrapper"><img src="./assets/clear.png" ng-click="selectImage(10)"></img><span class="glyphicon" ng-class="{'glyphicon-ok' : images.10.selected}" id="span_10"></span></div> -->
+        
+        <!-- following is the newest -->
+        <!-- <div id="image-div_1" class="wrapper"><img src="./assets/clear.png" ng-click="selectImage('one')"></img><span class="glyphicon" ng-class="images.one.selected ? 'glyphicon-ok' : ''" id="span_1"></span></div>
+        <div id="image-div_2" class="wrapper"><img src="./assets/clear.png" ng-click="selectImage('two')"></img><span class="glyphicon" ng-class="images.two.selected ? 'glyphicon-ok' : ''" id="span_2"></span></div>
+        <div id="image-div_3" class="wrapper"><img src="./assets/clear.png" ng-click="selectImage('three')"></img><span class="glyphicon" ng-class="images.three.selected ? 'glyphicon-ok' : ''" id="span_3"></span></div>
+        <div id="image-div_4" class="wrapper"><img src="./assets/clear.png" ng-click="selectImage('four')"></img><span class="glyphicon" ng-class="images.four.selected ? 'glyphicon-ok' : ''" id="span_4"></span></div>
+        <div id="image-div_5" class="wrapper"><img src="./assets/clear.png" ng-click="selectImage('five')"></img><span class="glyphicon" ng-class="images.five.selected ? 'glyphicon-ok' : ''" id="span_5"></span></div> -->
+        
+        
+        <!-- <div id="image-div_6" class="wrapper"><img src="./assets/clear.png" ng-click="selectImage('six')"></img><span class="glyphicon" ng-class="images.six.selected ? 'glyphicon-ok' : ''" id="span_6"></span></div>
+        <div id="image-div_7" class="wrapper"><img src="./assets/clear.png" ng-click="selectImage('seven')"></img><span class="glyphicon" ng-class="images.seven.selected ? 'glyphicon-ok' : ''" id="span_7"></span></div>
+        <div id="image-div_8" class="wrapper"><img src="./assets/clear.png" ng-click="selectImage('eight')"></img><span class="glyphicon" ng-class="images.eight.selected ? 'glyphicon-ok' : ''" id="span_8"></span></div>
+        <div id="image-div_9" class="wrapper"><img src="./assets/clear.png" ng-click="selectImage('nine')"></img><span class="glyphicon" ng-class="images.nine.selected ? 'glyphicon-ok' : ''" id="span_9"></span></div>
+        <div id="image-div_10" class="wrapper"><img src="./assets/clear.png" ng-click="selectImage('ten')"></img><span class="glyphicon" ng-class="images.ten.selected ? 'glyphicon-ok' : ''" id="span_10"></span></div> -->
+      </div>
+    <hr>
     <button ng-click="addChild()">Submit</button>
   </form>
