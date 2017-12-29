@@ -1,3 +1,7 @@
+body {
+  font-family: "Raleway", "HelveticaNeue", "Helvetica";
+}
+
 .hidden {
   display: none;
 }
@@ -61,13 +65,28 @@ td {
 }
 
 #nav {
+  height: 80px;
+  border-bottom: 1px solid lightgray;
   display: flex;
   flex-direction: row-reverse;
   justify-content: space-between;
 }
 
 #nav a {
-  padding: 10px;
+  /* padding: 10px; */
+  text-decoration: none;
+  border: 1px solid lightgray;
+  width: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 10px 5px;
+  border-radius: 10px;
+  color: black;
+}
+
+#nav a:hover {
+  background-color: lightgray;
 }
 
 a[ng-click] {
@@ -78,6 +97,10 @@ a[ng-click] {
 
 a[ng-click]:hover {
   color: lightblue;
+}
+
+#nav_brand_logo {
+  width: 330px;
 }
 
 #nav_active_child_username,
@@ -91,8 +114,16 @@ a[ng-click]:hover {
 }
 
 #nav_active_child_avatar {
-  width: 50px;
-  height: 50px;
+  width: 75px;
+  height: 75px;
+
+  margin: 0 5px;
+  border: none;
+  border-radius: 50%;
+}
+
+#nav-links {
+  display: flex;
 }
 
 #username_avatar_div {
@@ -101,11 +132,15 @@ a[ng-click]:hover {
   /* width: 50%; */
   /* border: 1px solid red; */
   justify-content: center;
+  align-items: center;
 }
 
-#username_avatar_div img {
-  margin-right: 5px;
-}
+/* #username_avatar_div img {
+  margin: 0 5px;
+  border: none;
+  border-radius: 50%;
+
+} */
 
 #username_avatar_div h2 {
   margin-left: 5px;
