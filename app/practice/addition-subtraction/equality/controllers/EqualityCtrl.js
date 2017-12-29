@@ -1,4 +1,4 @@
-app.controller("EqualityCtrl", function ($scope, $location, EqualityFactory) {
+app.controller("EqualityCtrl", function ($scope, $rootScope, $location, EqualityFactory, Factory) {
   
   /*************/
   /* Functions */
@@ -138,10 +138,17 @@ app.controller("EqualityCtrl", function ($scope, $location, EqualityFactory) {
     // log to db
     // 
     
-    $location.url('practice/child-dash');
+    $location.url('child-dash');
 
     // TODO 12-19-2017 mark this section as complete in the db for the active user
     console.log('TODO 12-19-2017 mark this section as complete in the db for the active user');
+
+    const childConceptObj = {
+      childId: $rootScope.activeChildId,
+      conceptId: $rootScope.activeConceptId
+    };
+
+    Factory.addConceptToChildConcepts(childConceptObj);
   };
 
   $scope.showModalBtn = () => {

@@ -8,6 +8,12 @@ app.controller("ChildDashCtrl", function ($scope, $rootScope, Factory, $location
   
   $scope.activeChild = null;
 
+  $scope.trackConcept = e => {
+    // console.log(e);
+    const conceptName = e.target.text;
+    Factory.getConceptId(conceptName).then(conceptId => $rootScope.activeConceptId = conceptId);
+  };
+
   // // add a realtime listener
   firebase.auth().onAuthStateChanged(firebaseUser => {
     if(firebaseUser) {

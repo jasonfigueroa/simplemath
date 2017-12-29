@@ -1,9 +1,9 @@
 <div id="nav-div" ng-controller="NavigationCtrl" ng-hide="locationIsRoot()">
   <div id="nav">
     <div>
-      <a href="#!/login" ng-click="logout()">Logout</a>
+      <a href="#!/dash/select-child" ng-click="" ng-hide="currentPath === '/dash' || currentPath === '/dash/select-child' || currentPath === '/dash/add-child' || currentPath === '/dash/view-children'">Switch User</a>
       <a href="#!/dash" ng-click="">Dash</a>
-      <a href="#!/dash/select-child" ng-click="">Switch User</a>
+      <a href="#!/login" ng-click="logout()">Logout</a>
     </div>
     <!-- <h1 id="nav_active_child_username">Logged in as {{ activeChildUsername }}</h1> -->
     <div id="username_avatar_div" ng-hide="currentPath === '/dash' || currentPath === '/dash/select-child'">

@@ -1,4 +1,4 @@
-app.controller("AddingWithinTwentyCtrl", function ($scope, $location) {
+app.controller("AddingWithinTwentyCtrl", function ($scope, $rootScope, $location, Factory) {
 
   /*************/
   /* Functions */
@@ -45,10 +45,19 @@ app.controller("AddingWithinTwentyCtrl", function ($scope, $location) {
     // EqualityFactory.markAsComplete(userId, activeChildId);
     // log to db
     
-    $location.url('practice/child-dash');
-
+    
     // TODO 12-19-2017 mark this section as complete in the db for the active user
     console.log('TODO 12-19-2017 mark this section as complete in the db for the active user');
+    
+    // WORKING HERE
+    const childConceptObj = {
+      childId: $rootScope.activeChildId,
+      conceptId: $rootScope.activeConceptId
+    };
+    // Factory.addConceptToChildConcepts($rootScope.activeChildId, $rootScope.activeConceptId);
+    Factory.addConceptToChildConcepts(childConceptObj);
+    // the following probably doesn't have to be here
+    $location.url('child-dash');
   };
 
   $scope.showModalBtn = () => {

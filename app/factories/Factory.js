@@ -60,5 +60,37 @@ app.factory("Factory", function () {
         });
       }
     },
+    "getConceptId": {
+      value: function(conceptName) {
+        return firebase.database().ref('/concepts/').once('value').then(function(snapshot) {
+          const data = snapshot.val();
+          let conceptId = null;
+          for(key in data) {
+            if(data[key].title === conceptName) {
+              conceptId = key;
+              console.log(data[key]);
+              // console.log(`${}`)
+              // console.log(`${}`)
+            }
+          }
+          return conceptId;
+        });
+      }
+    },
+    // addConceptToChildConcepts($rootScope.activeChildId, $rootScope.activeConceptId)
+    "addConceptToChildConcepts": {
+      // value: function(activeChildId, activeConceptId) {
+      value: function(childConceptObj) {
+        console.log(childConceptObj);
+        // Get a key for a new Post.
+        var newPostKey = firebase.database().ref().child('childConcepts/').push().key;
+        // Write the new post's data simultaneously in the posts list and the user's post list.
+        var updates = {};
+        updates[`childConcepts/${newPostKey}`] = childConceptObj;
+        // updates[`childConcepts/${newPostKey}/conceptId`] = activeConceptId;
+      
+        return firebase.database().ref().update(updates);     
+      }
+    }
   });
 });

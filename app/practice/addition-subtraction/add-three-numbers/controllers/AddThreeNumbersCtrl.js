@@ -1,4 +1,4 @@
-app.controller("AddThreeNumbersCtrl", function ($scope, $location) {
+app.controller("AddThreeNumbersCtrl", function ($scope, $rootScope, $location, Factory) {
 
   /*************/
   /* Functions */
@@ -65,10 +65,17 @@ app.controller("AddThreeNumbersCtrl", function ($scope, $location) {
     // EqualityFactory.markAsComplete(userId, activeChildId);
     // log to db
     
-    $location.url('practice/child-dash');
+    $location.url('child-dash');
 
     // TODO 12-19-2017 mark this section as complete in the db for the active user
     console.log('TODO 12-19-2017 mark this section as complete in the db for the active user');
+
+    const childConceptObj = {
+      childId: $rootScope.activeChildId,
+      conceptId: $rootScope.activeConceptId
+    };
+
+    Factory.addConceptToChildConcepts(childConceptObj);
   };
 
   $scope.showModalBtn = () => {
