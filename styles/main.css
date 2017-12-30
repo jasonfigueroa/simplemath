@@ -2,9 +2,12 @@ body {
   font-family: "Raleway", "HelveticaNeue", "Helvetica";
   color:#303C6C;
   /* background-color: #FBE8A6; */
-  /* background-color: #D2FDFF; */
-  background: red; 
-  background: linear-gradient(#D2FDFF, #B4DFE5);
+  /* background-color: #F4976C; */
+  background-color: #D2FDFF;
+  /* background-color: #B4DFE5; */
+  /* background-color: whitesmoke; */
+  /* background: red;  */
+  /* background: linear-gradient(#D2FDFF, #B4DFE5); */
 }
 
 .hidden {
@@ -196,3 +199,20 @@ a[ng-click]:hover {
 #username_avatar_div h2 {
   margin-left: 5px;
 } 
+
+#userInput {
+  width: 50px;
+  background-color: #FBE8A6;
+}
+
+#userInput:focus {
+  border: 1px solid rgba(244, 151, 108, 1);
+}
+
+#toast-container>div {
+  /* incorrect */
+  /*background-color: red;*/
+
+  /* correct */
+  background-color: green;
+}

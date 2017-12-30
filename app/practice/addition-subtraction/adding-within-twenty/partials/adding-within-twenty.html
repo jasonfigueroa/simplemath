@@ -1,7 +1,8 @@
+<toaster-container></toaster-container>
 <!-- modal -->
 <div id="congratsModal" class="green hidden">
   <p>Congratulations you have completed this section!</p>
-  <button id="completeSectionBtn" ng-click="completeSection()">Continue</button>
+  <button class="btn btn-default" id="completeSectionBtn" ng-click="completeSection()">Continue</button>
 </div>
 
 <h1>Addition and Subtraction</h1>
@@ -15,9 +16,9 @@
 </p>
 
 <p>
-  {{set.a}} + {{set.b}} = <input id="userInput" type="text" size="5" ng-model="userAnswer" ng-enter="checkAnswer()"> <!-- <span id="message" class="hidden">{{ message }}</span> -->
+  {{set.a}} + {{set.b}} = <input class="form-control" id="userInput" type="text" size="5" ng-model="userAnswer" ng-enter="checkAnswer()"> <!-- <span id="message" class="hidden">{{ message }}</span> -->
 </p>
 
-<button ng-click="checkAnswer()">Submit</button>
-<button id="nextBtn" ng-click="nextQuestion()" class="hidden">Next</button>
-<button id="showModalBtn" ng-click="showModalBtn()" class="hidden">Complete</button>
+<button class="btn btn-default" ng-click="checkAnswer()">Submit</button>
+<button id="nextBtn" ng-click="nextQuestion()" class="btn btn-default hidden">Next</button>
+<button id="showModalBtn" ng-click="showModalBtn()" class="btn btn-default hidden">Complete</button>

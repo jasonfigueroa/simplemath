@@ -1,4 +1,4 @@
-app.controller("AddingWithinTwentyCtrl", function ($scope, $rootScope, $location, Factory) {
+app.controller("AddingWithinTwentyCtrl", function ($scope, $rootScope, $location, Factory, toaster) {
 
   /*************/
   /* Functions */
@@ -65,6 +65,20 @@ app.controller("AddingWithinTwentyCtrl", function ($scope, $rootScope, $location
     document.getElementById('completeSectionBtn').focus();
   };
 
+  // const popSuccess = function(){
+  //   toaster.pop('success', "Correct", "Awesome job!");
+  // };
+
+  const popWarning = function(){
+    // toaster.pop('warning', "Incorrect", "Sorry, please try agin.");
+    toaster.pop({
+      type: 'info',
+      title: 'Title text',
+      body: 'Body text',
+      timeout: 30000
+    });
+  };
+
   /********************/
   /* End of Functions */
   /********************/
@@ -108,8 +122,44 @@ app.controller("AddingWithinTwentyCtrl", function ($scope, $rootScope, $location
 
   reset_template();
 
+  // $scope.checkAnswer = () => {
+  //   messageSpan.attr('class', 'hidden');
+  //   if ($scope.userAnswer == answer) {
+  //     if($scope.correctAnswerCount + 1 >= $scope.totalQuestions) {
+  //       // display complete section button
+  //       showModalBtn.removeClass('hidden');
+  //       document.getElementById('showModalBtn').focus();
+  //       // redirect here
+  //     } else {
+  //       // display next button
+  //       nextBtn.removeClass('hidden');
+  //       document.getElementById('nextBtn').focus();
+  //     }
+
+  //     // change color of message span to green
+  //     messageSpan.addClass('green');
+  //     // bold text
+  //     messageSpan.addClass('bold');
+  //     // change $scope.message to correctAnswer 
+  //     $scope.message = correctAnswer;
+  //     // show message
+  //     messageSpan.removeClass('hidden');
+  //     // display next button
+  //     // nextBtn.removeClass('hidden');
+  //   } else {
+  //     // change color of message span to red
+  //     messageSpan.addClass('red');
+  //     // bold text
+  //     messageSpan.addClass('bold');
+  //     // change $scope.message to wrongAnswer
+  //     $scope.message = wrongAnswer;
+  //     // show message
+  //     messageSpan.removeClass('hidden');
+  //   }
+  // }
+
   $scope.checkAnswer = () => {
-    messageSpan.attr('class', 'hidden');
+    // messageSpan.attr('class', 'hidden');
     if ($scope.userAnswer == answer) {
       if($scope.correctAnswerCount + 1 >= $scope.totalQuestions) {
         // display complete section button
@@ -122,25 +172,28 @@ app.controller("AddingWithinTwentyCtrl", function ($scope, $rootScope, $location
         document.getElementById('nextBtn').focus();
       }
 
+      // popSuccess();
+
       // change color of message span to green
-      messageSpan.addClass('green');
+      // messageSpan.addClass('green');
       // bold text
-      messageSpan.addClass('bold');
+      // messageSpan.addClass('bold');
       // change $scope.message to correctAnswer 
-      $scope.message = correctAnswer;
+      // $scope.message = correctAnswer;
       // show message
-      messageSpan.removeClass('hidden');
+      // messageSpan.removeClass('hidden');
       // display next button
       // nextBtn.removeClass('hidden');
     } else {
+      popWarning();
       // change color of message span to red
-      messageSpan.addClass('red');
+      // messageSpan.addClass('red');
       // bold text
-      messageSpan.addClass('bold');
+      // messageSpan.addClass('bold');
       // change $scope.message to wrongAnswer
-      $scope.message = wrongAnswer;
+      // $scope.message = wrongAnswer;
       // show message
-      messageSpan.removeClass('hidden');
+      // messageSpan.removeClass('hidden');
     }
   }
 
