@@ -1,5 +1,10 @@
 body {
   font-family: "Raleway", "HelveticaNeue", "Helvetica";
+  color:#303C6C;
+  /* background-color: #FBE8A6; */
+  /* background-color: #D2FDFF; */
+  background: red; 
+  background: linear-gradient(#D2FDFF, #B4DFE5);
 }
 
 .hidden {
@@ -70,24 +75,28 @@ td {
   display: flex;
   flex-direction: row-reverse;
   justify-content: space-between;
+  /* background-color: #F4976C; */
+  /* background-color: #FBE8A6; */
+  background-color: #303C6C;
 }
 
 #nav a {
   /* padding: 10px; */
   text-decoration: none;
-  border: 1px solid lightgray;
+  border: 2px solid #303C6C;
   width: 100px;
   display: flex;
   justify-content: center;
   align-items: center;
   margin: 10px 5px;
+  /* the following is being overridden below on #nav-links a:hover */
   border-radius: 10px;
   color: black;
 }
 
-#nav a:hover {
+/* #nav a:hover {
   background-color: lightgray;
-}
+} */
 
 a[ng-click] {
   cursor: pointer;
@@ -101,6 +110,9 @@ a[ng-click]:hover {
 
 #nav_brand_logo {
   width: 330px;
+  /* color: #303C6C; */
+  /* color: #F4976C; */
+  color: #FBE8A6;
 }
 
 #nav_active_child_username,
@@ -110,7 +122,8 @@ a[ng-click]:hover {
 }
 
 #nav_active_child_username {
-  color: mediumpurple;
+  /* color: #303C6C; */
+  color: #FBE8A6;
 }
 
 #nav_active_child_avatar {
@@ -124,6 +137,44 @@ a[ng-click]:hover {
 
 #nav-links {
   display: flex;
+}
+
+#nav-links a {
+  /* background-color: #D2FDFF; */
+  /* background-color: #FBE8A6; */
+  background-color:#303C6C;
+  color: #FBE8A6;
+  /* color:#303C6C; */
+}
+
+/****************************************************/
+/* Not sure which of the following two looks better */
+/****************************************************/
+
+/* #nav-links a:hover {
+  background-color: #FBE8A6;
+  border-color: #FBE8A6;
+  color: #303C6C;
+} */
+
+#nav-links a:hover {
+  /* background-color: #FBE8A6; */
+  /* border-color: #FBE8A6; */
+  border-radius: 0;
+  border-bottom-color: #FBE8A6;
+  /* color: #303C6C; */
+}
+/********************************************************/
+/* End Not sure which of the following two looks better */
+/********************************************************/
+
+/* #nav-links a:hover:not(.fa) {
+  text-decoration: underline;
+} */
+
+#nav-links i {
+  /* color:#303C6C; */
+  margin-right: 5px;
 }
 
 #username_avatar_div {
