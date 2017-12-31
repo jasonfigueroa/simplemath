@@ -8,6 +8,10 @@ body {
   /* background-color: whitesmoke; */
   /* background: red;  */
   /* background: linear-gradient(#D2FDFF, #B4DFE5); */
+  min-height: 100vh;
+  /* background: linear-gradient(to bottom right, #D2FDFF, #B4DFE5) no-repeat; */
+  background: linear-gradient(to bottom right, #FBE8A6, #F4976C) no-repeat;
+  font-size: 17px;
 }
 
 .hidden {
@@ -86,7 +90,7 @@ td {
 #nav a {
   /* padding: 10px; */
   text-decoration: none;
-  border: 2px solid #303C6C;
+  border: 3px solid #303C6C;
   width: 100px;
   display: flex;
   justify-content: center;
@@ -103,19 +107,35 @@ td {
 
 a[ng-click] {
   cursor: pointer;
-  color: blue;
-  text-decoration: underline;
+  color: #303C6C;
+  text-decoration: none;
+  font-size: 17px;
 }
 
+/* a[ng-click] i {
+  opacity: 0;
+} */
+
 a[ng-click]:hover {
-  color: lightblue;
+  /* color: lightblue; */
+  text-decoration: underline;
+  /* opacity: 1; */
 }
+
+/* a[ng-click] i:hover {
+  opacity: 1;
+} */
 
 #nav_brand_logo {
   width: 330px;
   /* color: #303C6C; */
   /* color: #F4976C; */
   color: #FBE8A6;
+  padding-left: 10px;
+}
+
+#nav_brand_logo i {
+  margin-right: 5px;
 }
 
 #nav_active_child_username,
@@ -189,6 +209,19 @@ a[ng-click]:hover {
   align-items: center;
 }
 
+img {
+  border-radius: 10px;
+  border-color: #FBE8A6;
+}
+
+img:hover {
+  border-color: #303C6C;
+}
+
+label {
+  font-size: 17px;
+}
+
 /* #username_avatar_div img {
   margin: 0 5px;
   border: none;
@@ -202,11 +235,15 @@ a[ng-click]:hover {
 
 #userInput {
   width: 50px;
-  background-color: #FBE8A6;
+  /* background-color: #FBE8A6; */
 }
 
-#userInput:focus {
+/* #userInput:focus {
   border: 1px solid rgba(244, 151, 108, 1);
+} */
+
+#newChildUsername {
+  width: 200px;
 }
 
 #toast-container > div {
@@ -236,3 +273,22 @@ a[ng-click]:hover {
   -o-transition: 500ms cubic-bezier(0.250, 0.250, 0.750, 0.750) all;
   transition: 500ms cubic-bezier(0.250, 0.250, 0.750, 0.750) all;
 } 
+
+select.form-control {
+  width: 15%;
+}
+
+.underline {
+  text-decoration: underline;
+}
+
+#loginEmail,
+#loginPassword {
+  width: 250px;
+}
+
+/* @media (min-height: 100vh) {
+  body {
+    height: 100%;
+  }
+} */

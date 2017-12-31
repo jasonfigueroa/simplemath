@@ -5,13 +5,16 @@
 <h1>Welcome to S1mple Math!</h1>
 <h2 ng-hide="existingUser">Sign Up</h2>
 <h2 ng-show="existingUser">Log In</h2>
-<input ng-model="loginEmail" type="email" placeholder="Email">
-<br>
-<input ng-model="loginPassword" type="password" placeholder="Password" ng-enter="loginSignUp()">
-<br>
-<button ng-show="existingUser" ng-click="login()">Log In</button>
-<button ng-hide="existingUser" ng-click="signUp()">Sign Up</button>
-<button id="btnLogout" ng-click="logout()" class="hidden">Log Out</button>
+
+<form class="form-group">
+  <input id="loginEmail" class="form-control" ng-model="loginEmail" type="email" placeholder="Email">
+  <br>
+  <input id="loginPassword" class="form-control" ng-model="loginPassword" type="password" placeholder="Password" ng-enter="loginSignUp()">
+  <br>
+  <button class="btn btn-default" ng-show="existingUser" ng-click="login()">Log In</button>
+  <button class="btn btn-default" ng-hide="existingUser" ng-click="signUp()">Sign Up</button>
+  <button id="btnLogout" ng-click="logout()" class="btn btn-default hidden">Log Out</button>
+</form>
 
 <!-- already a user click here -->
 <div>
