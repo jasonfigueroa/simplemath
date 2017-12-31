@@ -65,18 +65,28 @@ app.controller("AddingWithinTwentyCtrl", function ($scope, $rootScope, $location
     document.getElementById('completeSectionBtn').focus();
   };
 
-  // const popSuccess = function(){
-  //   toaster.pop('success', "Correct", "Awesome job!");
-  // };
+  const popSuccess = function(){
+    toaster.pop('success', "Correct", "Awesome job!");
+  };
 
   const popWarning = function(){
-    // toaster.pop('warning', "Incorrect", "Sorry, please try agin.");
-    toaster.pop({
-      type: 'info',
-      title: 'Title text',
-      body: 'Body text',
-      timeout: 30000
-    });
+    toaster.pop('warning', "Incorrect", "Sorry, please try agin.");
+    // toaster.pop({
+    //   type: 'warning',
+    //   title: 'Title text',
+    //   body: 'Body text',
+    //   timeout: 30000
+    // });
+  };
+
+  const popError = function(){
+    toaster.pop('error', "Incorrect", "Sorry, please try agin.");
+    // toaster.pop({
+    //   type: 'warning',
+    //   title: 'Title text',
+    //   body: 'Body text',
+    //   timeout: 30000
+    // });
   };
 
   /********************/
@@ -172,7 +182,7 @@ app.controller("AddingWithinTwentyCtrl", function ($scope, $rootScope, $location
         document.getElementById('nextBtn').focus();
       }
 
-      // popSuccess();
+      popSuccess();
 
       // change color of message span to green
       // messageSpan.addClass('green');
@@ -185,7 +195,8 @@ app.controller("AddingWithinTwentyCtrl", function ($scope, $rootScope, $location
       // display next button
       // nextBtn.removeClass('hidden');
     } else {
-      popWarning();
+      // popWarning();
+      popError();
       // change color of message span to red
       // messageSpan.addClass('red');
       // bold text
