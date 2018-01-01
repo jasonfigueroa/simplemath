@@ -75,7 +75,7 @@ app.controller("AddingWithinTwentyCtrl", function ($uibModal, $document, $scope,
 
   let answer = null;
 
-  $scope.totalQuestions = 10;
+  $scope.totalQuestions = 2;
   $scope.correctAnswerCount = 0;
   
   const wrongAnswer = "Sorry that is incorrect, please try agin.";
@@ -126,6 +126,8 @@ app.controller('ModalDemoCtrl', function ($uibModal, $document, $rootScope) {
 
   $rootScope.openModal = () => {
     $ctrl.open();
+    // angular.element(document.querySelector('#trophy').addClass('grow'));
+    // document.getElementById('trophy').addClass('grow');
   }
   $ctrl.open = function (size, parentSelector) {
     var parentElem = parentSelector ? 
