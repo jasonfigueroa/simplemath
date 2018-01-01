@@ -1,9 +1,21 @@
-<!-- modal -->
-<div id="congratsModal" class="green hidden">
-  <p>Congratulations you have completed this section!</p>
-  <button id="completeSectionBtn" ng-click="completeSection()">Continue</button>
+<!-- New Test Modal -->
+<div ng-controller="ModalDemoCtrl as $ctrl" class="modal-demo">
+  <script type="text/ng-template" id="myModalContent.html">
+      <div class="modal-header">
+          <h3 class="modal-title" id="modal-title">Great Work {{activeChildUsername}}!</h3>
+      </div>
+      <div class="modal-body" id="modal-body">
+          <p>Congratulations, you completed {{conceptName}}!</p>
+          <div><i class="far fa-trophy-alt fa-5x pulse"></i></div>
+      </div>
+      <div class="modal-footer">
+        <button class="btn btn-success" type="" ng-click="$ctrl.cancel()">Continue</button>
+      </div>
+  </script>
 </div>
+<!-- End New Test Modal -->
 
+<toaster-container toaster-options="{'time-out': 2000}"></toaster-container>
 <h1>Addition and Subtraction</h1>
 
 <h2>Adding Within 20</h2>
@@ -15,9 +27,9 @@
 </p>
 
 <p>
-  {{set.a}} + {{set.b}} = <input id="userInput" type="text" size="5" ng-model="userAnswer" ng-enter="checkAnswer()"> <!-- <span id="message" class="hidden">{{ message }}</span> -->
+  {{set.a}} + {{set.b}} = <input class="form-control" id="userInput" type="text" size="5" ng-model="userAnswer" ng-enter="checkAnswer()">
 </p>
 
-<button ng-click="checkAnswer()">Submit</button>
-<button id="nextBtn" ng-click="nextQuestion()" class="hidden">Next</button>
-<button id="showModalBtn" ng-click="showModalBtn()" class="hidden">Complete</button>
+<button class="btn btn-default" ng-click="checkAnswer()">Submit</button>
+<button id="nextBtn" ng-click="nextQuestion()" class="btn btn-default hidden">Next</button>
+<button id="showModalBtn" ng-click="openModal()" class="btn btn-default hidden">Complete</button>

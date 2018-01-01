@@ -1,4 +1,4 @@
-var app = angular.module("NgBoilerApp", ["ngRoute", "ngSanitize"])
+var app = angular.module("NgBoilerApp", ["ui.bootstrap", "ngRoute", "ngSanitize", "toaster", "ngAnimate"])
 
 // TODO change NgBoilerApp to app name
 app.config(function ($routeProvider) {

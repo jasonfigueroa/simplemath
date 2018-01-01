@@ -1,4 +1,4 @@
-app.controller("SubtractWithinTwentyCtrl", function ($scope, $rootScope, $location, Factory) {
+app.controller("SubtractWithinTwentyCtrl", function ($scope, $rootScope, $location, Factory, toaster) {
   
   /*************/
   /* Functions */
@@ -45,32 +45,49 @@ app.controller("SubtractWithinTwentyCtrl", function ($scope, $rootScope, $locati
     
     $scope.correctAnswerCount++;
 
-    messageSpan.attr('class', 'hidden');
+    // messageSpan.attr('class', 'hidden');
     nextBtn.addClass('hidden');
   };
 
   // TODO 12-21-2017 following is not in use and has to be fixed
-  $scope.completeSection = () => {
-    console.log(`activeChildId: ${activeChildId}`);
-    // EqualityFactory.markAsComplete(userId, activeChildId);
-    // log to db
+  // $scope.completeSection = () => {
+  //   console.log(`activeChildId: ${activeChildId}`);
+  //   // EqualityFactory.markAsComplete(userId, activeChildId);
+  //   // log to db
     
-    $location.url('child-dash');
+  //   $location.url('child-dash');
 
-    // TODO 12-19-2017 mark this section as complete in the db for the active user
-    console.log('TODO 12-19-2017 mark this section as complete in the db for the active user');
+  //   // TODO 12-19-2017 mark this section as complete in the db for the active user
+  //   console.log('TODO 12-19-2017 mark this section as complete in the db for the active user');
 
+  //   const childConceptObj = {
+  //     childId: $rootScope.activeChildId,
+  //     conceptId: $rootScope.activeConceptId
+  //   };
+
+  //   Factory.addConceptToChildConcepts(childConceptObj);
+  // };
+
+  $rootScope.completeSection = () => {
     const childConceptObj = {
       childId: $rootScope.activeChildId,
       conceptId: $rootScope.activeConceptId
     };
-
     Factory.addConceptToChildConcepts(childConceptObj);
+    $location.url('child-dash');
   };
 
   $scope.showModalBtn = () => {
     congratsModal.removeClass('hidden');
     document.getElementById('completeSectionBtn').focus();
+  };
+
+  const popSuccess = function(){
+    toaster.pop('success', "Correct", "Awesome job!");
+  };
+
+  const popError = function(){
+    toaster.pop('error', "Incorrect", "Sorry, please try agin.");
   };
 
   /********************/
@@ -92,7 +109,7 @@ app.controller("SubtractWithinTwentyCtrl", function ($scope, $rootScope, $locati
 
   let answer = null;
 
-  $scope.totalQuestions = 10;
+  $scope.totalQuestions = 2;
   $scope.correctAnswerCount = 0;
   
   const wrongAnswer = "Sorry that is incorrect, please try agin.";
@@ -101,7 +118,7 @@ app.controller("SubtractWithinTwentyCtrl", function ($scope, $rootScope, $locati
   $scope.message = null;
   
   // target elements
-  const messageSpan = angular.element(document.querySelector('#message'));
+  // const messageSpan = angular.element(document.querySelector('#message'));
   const nextBtn = angular.element(document.querySelector('#nextBtn'));
 
   const showModalBtn = angular.element(document.querySelector('#showModalBtn'));
@@ -120,40 +137,58 @@ app.controller("SubtractWithinTwentyCtrl", function ($scope, $rootScope, $locati
   // const messageSpan = angular.element(document.querySelector('#message'));
   // const nextBtn = angular.element(document.querySelector('#nextBtn'));
 
+  // $scope.checkAnswer = () => {
+  //   messageSpan.attr('class', 'hidden');
+  //   if ($scope.userAnswer == answer) {
+  //     if($scope.correctAnswerCount + 1 >= $scope.totalQuestions) {
+  //       // display complete section button
+  //       showModalBtn.removeClass('hidden');
+  //       document.getElementById('showModalBtn').focus();
+  //       // redirect here
+  //     } else {
+  //       // display next button
+  //       nextBtn.removeClass('hidden');
+  //       document.getElementById('nextBtn').focus();
+  //     }
+
+  //     // change color of message span to green
+  //     messageSpan.addClass('green');
+  //     // bold text
+  //     messageSpan.addClass('bold');
+  //     // change $scope.message to correctAnswer 
+  //     $scope.message = correctAnswer;
+  //     // show message
+  //     messageSpan.removeClass('hidden');
+  //     // display next button
+  //     // nextBtn.removeClass('hidden');
+
+  //   } else {
+  //     // change color of message span to red
+  //     messageSpan.addClass('red');
+  //     // bold text
+  //     messageSpan.addClass('bold');
+  //     // change $scope.message to wrongAnswer
+  //     $scope.message = wrongAnswer;
+  //     // show message
+  //     messageSpan.removeClass('hidden');
+  //   }
+  // }
+
   $scope.checkAnswer = () => {
-    messageSpan.attr('class', 'hidden');
     if ($scope.userAnswer == answer) {
+      
       if($scope.correctAnswerCount + 1 >= $scope.totalQuestions) {
-        // display complete section button
         showModalBtn.removeClass('hidden');
         document.getElementById('showModalBtn').focus();
-        // redirect here
       } else {
-        // display next button
         nextBtn.removeClass('hidden');
         document.getElementById('nextBtn').focus();
       }
-
-      // change color of message span to green
-      messageSpan.addClass('green');
-      // bold text
-      messageSpan.addClass('bold');
-      // change $scope.message to correctAnswer 
-      $scope.message = correctAnswer;
-      // show message
-      messageSpan.removeClass('hidden');
-      // display next button
-      // nextBtn.removeClass('hidden');
-
+      
+      popSuccess();
+    
     } else {
-      // change color of message span to red
-      messageSpan.addClass('red');
-      // bold text
-      messageSpan.addClass('bold');
-      // change $scope.message to wrongAnswer
-      $scope.message = wrongAnswer;
-      // show message
-      messageSpan.removeClass('hidden');
+      popError();
     }
   }
 
@@ -177,4 +212,51 @@ app.controller("SubtractWithinTwentyCtrl", function ($scope, $rootScope, $locati
       
   //   }
   // });
+});
+
+app.controller('ModalDemoCtrl', function ($uibModal, $document, $rootScope) {
+  var $ctrl = this;
+  $ctrl.items = "Hello From Controller";
+
+  $ctrl.animationsEnabled = true;
+
+  $rootScope.openModal = () => {
+    $ctrl.open();
+    // angular.element(document.querySelector('#trophy').addClass('grow'));
+    // document.getElementById('trophy').addClass('grow');
+  }
+  $ctrl.open = function (size, parentSelector) {
+    var parentElem = parentSelector ? 
+      angular.element($document[0].querySelector('.modal-demo ' + parentSelector)) : undefined;
+    var modalInstance = $uibModal.open({
+      animation: $ctrl.animationsEnabled,
+      ariaLabelledBy: 'modal-title',
+      ariaDescribedBy: 'modal-body',
+      templateUrl: 'myModalContent.html',
+      controller: 'ModalInstanceCtrl',
+      controllerAs: '$ctrl',
+      size: size,
+      appendTo: parentElem,
+      resolve: {
+        items: function () {
+          return $ctrl.items;
+        }
+      }
+    });
+  };
+});
+
+// The following is for the modal
+app.controller('ModalInstanceCtrl', function ($uibModalInstance, items, $rootScope) {
+  const $ctrl = this;
+  $ctrl.items = items;
+
+  $ctrl.ok = function () {
+    $uibModalInstance.close($ctrl.selected.item);
+  };
+
+  $ctrl.cancel = function () {
+    $uibModalInstance.dismiss('cancel');
+    $rootScope.completeSection();
+  };
 });

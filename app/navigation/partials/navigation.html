@@ -1,16 +1,18 @@
 <div id="nav-div" ng-controller="NavigationCtrl" ng-hide="locationIsRoot()">
   <div id="nav">
-    <div>
-      <a href="#!/dash/select-child" ng-click="" ng-hide="currentPath === '/dash' || currentPath === '/dash/select-child' || currentPath === '/dash/add-child' || currentPath === '/dash/view-children'">Switch User</a>
-      <a href="#!/dash" ng-click="">Dash</a>
-      <a href="#!/login" ng-click="logout()">Logout</a>
+    <div id="nav-links">
+      <a href="#!/dash/select-child" ng-click="" ng-hide="currentPath === '/dash' || currentPath === '/dash/select-child' || currentPath === '/dash/add-child' || currentPath === '/dash/view-children'"><i class="fa fa-users fa-2x" aria-hidden="true"></i> Users</a>
+      <!-- <a href="#!/dash/select-child" ng-click="" ng-hide="currentPath === '/dash' || currentPath === '/dash/select-child' || currentPath === '/dash/add-child' || currentPath === '/dash/view-children'"><i class="fal fa-users"></i> Users</a> -->
+      <a href="#!/child-dash" ng-click=""><i class="fa fa-graduation-cap fa-2x" aria-hidden="true"></i> Dash</a>
+      <a href="#!/dash" ng-click=""><i class="far fa-tachometer-alt fa-2x" aria-hidden="true"></i> Parents</a>
+      <a href="#!/login" ng-click="logout()"><i class="fa fa-sign-out fa-2x" aria-hidden="true"></i> Logout</a>
     </div>
     <!-- <h1 id="nav_active_child_username">Logged in as {{ activeChildUsername }}</h1> -->
     <div id="username_avatar_div" ng-hide="currentPath === '/dash' || currentPath === '/dash/select-child'">
       <h2 id="nav_active_child_username" ng-show="activeChildUsername">{{ activeChildUsername }}</h2>
       <img id="nav_active_child_avatar" ng-src="{{activeChildAvatarSrc}}" ng-show="activeChildUsername">
     </div>
-    <h1 id="nav_brand_logo">S1mple Math</h1>
+    <h1 id="nav_brand_logo"><i class="far fa-rocket"></i>S1mple Math</h1>
   </div>
-  <hr>
+  <!-- <hr> -->
 </div>

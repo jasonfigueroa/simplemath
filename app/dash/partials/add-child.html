@@ -1,15 +1,16 @@
+<h1>Add Child</h1>
 <form>
-    <label for="newChildUsername">Add Child</label>
-    <input type="text" ng-model="newChild.username" id="newChildUsername" ng-enter="addChild()">
+    <label class="form-group" for="newChildUsername">Username:</label>
+    <input class="form-control" type="text" ng-model="newChild.username" id="newChildUsername" ng-enter="addChild()">
     <hr>
     <form name="myForm">
-        <label for="typeSelect">Choose Type:</label>
+        <label for="typeSelect">Avatar Type:</label>
         <select name="typeSelect" id="typeSelect" class="form-control"
         ng-options="type.name for type in avatar.types track by type.id"
         ng-model="avatar.selectedType"
         ng-change="reloadImages()"></select>
     
-        <label for="backgroundSelect">Choose Background:</label>
+        <label for="backgroundSelect">Avatar Background:</label>
         <select name="backgroundSelect" id="backgroundSelect" class="form-control"
         ng-options="background.name for background in avatar.backgrounds track by background.id"
         ng-model="avatar.selectedBackground"
@@ -23,7 +24,7 @@
     
       <!-- temp off -->
       <!-- <img ng-repeat="avatarStr in avatarArray" ng-src="./assets/clear.png" alt="random avatar"/> -->
-      <form name="avatarForm">
+      <form class="form-group" name="avatarForm">
         <label>
           <input type="radio" ng-model="image.name" value="image_1">
           <img src="./assets/clear.png"></img><span class="glyphicon" ng-class="images.one.selected ? 'glyphicon-ok' : ''" id="span_1"></span>
@@ -66,5 +67,5 @@
         <div id="image-div_10" class="wrapper"><img src="./assets/clear.png" ng-click="selectImage('ten')"></img><span class="glyphicon" ng-class="images.ten.selected ? 'glyphicon-ok' : ''" id="span_10"></span></div> -->
       </div>
     <hr>
-    <button ng-click="addChild()">Submit</button>
+    <button class="btn btn-default" ng-click="addChild()">Submit</button>
   </form>

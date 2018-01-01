@@ -10,8 +10,12 @@ app.controller("ChildDashCtrl", function ($scope, $rootScope, Factory, $location
 
   $scope.trackConcept = e => {
     // console.log(e);
-    const conceptName = e.target.text;
-    Factory.getConceptId(conceptName).then(conceptId => $rootScope.activeConceptId = conceptId);
+    $rootScope.conceptName = e.target.text.trim();
+    console.log($rootScope.conceptName);
+    Factory.getConceptId($rootScope.conceptName).then(conceptId => {
+      $rootScope.activeConceptId = conceptId;
+      console.log($rootScope.activeConceptId);
+    });
   };
 
   // // add a realtime listener

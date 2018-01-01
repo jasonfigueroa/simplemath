@@ -4,24 +4,33 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Document</title>
   <!-- temp cdn's -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link href="//fonts.googleapis.com/css?family=Raleway:400,300,600" rel="stylesheet" type="text/css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/7.0.0/normalize.min.css">
+  <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"> -->
+  <link rel="stylesheet" href="lib/node_modules/angularjs-toaster/toaster.min.css">
+  <link rel="stylesheet" href="styles/fontawesome-all.css">
   <link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.css" rel="stylesheet">
-
+  
   <link rel="stylesheet" href="./styles/main.css">
   <link rel="stylesheet" href="styles/avatar-selection.css">
+  <!-- <link href="https://cdnjs.cloudflare.com/ajax/libs/angularjs-toaster/1.1.0/toaster.min.css" rel="stylesheet" /> -->
+  <title>S1mple Math</title>
+  <link rel="shortcut icon" type="image/png" href="assets/rocket.png"/>
 </head>
 <body ng-app="NgBoilerApp">
 
   <nav ng-include="'app/navigation/partials/navigation.html'"></nav>
   
-  <div ng-view></div>
+  <div class="container" ng-view></div>
+
+  <div ng-include="'app/footer/partials/footer.html'"></div>
 
   <script src="lib/node_modules/angular/angular.min.js"></script>
   <script src="lib/node_modules/angular-route/angular-route.min.js"></script>
   <!-- temp cdn -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.6.5/angular-animate.js"></script>
+
   <script src="lib/node_modules/angular-sanitize/angular-sanitize.min.js"></script>  
   <!-- temp cdn's -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.6.5/angular-touch.js"></script>
@@ -31,6 +40,9 @@
   
   <script src="https://www.gstatic.com/firebasejs/4.7.0/firebase.js"></script>
   
+  <!-- toaster -->
+  <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/angularjs-toaster/1.1.0/toaster.min.js"></script> -->
+  <script src="lib/node_modules/angularjs-toaster/toaster.min.js"></script>
 
   <!-- app scripts -->
   <script src="app/app.js"></script>
@@ -42,6 +54,7 @@
   <script src="app/login/factories/LoginFactory.js"></script>
   <script src="app/navigation/controllers/NavigationCtrl.js"></script>
   <script src="app/navigation/factories/NavigationFactory.js"></script>
+  <script src="app/footer/controllers/FooterCtrl.js"></script>
   <script src="app/dash/controllers/DashCtrl.js"></script>
   <script src="app/dash/factories/DashFactory.js"></script>
   <script src="app/dash/controllers/AddChildCtrl.js"></script>
