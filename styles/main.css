@@ -287,6 +287,46 @@ select.form-control {
   width: 250px;
 }
 
+.modal-content {
+  color:#303C6C;
+  background: linear-gradient(to bottom right, #FBE8A6, #F4976C) no-repeat;
+}
+
+.modal-content p {
+  margin-bottom: 30px;
+}
+
+.modal-content,
+.modal-footer {
+  text-align: center;
+}
+
+.modal-header,
+.modal-footer {
+  border-color: #303C6C; 
+}
+
+#registeredChildListItem {
+  padding-bottom: 10px;
+  margin-bottom: 25px;
+}
+
+#registeredChildListItem:not(:last-of-type) {
+  border-bottom: 1px solid #303C6C;
+}
+
+#registeredChildListItem h2 {
+  margin-bottom: 0;
+}
+
+#registeredChildListItem h3 {
+  margin-top: 0;
+}
+
+#registeredChildListItem button {
+  float: right;
+}
+
 /* @media (min-height: 100vh) {
   body {
     height: 100%;

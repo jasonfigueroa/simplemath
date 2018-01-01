@@ -1,4 +1,4 @@
-app.controller("AddingWithinTwentyCtrl", function ($scope, $rootScope, $location, Factory, toaster) {
+app.controller("AddingWithinTwentyCtrl", function ($uibModal, $document, $scope, $rootScope, $location, Factory, toaster) {
 
   /*************/
   /* Functions */
@@ -39,54 +39,21 @@ app.controller("AddingWithinTwentyCtrl", function ($scope, $rootScope, $location
     nextBtn.addClass('hidden');
   };
 
-  // TODO 12-21-2017 following is not in use and has to be fixed
-  $scope.completeSection = () => {
-    console.log(`activeChildId: ${activeChildId}`);
-    // EqualityFactory.markAsComplete(userId, activeChildId);
-    // log to db
-    
-    
-    // TODO 12-19-2017 mark this section as complete in the db for the active user
-    console.log('TODO 12-19-2017 mark this section as complete in the db for the active user');
-    
-    // WORKING HERE
+  $rootScope.completeSection = () => {
     const childConceptObj = {
       childId: $rootScope.activeChildId,
       conceptId: $rootScope.activeConceptId
     };
-    // Factory.addConceptToChildConcepts($rootScope.activeChildId, $rootScope.activeConceptId);
     Factory.addConceptToChildConcepts(childConceptObj);
-    // the following probably doesn't have to be here
     $location.url('child-dash');
-  };
-
-  $scope.showModalBtn = () => {
-    congratsModal.removeClass('hidden');
-    document.getElementById('completeSectionBtn').focus();
   };
 
   const popSuccess = function(){
     toaster.pop('success', "Correct", "Awesome job!");
   };
 
-  const popWarning = function(){
-    toaster.pop('warning', "Incorrect", "Sorry, please try agin.");
-    // toaster.pop({
-    //   type: 'warning',
-    //   title: 'Title text',
-    //   body: 'Body text',
-    //   timeout: 30000
-    // });
-  };
-
   const popError = function(){
     toaster.pop('error', "Incorrect", "Sorry, please try agin.");
-    // toaster.pop({
-    //   type: 'warning',
-    //   title: 'Title text',
-    //   body: 'Body text',
-    //   timeout: 30000
-    // });
   };
 
   /********************/
@@ -132,100 +99,66 @@ app.controller("AddingWithinTwentyCtrl", function ($scope, $rootScope, $location
 
   reset_template();
 
-  // $scope.checkAnswer = () => {
-  //   messageSpan.attr('class', 'hidden');
-  //   if ($scope.userAnswer == answer) {
-  //     if($scope.correctAnswerCount + 1 >= $scope.totalQuestions) {
-  //       // display complete section button
-  //       showModalBtn.removeClass('hidden');
-  //       document.getElementById('showModalBtn').focus();
-  //       // redirect here
-  //     } else {
-  //       // display next button
-  //       nextBtn.removeClass('hidden');
-  //       document.getElementById('nextBtn').focus();
-  //     }
-
-  //     // change color of message span to green
-  //     messageSpan.addClass('green');
-  //     // bold text
-  //     messageSpan.addClass('bold');
-  //     // change $scope.message to correctAnswer 
-  //     $scope.message = correctAnswer;
-  //     // show message
-  //     messageSpan.removeClass('hidden');
-  //     // display next button
-  //     // nextBtn.removeClass('hidden');
-  //   } else {
-  //     // change color of message span to red
-  //     messageSpan.addClass('red');
-  //     // bold text
-  //     messageSpan.addClass('bold');
-  //     // change $scope.message to wrongAnswer
-  //     $scope.message = wrongAnswer;
-  //     // show message
-  //     messageSpan.removeClass('hidden');
-  //   }
-  // }
-
   $scope.checkAnswer = () => {
-    // messageSpan.attr('class', 'hidden');
     if ($scope.userAnswer == answer) {
+      
       if($scope.correctAnswerCount + 1 >= $scope.totalQuestions) {
-        // display complete section button
         showModalBtn.removeClass('hidden');
         document.getElementById('showModalBtn').focus();
-        // redirect here
       } else {
-        // display next button
         nextBtn.removeClass('hidden');
         document.getElementById('nextBtn').focus();
       }
-
+      
       popSuccess();
-
-      // change color of message span to green
-      // messageSpan.addClass('green');
-      // bold text
-      // messageSpan.addClass('bold');
-      // change $scope.message to correctAnswer 
-      // $scope.message = correctAnswer;
-      // show message
-      // messageSpan.removeClass('hidden');
-      // display next button
-      // nextBtn.removeClass('hidden');
+    
     } else {
-      // popWarning();
       popError();
-      // change color of message span to red
-      // messageSpan.addClass('red');
-      // bold text
-      // messageSpan.addClass('bold');
-      // change $scope.message to wrongAnswer
-      // $scope.message = wrongAnswer;
-      // show message
-      // messageSpan.removeClass('hidden');
     }
   }
+});
 
-  // TODO 12-21-2017 haven't done anything to the following
-  // // // add a realtime listener
-  // firebase.auth().onAuthStateChanged(firebaseUser => {
-  //   if(firebaseUser) {
-  //     EqualityFactory.getUserId(firebaseUser.email).then(data => {
-  //       console.log(`data: ${data}`);
-  //       userId = data;
-  //       console.log(`userId: ${userId}`)
-  //       EqualityFactory.getActiveChildId(userId).then(data => activeChildId = data);
-  //     });
-  //     // console.log(firebaseUser.email);
-  //     // console.log('logged in');
-  //     // console.log(`userId: ${userId}`);
-      
-  //   } else {
-  //     // TODO add redirect here
-  //     console.log('not logged in');
-      
-  //   }
-  // });
+app.controller('ModalDemoCtrl', function ($uibModal, $document, $rootScope) {
+  var $ctrl = this;
+  $ctrl.items = "Hello From Controller";
+
+  $ctrl.animationsEnabled = true;
+
+  $rootScope.openModal = () => {
+    $ctrl.open();
+  }
+  $ctrl.open = function (size, parentSelector) {
+    var parentElem = parentSelector ? 
+      angular.element($document[0].querySelector('.modal-demo ' + parentSelector)) : undefined;
+    var modalInstance = $uibModal.open({
+      animation: $ctrl.animationsEnabled,
+      ariaLabelledBy: 'modal-title',
+      ariaDescribedBy: 'modal-body',
+      templateUrl: 'myModalContent.html',
+      controller: 'ModalInstanceCtrl',
+      controllerAs: '$ctrl',
+      size: size,
+      appendTo: parentElem,
+      resolve: {
+        items: function () {
+          return $ctrl.items;
+        }
+      }
+    });
+  };
+});
+
+// The following is for the modal
+app.controller('ModalInstanceCtrl', function ($uibModalInstance, items, $rootScope) {
+  const $ctrl = this;
+  $ctrl.items = items;
+
+  $ctrl.ok = function () {
+    $uibModalInstance.close($ctrl.selected.item);
+  };
+
+  $ctrl.cancel = function () {
+    $uibModalInstance.dismiss('cancel');
+    $rootScope.completeSection();
+  };
 });

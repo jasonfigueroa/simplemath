@@ -1,24 +1,24 @@
 <h1>Registered Children</h1>
 <ul>
-  <li ng-repeat="child in childrenList" class="listStyleNone">
-    <button ng-click="removeChild(child)">Remove</button>
-    {{ child.username }}
+  <li id="registeredChildListItem" ng-repeat="child in childrenList" class="listStyleNone">
+    <button class="btn btn-default" ng-click="removeChild(child)">Remove</button>
+    <h2>{{ child.username }}</h2>
     <br>
-    <h2>Progress</h2>
+    <h3>Progress</h3>
 
-    <h3>Place Value</h3>
+    <h4>Place Value</h4>
     <p style="color: red;" ng-hide="child.completedConcepts.placevalue.length">{{child.username}} hasn't completed any Place Value concepts.</p>
     <ul ng-show="child.completedConcepts.placevalue.length">
       <li ng-repeat="concept in child.completedConcepts.placevalue">{{concept.conceptTitle}}</li>
     </ul>
     
-    <h3>Addition and Subtraction</h3>
+    <h4>Addition and Subtraction</h4>
       <p style="color: red;" ng-hide="child.completedConcepts.additionandsubtraction.length">{{child.username}} hasn't completed any Addition and Subtraction concepts.</p>
       <ul ng-show="child.completedConcepts.additionandsubtraction.length">
         <li ng-repeat="concept in child.completedConcepts.additionandsubtraction">{{concept.conceptTitle}}</li>
       </ul>
 
-      <hr>
+      <!-- <hr> -->
     </li>
   </li>
 
