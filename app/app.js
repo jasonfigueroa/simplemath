@@ -2,7 +2,7 @@ var app = angular.module("NgBoilerApp", ["ui.bootstrap", "ngRoute", "ngSanitize"
 
 // TODO change NgBoilerApp to app name
 app.config(function ($routeProvider) {
-  $routeProvider
+    $routeProvider
     // TODO change routes accordingly
     .when("/", {
         templateUrl: "app/login/partials/login.html",
