@@ -77,8 +77,9 @@ body {
 }
 
 .ten-frame {
-  border: 1px solid black;
-  margin-bottom: 5px;
+  border: 2px solid #303C6C;
+  border-radius: 10px;
+  margin-bottom: 18px;
 }
 
 .ten-frame-container {
@@ -267,6 +268,10 @@ label {
 #username_avatar_div h2 {
   margin-left: 5px;
 } 
+
+.width-50 {
+  width: 50px;
+}
 
 #userInput {
   width: 50px;
