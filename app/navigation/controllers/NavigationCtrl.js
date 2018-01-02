@@ -8,7 +8,7 @@ app.controller("NavigationCtrl", function ($scope, $rootScope, $location, Factor
   // $scope.activeChildUsername = null;
 
   $scope.locationIsRoot = () => {
-    console.log('in locationIsRoot()');
+    // console.log('in locationIsRoot()');
     return $location.url() === '/';
   };
   
