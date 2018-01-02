@@ -72,14 +72,22 @@ body {
 }
 
 
-.black-background {
+/* .black-background {
   background-color: black;
+} */
+
+.blackout-td {
+  background-color: #303C6C;
 }
 
 .ten-frame {
   border: 2px solid #303C6C;
   border-radius: 10px;
   margin-bottom: 18px;
+}
+
+.inline {
+  display: inline;
 }
 
 .ten-frame-container {
@@ -95,17 +103,21 @@ body {
 }
 
 table {
-  border: 1px solid black;
+  border: 2px solid #303c6c;
+  /* border: 1px solid black; */
   max-width: 60%;
   border-collapse: collapse;
+  margin-bottom: 15px;
 }
 
-tr {
+/* tr {
   border: 1px solid black;
-}
+} */
 
 td {
-  border: 1px solid black;
+  border: 2px solid #303c6c;
+  color: #303C6C;
+  /* border: 1px solid black; */
   padding: 5px 10px;
   margin: 0;
 }

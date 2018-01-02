@@ -8,7 +8,7 @@
   What is the missing number?
 </p>
 <p>
-  51, 52, 53, <input type="text" size="5" ng-model="userAnswer">, 55, 56, , 57. 58, 59 <span id="message" class="hidden">{{ message }}</span>
+  51, 52, 53, <input class="form-control width-50 inline" type="text" ng-model="userAnswer">, 55, 56, , 57. 58, 59 <span id="message" class="hidden">{{ message }}</span>
 </p>
-<button ng-click="checkAnswer()">Submit</button>
-<button id="nextBtn" ng-click="nextQuestion()" class="hidden">Next</button>
+<button class="btn btn-default" ng-click="checkAnswer()">Submit</button>
+<button id="nextBtn" ng-click="nextQuestion()" class="btn btn-default hidden">Next</button>
