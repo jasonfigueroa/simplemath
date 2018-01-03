@@ -149,8 +149,8 @@
   </tr>
 </table>
 <p>
-  <input class="form-control width-50" type="text" ng-model="userAnswer"> <span id="message" class="hidden">{{ message }}</span>
+  <input class="form-control width-50" type="text" ng-model="userAnswer"> <span class="green bold" ng-show="userIsCorrect">That's correct, awesome job!</span><span class="red bold" ng-show="userIsIncorrect">Sorry that is incorrect, please try agin.</span><!-- <span id="message" class="hidden">{{ message }}</span> -->
 </p>
-<button class="btn btn-default" ng-click="checkAnswer()">Submit</button>
+<button class="btn btn-default" ng-click="check()">Submit</button>
 <!-- <button id="nextBtn" ng-click="nextQuestion()" class="hidden">Next</button> -->
-<button id="showModalBtn" ng-click="showModalBtn()" class="btn btn-default hidden">Complete</button>
+<button id="showModalBtn" ng-click="showModalBtn()" class="btn btn-default" ng-show="userIsCorrect">Complete</button>
