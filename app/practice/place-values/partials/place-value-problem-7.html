@@ -5,10 +5,10 @@
 <p>Question 7 of 10.</p>
 
 <p>
-  What number is right before <span class="bold">23</span>? <span id="message" class="hidden">{{ message }}</span>
+  What number is right before <span class="bold">23</span>? <span class="green bold" ng-show="userIsCorrect">That's correct, awesome job!</span><span class="red bold" ng-show="userIsIncorrect">Sorry that is incorrect, please try agin.</span><!-- <span id="message" class="hidden">{{ message }}</span> -->
 </p>
 <p>
   <input class="form-control width-50" type="text" ng-model="userAnswer">
 </p>
-<button class="btn btn-default" ng-click="checkAnswer()">Submit</button>
-<button id="nextBtn" ng-click="nextQuestion()" class="btn btn-default hidden">Next</button>
+<button class="btn btn-default" ng-click="check()">Submit</button>
+<button id="nextBtn" ng-click="nextQuestion()" class="btn btn-default" ng-show="userIsCorrect">Next</button>
