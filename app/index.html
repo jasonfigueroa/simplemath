@@ -8,8 +8,8 @@
   <link href="//fonts.googleapis.com/css?family=Raleway:400,300,600" rel="stylesheet" type="text/css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/7.0.0/normalize.min.css">
   <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"> -->
-  <link rel="stylesheet" href="lib/node_modules/angularjs-toaster/toaster.min.css">
-  <link rel="stylesheet" href="styles/fontawesome-all.css">
+  <link rel="stylesheet" href="lib/angularjs-toaster/toaster.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css">
   <link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.css" rel="stylesheet">
   
   <link rel="stylesheet" href="./styles/main.css">
@@ -20,18 +20,18 @@
 </head>
 <body ng-app="NgBoilerApp">
 
-  <nav ng-include="'app/navigation/partials/navigation.html'"></nav>
+  <nav ng-include="'navigation/partials/navigation.html'"></nav>
   
   <div class="container" ng-view></div>
 
-  <div ng-include="'app/footer/partials/footer.html'"></div>
+  <div ng-include="'footer/partials/footer.html'"></div>
 
-  <script src="lib/node_modules/angular/angular.min.js"></script>
-  <script src="lib/node_modules/angular-route/angular-route.min.js"></script>
+  <script src="lib/angular/angular.min.js"></script>
+  <script src="lib/angular-route/angular-route.min.js"></script>
   <!-- temp cdn -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.6.5/angular-animate.js"></script>
 
-  <script src="lib/node_modules/angular-sanitize/angular-sanitize.min.js"></script>  
+  <script src="lib/angular-sanitize/angular-sanitize.min.js"></script>  
   <!-- temp cdn's -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.6.5/angular-touch.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-bootstrap/2.5.0/ui-bootstrap-tpls.js"></script>
@@ -42,105 +42,105 @@
   
   <!-- toaster -->
   <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/angularjs-toaster/1.1.0/toaster.min.js"></script> -->
-  <script src="lib/node_modules/angularjs-toaster/toaster.min.js"></script>
+  <script src="lib/angularjs-toaster/toaster.min.js"></script>
 
   <!-- app scripts -->
-  <script src="app/app.js"></script>
-  <script src="app/app.config.js"></script>
+  <script src="app.js"></script>
+  <script src="app.config.js"></script>
 
-  <script src="app/factories/Factory.js"></script>
+  <script src="factories/Factory.js"></script>
 
-  <script src="app/login/controllers/LoginCtrl.js"></script>
-  <script src="app/login/factories/LoginFactory.js"></script>
-  <script src="app/navigation/controllers/NavigationCtrl.js"></script>
-  <script src="app/navigation/factories/NavigationFactory.js"></script>
-  <script src="app/footer/controllers/FooterCtrl.js"></script>
-  <script src="app/dash/controllers/DashCtrl.js"></script>
-  <script src="app/dash/factories/DashFactory.js"></script>
-  <script src="app/dash/controllers/AddChildCtrl.js"></script>
-  <script src="app/dash/factories/AddChildFactory.js"></script>
-  <script src="app/dash/controllers/ViewChildrenCtrl.js"></script>
-  <script src="app/dash/factories/ViewChildrenFactory.js"></script>
-  <script src="app/practice/controllers/SelectChildCtrl.js"></script>
-  <script src="app/practice/factories/SelectChildFactory.js"></script>
-  <script src="app/practice/controllers/ChildDashCtrl.js"></script>
-  <script src="app/practice/factories/ChildDashFactory.js"></script>
-  <script src="app/practice/problems/controllers/ProblemSubmissionCtrl.js"></script>
-  <script src="app/practice/problems/factories/ProblemSubmissionFactory.js"></script>
-  <!-- <script src="app/practice/problems/controllers/CategorySubmissionCtrl.js"></script> -->
-  <!-- <script src="app/practice/problems/factories/CategorySubmissionFactory.js"></script> -->
-  <script src="app/practice/problems/controllers/ConceptSubmissionCtrl.js"></script>
-  <script src="app/practice/problems/factories/ConceptSubmissionFactory.js"></script>
-  <script src="app/practice/place-values/controllers/PlaceValueProblem1Ctrl.js"></script>
-  <!-- <script src="app/practice/place-values/factories/PlaceValueProblemFactory.js"></script> -->
-  <script src="app/practice/place-values/controllers/PlaceValueProblem2Ctrl.js"></script>
-  <script src="app/practice/place-values/controllers/PlaceValueProblem3Ctrl.js"></script>
-  <script src="app/practice/place-values/controllers/PlaceValueProblem4Ctrl.js"></script>
-  <script src="app/practice/place-values/controllers/PlaceValueProblem5Ctrl.js"></script>
-  <script src="app/practice/place-values/controllers/PlaceValueProblem6Ctrl.js"></script>
-  <script src="app/practice/place-values/controllers/PlaceValueProblem7Ctrl.js"></script>
-  <script src="app/practice/place-values/controllers/PlaceValueProblem8Ctrl.js"></script>
-  <script src="app/practice/place-values/controllers/PlaceValueProblem9Ctrl.js"></script>
-  <script src="app/practice/place-values/controllers/PlaceValueProblem10Ctrl.js"></script>
-  <script src="app/practice/place-values/controllers/PlaceValuesCompleteCtrl.js"></script>
+  <script src="login/controllers/LoginCtrl.js"></script>
+  <script src="login/factories/LoginFactory.js"></script>
+  <script src="navigation/controllers/NavigationCtrl.js"></script>
+  <script src="navigation/factories/NavigationFactory.js"></script>
+  <script src="footer/controllers/FooterCtrl.js"></script>
+  <script src="dash/controllers/DashCtrl.js"></script>
+  <script src="dash/factories/DashFactory.js"></script>
+  <script src="dash/controllers/AddChildCtrl.js"></script>
+  <script src="dash/factories/AddChildFactory.js"></script>
+  <script src="dash/controllers/ViewChildrenCtrl.js"></script>
+  <script src="dash/factories/ViewChildrenFactory.js"></script>
+  <script src="practice/controllers/SelectChildCtrl.js"></script>
+  <script src="practice/factories/SelectChildFactory.js"></script>
+  <script src="practice/controllers/ChildDashCtrl.js"></script>
+  <script src="practice/factories/ChildDashFactory.js"></script>
+  <script src="practice/problems/controllers/ProblemSubmissionCtrl.js"></script>
+  <script src="practice/problems/factories/ProblemSubmissionFactory.js"></script>
+  <!-- <script src="practice/problems/controllers/CategorySubmissionCtrl.js"></script> -->
+  <!-- <script src="practice/problems/factories/CategorySubmissionFactory.js"></script> -->
+  <script src="practice/problems/controllers/ConceptSubmissionCtrl.js"></script>
+  <script src="practice/problems/factories/ConceptSubmissionFactory.js"></script>
+  <script src="practice/place-values/controllers/PlaceValueProblem1Ctrl.js"></script>
+  <!-- <script src="practice/place-values/factories/PlaceValueProblemFactory.js"></script> -->
+  <script src="practice/place-values/controllers/PlaceValueProblem2Ctrl.js"></script>
+  <script src="practice/place-values/controllers/PlaceValueProblem3Ctrl.js"></script>
+  <script src="practice/place-values/controllers/PlaceValueProblem4Ctrl.js"></script>
+  <script src="practice/place-values/controllers/PlaceValueProblem5Ctrl.js"></script>
+  <script src="practice/place-values/controllers/PlaceValueProblem6Ctrl.js"></script>
+  <script src="practice/place-values/controllers/PlaceValueProblem7Ctrl.js"></script>
+  <script src="practice/place-values/controllers/PlaceValueProblem8Ctrl.js"></script>
+  <script src="practice/place-values/controllers/PlaceValueProblem9Ctrl.js"></script>
+  <script src="practice/place-values/controllers/PlaceValueProblem10Ctrl.js"></script>
+  <script src="practice/place-values/controllers/PlaceValuesCompleteCtrl.js"></script>
 
   <!-- groups of 10 -->
-  <script src="app/practice/place-values/groups-of-ten/controllers/GroupsOfTen1Ctrl.js"></script>
-  <script src="app/practice/place-values/groups-of-ten/controllers/GroupsOfTen2Ctrl.js"></script>
-  <script src="app/practice/place-values/groups-of-ten/controllers/GroupsOfTen3Ctrl.js"></script>
-  <script src="app/practice/place-values/groups-of-ten/controllers/GroupsOfTen4Ctrl.js"></script>
-  <script src="app/practice/place-values/groups-of-ten/controllers/GroupsOfTen5Ctrl.js"></script>
-  <script src="app/practice/place-values/groups-of-ten/controllers/GroupsOfTen6Ctrl.js"></script>
-  <script src="app/practice/place-values/groups-of-ten/controllers/GroupsOfTen7Ctrl.js"></script>
-  <script src="app/practice/place-values/groups-of-ten/controllers/GroupsOfTen8Ctrl.js"></script>
-  <script src="app/practice/place-values/groups-of-ten/controllers/GroupsOfTen9Ctrl.js"></script>
-  <script src="app/practice/place-values/groups-of-ten/controllers/GroupsOfTen10Ctrl.js"></script>
-  <script src="app/practice/place-values/groups-of-ten/controllers/GroupsOfTenCompleteCtrl.js"></script>
+  <script src="practice/place-values/groups-of-ten/controllers/GroupsOfTen1Ctrl.js"></script>
+  <script src="practice/place-values/groups-of-ten/controllers/GroupsOfTen2Ctrl.js"></script>
+  <script src="practice/place-values/groups-of-ten/controllers/GroupsOfTen3Ctrl.js"></script>
+  <script src="practice/place-values/groups-of-ten/controllers/GroupsOfTen4Ctrl.js"></script>
+  <script src="practice/place-values/groups-of-ten/controllers/GroupsOfTen5Ctrl.js"></script>
+  <script src="practice/place-values/groups-of-ten/controllers/GroupsOfTen6Ctrl.js"></script>
+  <script src="practice/place-values/groups-of-ten/controllers/GroupsOfTen7Ctrl.js"></script>
+  <script src="practice/place-values/groups-of-ten/controllers/GroupsOfTen8Ctrl.js"></script>
+  <script src="practice/place-values/groups-of-ten/controllers/GroupsOfTen9Ctrl.js"></script>
+  <script src="practice/place-values/groups-of-ten/controllers/GroupsOfTen10Ctrl.js"></script>
+  <script src="practice/place-values/groups-of-ten/controllers/GroupsOfTenCompleteCtrl.js"></script>
 
   <!-- tens and ones -->
-  <script src="app/practice/place-values/tens-and-ones/controllers/TensAndOnes1Ctrl.js"></script>
-  <script src="app/practice/place-values/tens-and-ones/controllers/TensAndOnes2Ctrl.js"></script>
-  <script src="app/practice/place-values/tens-and-ones/controllers/TensAndOnes3Ctrl.js"></script>
-  <script src="app/practice/place-values/tens-and-ones/controllers/TensAndOnes4Ctrl.js"></script>
-  <script src="app/practice/place-values/tens-and-ones/controllers/TensAndOnes5Ctrl.js"></script>
-  <script src="app/practice/place-values/tens-and-ones/controllers/TensAndOnes6Ctrl.js"></script>
-  <script src="app/practice/place-values/tens-and-ones/controllers/TensAndOnes7Ctrl.js"></script>
-  <script src="app/practice/place-values/tens-and-ones/controllers/TensAndOnes8Ctrl.js"></script>
-  <script src="app/practice/place-values/tens-and-ones/controllers/TensAndOnesCompleteCtrl.js"></script>
+  <script src="practice/place-values/tens-and-ones/controllers/TensAndOnes1Ctrl.js"></script>
+  <script src="practice/place-values/tens-and-ones/controllers/TensAndOnes2Ctrl.js"></script>
+  <script src="practice/place-values/tens-and-ones/controllers/TensAndOnes3Ctrl.js"></script>
+  <script src="practice/place-values/tens-and-ones/controllers/TensAndOnes4Ctrl.js"></script>
+  <script src="practice/place-values/tens-and-ones/controllers/TensAndOnes5Ctrl.js"></script>
+  <script src="practice/place-values/tens-and-ones/controllers/TensAndOnes6Ctrl.js"></script>
+  <script src="practice/place-values/tens-and-ones/controllers/TensAndOnes7Ctrl.js"></script>
+  <script src="practice/place-values/tens-and-ones/controllers/TensAndOnes8Ctrl.js"></script>
+  <script src="practice/place-values/tens-and-ones/controllers/TensAndOnesCompleteCtrl.js"></script>
 
   <!-- two digit place value -->
-  <script src="app/practice/place-values/two-digit-place-value/controllers/TwoDigitPlaceValue1Ctrl.js"></script>
-  <script src="app/practice/place-values/two-digit-place-value/controllers/TwoDigitPlaceValue2Ctrl.js"></script>
-  <script src="app/practice/place-values/two-digit-place-value/controllers/TwoDigitPlaceValue3Ctrl.js"></script>
-  <script src="app/practice/place-values/two-digit-place-value/controllers/TwoDigitPlaceValue4Ctrl.js"></script>
-  <script src="app/practice/place-values/two-digit-place-value/controllers/TwoDigitPlaceValue5Ctrl.js"></script>
-  <script src="app/practice/place-values/two-digit-place-value/controllers/TwoDigitPlaceValue6Ctrl.js"></script>
-  <script src="app/practice/place-values/two-digit-place-value/controllers/TwoDigitPlaceValue7Ctrl.js"></script>
-  <script src="app/practice/place-values/two-digit-place-value/controllers/TwoDigitPlaceValue8Ctrl.js"></script>
-  <script src="app/practice/place-values/two-digit-place-value/controllers/TwoDigitPlaceValueCompleteCtrl.js"></script>
+  <script src="practice/place-values/two-digit-place-value/controllers/TwoDigitPlaceValue1Ctrl.js"></script>
+  <script src="practice/place-values/two-digit-place-value/controllers/TwoDigitPlaceValue2Ctrl.js"></script>
+  <script src="practice/place-values/two-digit-place-value/controllers/TwoDigitPlaceValue3Ctrl.js"></script>
+  <script src="practice/place-values/two-digit-place-value/controllers/TwoDigitPlaceValue4Ctrl.js"></script>
+  <script src="practice/place-values/two-digit-place-value/controllers/TwoDigitPlaceValue5Ctrl.js"></script>
+  <script src="practice/place-values/two-digit-place-value/controllers/TwoDigitPlaceValue6Ctrl.js"></script>
+  <script src="practice/place-values/two-digit-place-value/controllers/TwoDigitPlaceValue7Ctrl.js"></script>
+  <script src="practice/place-values/two-digit-place-value/controllers/TwoDigitPlaceValue8Ctrl.js"></script>
+  <script src="practice/place-values/two-digit-place-value/controllers/TwoDigitPlaceValueCompleteCtrl.js"></script>
 
   <!-- two digit comparison -->
-  <script src="app/practice/place-values/two-digit-comparison/controllers/TwoDigitComparison1Ctrl.js"></script>
-  <script src="app/practice/place-values/two-digit-comparison/controllers/TwoDigitComparison2Ctrl.js"></script>
-  <script src="app/practice/place-values/two-digit-comparison/controllers/TwoDigitComparison3Ctrl.js"></script>
-  <script src="app/practice/place-values/two-digit-comparison/controllers/TwoDigitComparison4Ctrl.js"></script>
-  <script src="app/practice/place-values/two-digit-comparison/controllers/TwoDigitComparison5Ctrl.js"></script>
-  <script src="app/practice/place-values/two-digit-comparison/controllers/TwoDigitComparison6Ctrl.js"></script>
-  <script src="app/practice/place-values/two-digit-comparison/controllers/TwoDigitComparison7Ctrl.js"></script>
-  <script src="app/practice/place-values/two-digit-comparison/controllers/TwoDigitComparison8Ctrl.js"></script>
-  <script src="app/practice/place-values/two-digit-comparison/controllers/TwoDigitComparisonCompleteCtrl.js"></script>
+  <script src="practice/place-values/two-digit-comparison/controllers/TwoDigitComparison1Ctrl.js"></script>
+  <script src="practice/place-values/two-digit-comparison/controllers/TwoDigitComparison2Ctrl.js"></script>
+  <script src="practice/place-values/two-digit-comparison/controllers/TwoDigitComparison3Ctrl.js"></script>
+  <script src="practice/place-values/two-digit-comparison/controllers/TwoDigitComparison4Ctrl.js"></script>
+  <script src="practice/place-values/two-digit-comparison/controllers/TwoDigitComparison5Ctrl.js"></script>
+  <script src="practice/place-values/two-digit-comparison/controllers/TwoDigitComparison6Ctrl.js"></script>
+  <script src="practice/place-values/two-digit-comparison/controllers/TwoDigitComparison7Ctrl.js"></script>
+  <script src="practice/place-values/two-digit-comparison/controllers/TwoDigitComparison8Ctrl.js"></script>
+  <script src="practice/place-values/two-digit-comparison/controllers/TwoDigitComparisonCompleteCtrl.js"></script>
 
   <!-- adding withing twenty -->
-  <script src="app/practice/addition-subtraction/adding-within-twenty/controllers/AddingWithinTwentyCtrl.js"></script>
+  <script src="practice/addition-subtraction/adding-within-twenty/controllers/AddingWithinTwentyCtrl.js"></script>
 
   <!-- add three numbers -->
-  <script src="app/practice/addition-subtraction/add-three-numbers/controllers/AddThreeNumbersCtrl.js"></script>
+  <script src="practice/addition-subtraction/add-three-numbers/controllers/AddThreeNumbersCtrl.js"></script>
 
   <!-- subtract within twenty -->
-  <script src="app/practice/addition-subtraction/subtract-within-twenty/controllers/SubtractWithinTwentyCtrl.js"></script>
+  <script src="practice/addition-subtraction/subtract-within-twenty/controllers/SubtractWithinTwentyCtrl.js"></script>
 
   <!-- equality -->
-  <script src="app/practice/addition-subtraction/equality/controllers/EqualityCtrl.js"></script>
-  <script src="app/practice/addition-subtraction/equality/factories/EqualityFactory.js"></script>
+  <script src="practice/addition-subtraction/equality/controllers/EqualityCtrl.js"></script>
+  <script src="practice/addition-subtraction/equality/factories/EqualityFactory.js"></script>
 </body>
 </html>

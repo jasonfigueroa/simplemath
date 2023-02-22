@@ -5,265 +5,265 @@ app.config(function ($routeProvider) {
     $routeProvider
     // TODO change routes accordingly
     .when("/", {
-        templateUrl: "app/login/partials/login.html",
+        templateUrl: "login/partials/login.html",
         controller: "LoginCtrl"
     })
     .when('/dash', {
-        templateUrl: "app/dash/partials/dash.html",
+        templateUrl: "dash/partials/dash.html",
         controller: "DashCtrl"
     })
     .when('/dash/add-child', {
-        templateUrl: "app/dash/partials/add-child.html",
+        templateUrl: "dash/partials/add-child.html",
         controller: "AddChildCtrl"
     })
     .when('/dash/view-children', {
-        templateUrl: 'app/dash/partials/view-children.html',
+        templateUrl: 'dash/partials/view-children.html',
         controller: 'ViewChildrenCtrl'
     })
     .when('/dash/select-child', {
-        templateUrl: 'app/practice/partials/select-child.html',
+        templateUrl: 'practice/partials/select-child.html',
         controller: 'SelectChildCtrl'
     })
     .when('/child-dash', {
-        templateUrl: 'app/practice/partials/child-dash.html',
+        templateUrl: 'practice/partials/child-dash.html',
         controller: 'ChildDashCtrl'
     })
     .when('/practice/problems/add', {
-        templateUrl: 'app/practice/problems/partials/problem-submission.html',
+        templateUrl: 'practice/problems/partials/problem-submission.html',
         controller: 'ProblemSubmissionCtrl'
     })
     .when('/practice/place-value-1', {
-        templateUrl: 'app/practice/place-values/partials/place-value-problem-1.html',
+        templateUrl: 'practice/place-values/partials/place-value-problem-1.html',
         controller: 'PlaceValueProblem1Ctrl'
     })
     .when('/practice/place-value-2', {
-        templateUrl: 'app/practice/place-values/partials/place-value-problem-2.html',
+        templateUrl: 'practice/place-values/partials/place-value-problem-2.html',
         controller: 'PlaceValueProblem2Ctrl'
     })
     .when('/practice/place-value-3', {
-        templateUrl: 'app/practice/place-values/partials/place-value-problem-3.html',
+        templateUrl: 'practice/place-values/partials/place-value-problem-3.html',
         controller: 'PlaceValueProblem3Ctrl'
     })
     .when('/practice/place-value-4', {
-        templateUrl: 'app/practice/place-values/partials/place-value-problem-4.html',
+        templateUrl: 'practice/place-values/partials/place-value-problem-4.html',
         controller: 'PlaceValueProblem4Ctrl'
     })
     .when('/practice/place-value-5', {
-        templateUrl: 'app/practice/place-values/partials/place-value-problem-5.html',
+        templateUrl: 'practice/place-values/partials/place-value-problem-5.html',
         controller: 'PlaceValueProblem5Ctrl'
     })
     .when('/practice/place-value-6', {
-        templateUrl: 'app/practice/place-values/partials/place-value-problem-6.html',
+        templateUrl: 'practice/place-values/partials/place-value-problem-6.html',
         controller: 'PlaceValueProblem6Ctrl'
     })
     .when('/practice/place-value-7', {
-        templateUrl: 'app/practice/place-values/partials/place-value-problem-7.html',
+        templateUrl: 'practice/place-values/partials/place-value-problem-7.html',
         controller: 'PlaceValueProblem7Ctrl'
     })
     .when('/practice/place-value-8', {
-        templateUrl: 'app/practice/place-values/partials/place-value-problem-8.html',
+        templateUrl: 'practice/place-values/partials/place-value-problem-8.html',
         controller: 'PlaceValueProblem8Ctrl'
     })
     .when('/practice/place-value-9', {
-        templateUrl: 'app/practice/place-values/partials/place-value-problem-9.html',
+        templateUrl: 'practice/place-values/partials/place-value-problem-9.html',
         controller: 'PlaceValueProblem9Ctrl'
     })
     .when('/practice/place-value-10', {
-        templateUrl: 'app/practice/place-values/partials/place-value-problem-10.html',
+        templateUrl: 'practice/place-values/partials/place-value-problem-10.html',
         controller: 'PlaceValueProblem10Ctrl'
     })
     .when('/practice/place-values-complete', {
-        templateUrl: 'app/practice/place-values/partials/place-values-complete.html',
+        templateUrl: 'practice/place-values/partials/place-values-complete.html',
         controller: 'PlaceValuesCompleteCtrl'
     })
     .when('/practice/place-values/groups-of-ten/groups-of-ten-1', {
-        templateUrl: 'app/practice/place-values/groups-of-ten/partials/groups-of-ten-1.html',
+        templateUrl: 'practice/place-values/groups-of-ten/partials/groups-of-ten-1.html',
         controller: 'GroupsOfTen1Ctrl'
     })
     .when('/practice/place-values/groups-of-ten/groups-of-ten-2', {
-        templateUrl: 'app/practice/place-values/groups-of-ten/partials/groups-of-ten-2.html',
+        templateUrl: 'practice/place-values/groups-of-ten/partials/groups-of-ten-2.html',
         controller: 'GroupsOfTen2Ctrl'
     })
     .when('/practice/place-values/groups-of-ten/groups-of-ten-3', {
-        templateUrl: 'app/practice/place-values/groups-of-ten/partials/groups-of-ten-3.html',
+        templateUrl: 'practice/place-values/groups-of-ten/partials/groups-of-ten-3.html',
         controller: 'GroupsOfTen3Ctrl'
     })
     .when('/practice/place-values/groups-of-ten/groups-of-ten-4', {
-        templateUrl: 'app/practice/place-values/groups-of-ten/partials/groups-of-ten-4.html',
+        templateUrl: 'practice/place-values/groups-of-ten/partials/groups-of-ten-4.html',
         controller: 'GroupsOfTen4Ctrl'
     })
     .when('/practice/place-values/groups-of-ten/groups-of-ten-5', {
-        templateUrl: 'app/practice/place-values/groups-of-ten/partials/groups-of-ten-5.html',
+        templateUrl: 'practice/place-values/groups-of-ten/partials/groups-of-ten-5.html',
         controller: 'GroupsOfTen5Ctrl'
     })
     .when('/practice/place-values/groups-of-ten/groups-of-ten-6', {
-        templateUrl: 'app/practice/place-values/groups-of-ten/partials/groups-of-ten-6.html',
+        templateUrl: 'practice/place-values/groups-of-ten/partials/groups-of-ten-6.html',
         controller: 'GroupsOfTen6Ctrl'
     })
     .when('/practice/place-values/groups-of-ten/groups-of-ten-7', {
-        templateUrl: 'app/practice/place-values/groups-of-ten/partials/groups-of-ten-7.html',
+        templateUrl: 'practice/place-values/groups-of-ten/partials/groups-of-ten-7.html',
         controller: 'GroupsOfTen7Ctrl'
     })
     .when('/practice/place-values/groups-of-ten/groups-of-ten-8', {
-        templateUrl: 'app/practice/place-values/groups-of-ten/partials/groups-of-ten-8.html',
+        templateUrl: 'practice/place-values/groups-of-ten/partials/groups-of-ten-8.html',
         controller: 'GroupsOfTen8Ctrl'
     })
     .when('/practice/place-values/groups-of-ten/groups-of-ten-9', {
-        templateUrl: 'app/practice/place-values/groups-of-ten/partials/groups-of-ten-9.html',
+        templateUrl: 'practice/place-values/groups-of-ten/partials/groups-of-ten-9.html',
         controller: 'GroupsOfTen9Ctrl'
     })
     .when('/practice/place-values/groups-of-ten/groups-of-ten-10', {
-        templateUrl: 'app/practice/place-values/groups-of-ten/partials/groups-of-ten-10.html',
+        templateUrl: 'practice/place-values/groups-of-ten/partials/groups-of-ten-10.html',
         controller: 'GroupsOfTen10Ctrl'
     })
     .when('/practice/place-values/groups-of-ten/groups-of-ten-complete', {
-        templateUrl: 'app/practice/place-values/groups-of-ten/partials/groups-of-ten-complete.html',
+        templateUrl: 'practice/place-values/groups-of-ten/partials/groups-of-ten-complete.html',
         controller: 'GroupsOfTenCompleteCtrl'
     })
     .when('/practice/place-values/tens-and-ones/tens-and-ones-1', {
-        templateUrl: 'app/practice/place-values/tens-and-ones/partials/tens-and-ones-1.html',
+        templateUrl: 'practice/place-values/tens-and-ones/partials/tens-and-ones-1.html',
         controller: 'TensAndOnes1Ctrl'
     })
     .when('/practice/place-values/tens-and-ones/tens-and-ones-2', {
-        templateUrl: 'app/practice/place-values/tens-and-ones/partials/tens-and-ones-2.html',
+        templateUrl: 'practice/place-values/tens-and-ones/partials/tens-and-ones-2.html',
         controller: 'TensAndOnes2Ctrl'
     })
     .when('/practice/place-values/tens-and-ones/tens-and-ones-3', {
-        templateUrl: 'app/practice/place-values/tens-and-ones/partials/tens-and-ones-3.html',
+        templateUrl: 'practice/place-values/tens-and-ones/partials/tens-and-ones-3.html',
         controller: 'TensAndOnes3Ctrl'
     })
     .when('/practice/place-values/tens-and-ones/tens-and-ones-4', {
-        templateUrl: 'app/practice/place-values/tens-and-ones/partials/tens-and-ones-4.html',
+        templateUrl: 'practice/place-values/tens-and-ones/partials/tens-and-ones-4.html',
         controller: 'TensAndOnes4Ctrl'
     })
     .when('/practice/place-values/tens-and-ones/tens-and-ones-5', {
-        templateUrl: 'app/practice/place-values/tens-and-ones/partials/tens-and-ones-5.html',
+        templateUrl: 'practice/place-values/tens-and-ones/partials/tens-and-ones-5.html',
         controller: 'TensAndOnes5Ctrl'
     })
     .when('/practice/place-values/tens-and-ones/tens-and-ones-6', {
-        templateUrl: 'app/practice/place-values/tens-and-ones/partials/tens-and-ones-6.html',
+        templateUrl: 'practice/place-values/tens-and-ones/partials/tens-and-ones-6.html',
         controller: 'TensAndOnes6Ctrl'
     })
     .when('/practice/place-values/tens-and-ones/tens-and-ones-7', {
-        templateUrl: 'app/practice/place-values/tens-and-ones/partials/tens-and-ones-7.html',
+        templateUrl: 'practice/place-values/tens-and-ones/partials/tens-and-ones-7.html',
         controller: 'TensAndOnes7Ctrl'
     })
     .when('/practice/place-values/tens-and-ones/tens-and-ones-8', {
-        templateUrl: 'app/practice/place-values/tens-and-ones/partials/tens-and-ones-8.html',
+        templateUrl: 'practice/place-values/tens-and-ones/partials/tens-and-ones-8.html',
         controller: 'TensAndOnes8Ctrl'
     })
     .when('/practice/place-values/tens-and-ones/tens-and-ones-complete', {
-        templateUrl: 'app/practice/place-values/tens-and-ones/partials/tens-and-ones-complete.html',
+        templateUrl: 'practice/place-values/tens-and-ones/partials/tens-and-ones-complete.html',
         controller: 'TensAndOnesCompleteCtrl'
     })
     .when('/practice/place-values/two-digit-place-value/two-digit-place-value-1', {
-        templateUrl: 'app/practice/place-values/two-digit-place-value/partials/two-digit-place-value-1.html',
+        templateUrl: 'practice/place-values/two-digit-place-value/partials/two-digit-place-value-1.html',
         controller: 'TwoDigitPlaceValue1Ctrl'
     })
     .when('/practice/place-values/two-digit-place-value/two-digit-place-value-2', {
-        templateUrl: 'app/practice/place-values/two-digit-place-value/partials/two-digit-place-value-2.html',
+        templateUrl: 'practice/place-values/two-digit-place-value/partials/two-digit-place-value-2.html',
         controller: 'TwoDigitPlaceValue2Ctrl'
     })
     .when('/practice/place-values/two-digit-place-value/two-digit-place-value-3', {
-        templateUrl: 'app/practice/place-values/two-digit-place-value/partials/two-digit-place-value-3.html',
+        templateUrl: 'practice/place-values/two-digit-place-value/partials/two-digit-place-value-3.html',
         controller: 'TwoDigitPlaceValue3Ctrl'
     })
     .when('/practice/place-values/two-digit-place-value/two-digit-place-value-4', {
-        templateUrl: 'app/practice/place-values/two-digit-place-value/partials/two-digit-place-value-4.html',
+        templateUrl: 'practice/place-values/two-digit-place-value/partials/two-digit-place-value-4.html',
         controller: 'TwoDigitPlaceValue4Ctrl'
     })
     .when('/practice/place-values/two-digit-place-value/two-digit-place-value-5', {
-        templateUrl: 'app/practice/place-values/two-digit-place-value/partials/two-digit-place-value-5.html',
+        templateUrl: 'practice/place-values/two-digit-place-value/partials/two-digit-place-value-5.html',
         controller: 'TwoDigitPlaceValue5Ctrl'
     })
     .when('/practice/place-values/two-digit-place-value/two-digit-place-value-6', {
-        templateUrl: 'app/practice/place-values/two-digit-place-value/partials/two-digit-place-value-6.html',
+        templateUrl: 'practice/place-values/two-digit-place-value/partials/two-digit-place-value-6.html',
         controller: 'TwoDigitPlaceValue6Ctrl'
     })
     .when('/practice/place-values/two-digit-place-value/two-digit-place-value-7', {
-        templateUrl: 'app/practice/place-values/two-digit-place-value/partials/two-digit-place-value-7.html',
+        templateUrl: 'practice/place-values/two-digit-place-value/partials/two-digit-place-value-7.html',
         controller: 'TwoDigitPlaceValue7Ctrl'
     })
     .when('/practice/place-values/two-digit-place-value/two-digit-place-value-8', {
-        templateUrl: 'app/practice/place-values/two-digit-place-value/partials/two-digit-place-value-8.html',
+        templateUrl: 'practice/place-values/two-digit-place-value/partials/two-digit-place-value-8.html',
         controller: 'TwoDigitPlaceValue8Ctrl'
     })
     .when('/practice/place-values/two-digit-place-value/two-digit-place-value-complete', {
-        templateUrl: 'app/practice/place-values/two-digit-place-value/partials/two-digit-place-value-complete.html',
+        templateUrl: 'practice/place-values/two-digit-place-value/partials/two-digit-place-value-complete.html',
         controller: 'TwoDigitPlaceValueCompleteCtrl'
     })
     .when('/practice/place-values/two-digit-comparison/two-digit-comparison-1', {
-        templateUrl: 'app/practice/place-values/two-digit-comparison/partials/two-digit-comparison-1.html',
+        templateUrl: 'practice/place-values/two-digit-comparison/partials/two-digit-comparison-1.html',
         controller: 'TwoDigitComparison1Ctrl'
     })
     .when('/practice/place-values/two-digit-comparison/two-digit-comparison-2', {
-        templateUrl: 'app/practice/place-values/two-digit-comparison/partials/two-digit-comparison-2.html',
+        templateUrl: 'practice/place-values/two-digit-comparison/partials/two-digit-comparison-2.html',
         controller: 'TwoDigitComparison2Ctrl'
     })
     .when('/practice/place-values/two-digit-comparison/two-digit-comparison-3', {
-        templateUrl: 'app/practice/place-values/two-digit-comparison/partials/two-digit-comparison-3.html',
+        templateUrl: 'practice/place-values/two-digit-comparison/partials/two-digit-comparison-3.html',
         controller: 'TwoDigitComparison3Ctrl'
     })
     .when('/practice/place-values/two-digit-comparison/two-digit-comparison-4', {
-        templateUrl: 'app/practice/place-values/two-digit-comparison/partials/two-digit-comparison-4.html',
+        templateUrl: 'practice/place-values/two-digit-comparison/partials/two-digit-comparison-4.html',
         controller: 'TwoDigitComparison4Ctrl'
     })
     .when('/practice/place-values/two-digit-comparison/two-digit-comparison-5', {
-        templateUrl: 'app/practice/place-values/two-digit-comparison/partials/two-digit-comparison-5.html',
+        templateUrl: 'practice/place-values/two-digit-comparison/partials/two-digit-comparison-5.html',
         controller: 'TwoDigitComparison5Ctrl'
     })
     .when('/practice/place-values/two-digit-comparison/two-digit-comparison-6', {
-        templateUrl: 'app/practice/place-values/two-digit-comparison/partials/two-digit-comparison-6.html',
+        templateUrl: 'practice/place-values/two-digit-comparison/partials/two-digit-comparison-6.html',
         controller: 'TwoDigitComparison6Ctrl'
     })
     .when('/practice/place-values/two-digit-comparison/two-digit-comparison-7', {
-        templateUrl: 'app/practice/place-values/two-digit-comparison/partials/two-digit-comparison-7.html',
+        templateUrl: 'practice/place-values/two-digit-comparison/partials/two-digit-comparison-7.html',
         controller: 'TwoDigitComparison7Ctrl'
     })
     .when('/practice/place-values/two-digit-comparison/two-digit-comparison-8', {
-        templateUrl: 'app/practice/place-values/two-digit-comparison/partials/two-digit-comparison-8.html',
+        templateUrl: 'practice/place-values/two-digit-comparison/partials/two-digit-comparison-8.html',
         controller: 'TwoDigitComparison8Ctrl'
     })
     .when('/practice/place-values/two-digit-comparison/two-digit-comparison-complete', {
-        templateUrl: 'app/practice/place-values/two-digit-comparison/partials/two-digit-comparison-complete.html',
+        templateUrl: 'practice/place-values/two-digit-comparison/partials/two-digit-comparison-complete.html',
         controller: 'TwoDigitComparisonCompleteCtrl'
     })
     // adding within twenty
     .when('/practice/addition-subtraction/adding-within-twenty', {
-        templateUrl: 'app/practice/addition-subtraction/adding-within-twenty/partials/adding-within-twenty.html',
+        templateUrl: 'practice/addition-subtraction/adding-within-twenty/partials/adding-within-twenty.html',
         controller: 'AddingWithinTwentyCtrl'
     })
     // add three numbers
     .when('/practice/addition-subtraction/add-three-numbers', {
-        templateUrl: 'app/practice/addition-subtraction/add-three-numbers/partials/add-three-numbers.html',
+        templateUrl: 'practice/addition-subtraction/add-three-numbers/partials/add-three-numbers.html',
         controller: 'AddThreeNumbersCtrl'
     })
     // subtract within twenty
     .when('/practice/addition-subtraction/subtract-within-twenty', {
-        templateUrl: 'app/practice/addition-subtraction/subtract-within-twenty/partials/subtract-within-twenty.html',
+        templateUrl: 'practice/addition-subtraction/subtract-within-twenty/partials/subtract-within-twenty.html',
         controller: 'SubtractWithinTwentyCtrl'
     })
     // equality
     .when('/practice/addition-subtraction/equality', {
-        templateUrl: 'app/practice/addition-subtraction/equality/partials/equality.html',
+        templateUrl: 'practice/addition-subtraction/equality/partials/equality.html',
         controller: 'EqualityCtrl'
     })
 
     // NOTE: uncomment the following to add a new concept for problems
     // .when('/practice/problems/concept/add', {
-    //     templateUrl: 'app/practice/problems/partials/concept-submission',
+    //     templateUrl: 'practice/problems/partials/concept-submission',
     //     controller: 'ConceptSubmissionCtrl'
     // })
 
     // NOTE: uncomment the following to add a new category for problems
     // .when('/practice/problems/category/add', {
-    //     templateUrl: 'app/practice/problems/partials/category-submission',
+    //     templateUrl: 'practice/problems/partials/category-submission',
     //     controller: 'CategorySubmissionCtrl'
     // })
 
     // TODO the following is old code
     // .when("/employees/new", {
-    //     templateUrl: "app/employees/partials/create.html",
+    //     templateUrl: "employees/partials/create.html",
     //     controller: "EmployeeCreateCtrl"
     // })
     // TODO the following is old code

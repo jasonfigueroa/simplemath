@@ -6,7 +6,7 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "postinstall": "npm run copy-libs",
-    "copy-libs": "cpx \"node_modules/{angular,angular-*,bootstrap/dist,jquery/dist}/**/*\" app/lib -C",
+    "copy-libs": "cpx \"node_modules/{angular,angular-*,angularjs-*,bootstrap/dist,jquery/dist}/**/*\" app/lib -C",
     "start": "http-server ./app -a localhost -p 8000 -c-1"
   },
   "repository": {
