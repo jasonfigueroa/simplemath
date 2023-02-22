@@ -1,6 +1,5 @@
-app/app.config.js
-lib/node_modules/
-lib/package-lock.json
+.vscode
+node_modules/
 webfonts/
 styles/fontawesome-all.css
-
+app/lib/
