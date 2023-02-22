@@ -8,7 +8,7 @@
   authService.$inject = ['$location'];
 
   function authService($location) {
-    var user;
+    let user;
 
     return {
       setUser: setUser,

@@ -11,7 +11,7 @@
   LoginController.$inject = ['$scope', 'authService'];
 
   function LoginController($scope, authService) {
-    var self = this;
+    const self = this;
 
     self.email = 'jdoe@email.com';
     self.password = 'password123';
@@ -19,7 +19,7 @@
 
     function login() {
       if (self.email === 'jdoe@email.com' && self.password === 'password123') {
-        var user = {
+        const user = {
           id: 1,
           email: self.email
         };
