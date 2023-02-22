@@ -1,5 +1,5 @@
 // 12-11-2017 - was experimenting with $sce but didn't work out 
-app.controller("PlaceValueProblem1Ctrl", function ($scope, $location) {
+angular.module('simpleMath').controller("PlaceValueProblem1Ctrl", function ($scope, $location) {
   // $scope.problem = "<p>\n  What is the missing number?\n</p>\n<p>\n  100, 101, 102, 103, 104, <span><input type=\"text\" ng-model=\"userAnswer\" size=\"5\"></span>, 106. 107, 108, 109, 110\n</p>";
   $scope.userAnswer = '';
   const answer = '105';

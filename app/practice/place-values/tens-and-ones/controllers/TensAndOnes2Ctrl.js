@@ -1,4 +1,4 @@
-app.controller("TensAndOnes2Ctrl", function ($scope, $location) {
+angular.module('simpleMath').controller("TensAndOnes2Ctrl", function ($scope, $location) {
 
   $scope.userAnswer = '';
   const answer = '3';

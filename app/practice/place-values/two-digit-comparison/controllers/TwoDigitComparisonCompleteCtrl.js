@@ -1,3 +1,3 @@
-app.controller("TwoDigitComparisonCompleteCtrl", function ($scope, $location) {
+angular.module('simpleMath').controller("TwoDigitComparisonCompleteCtrl", function ($scope, $location) {
   
 });

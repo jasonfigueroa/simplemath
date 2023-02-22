@@ -1,4 +1,4 @@
-app.controller("FooterCtrl", function ($scope, $rootScope, $location, Factory) {
+angular.module('simpleMath').controller("FooterCtrl", function ($scope, $rootScope, $location, Factory) {
   // $rootScope.currentPath = $location.path();
   
   // $rootScope.test = 'hello';

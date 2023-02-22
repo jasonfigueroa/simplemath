@@ -1,4 +1,4 @@
-app.controller("ProblemSubmissionCtrl", function ($scope, ProblemSubmissionFactory, CategorySubmissionFactory) {
+angular.module('simpleMath').controller("ProblemSubmissionCtrl", function ($scope, ProblemSubmissionFactory, CategorySubmissionFactory) {
     $scope.categoryList = {
       availableOptions: null,
       selectedOption: null

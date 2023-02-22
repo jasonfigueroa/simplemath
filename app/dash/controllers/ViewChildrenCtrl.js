@@ -1,4 +1,4 @@
-app.controller("ViewChildrenCtrl", function ($scope, $rootScope, ViewChildrenFactory) {
+angular.module('simpleMath').controller("ViewChildrenCtrl", function ($scope, $rootScope, ViewChildrenFactory) {
   let userId = null;
   $scope.childrenList = null;
   

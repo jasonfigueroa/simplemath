@@ -1,0 +1,14 @@
+<div id="login-div">
+  <h1><i class="fa fa-rocket"></i> S1mple Math</h1>
+  <h2>Log In</h2>
+  
+  <form class="form-group">
+    <input id="loginEmail" class="form-control" ng-model="$ctrl.email" type="email" />
+    <br>
+    <input id="loginPassword" class="form-control" ng-model="$ctrl.password" type="password" />
+    <br>
+    <button class="btn btn-default" ng-click="$ctrl.login()">Log In</button>
+    <button id="btnLogout" ng-click="$ctrl.logout()" class="btn btn-default hidden">Log Out</button>
+  </form>
+  
+</div>

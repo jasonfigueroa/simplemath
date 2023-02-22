@@ -1,3 +1,3 @@
-app.controller("TensAndOnesCompleteCtrl", function ($scope, $location) {
+angular.module('simpleMath').controller("TensAndOnesCompleteCtrl", function ($scope, $location) {
   
   });

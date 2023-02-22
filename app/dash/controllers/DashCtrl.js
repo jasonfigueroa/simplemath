@@ -1,4 +1,4 @@
-app.controller("DashCtrl", function ($scope, $rootScope, $location) {
+angular.module('simpleMath').controller("DashCtrl", function ($scope, $rootScope, $location) {
   
   console.log(`$rootScope.currentPath: ${$rootScope.currentPath}`);
   $rootScope.currentPath = $location.path();

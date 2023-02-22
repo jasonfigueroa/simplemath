@@ -1,4 +1,4 @@
-app.controller("PlaceValueProblem7Ctrl", function ($scope, $location) {
+angular.module('simpleMath').controller("PlaceValueProblem7Ctrl", function ($scope, $location) {
   
   $scope.userAnswer = '';
   const answer = '22';

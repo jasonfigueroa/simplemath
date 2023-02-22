@@ -1,4 +1,4 @@
-app.controller("ConceptSubmissionCtrl", function ($scope, ConceptSubmissionFactory) {
+angular.module('simpleMath').controller("ConceptSubmissionCtrl", function ($scope, ConceptSubmissionFactory) {
   $scope.concept = {
     title: '',
     category_id: '',

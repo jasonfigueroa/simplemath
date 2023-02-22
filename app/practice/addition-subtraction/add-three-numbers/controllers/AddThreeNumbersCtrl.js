@@ -1,4 +1,4 @@
-app.controller("AddThreeNumbersCtrl", function ($uibModal, $document, $scope, $rootScope, $location, Factory, toaster) {
+angular.module('simpleMath').controller("AddThreeNumbersCtrl", function ($uibModal, $document, $scope, $rootScope, $location, Factory, toaster) {
 
   /*************/
   /* Functions */
@@ -200,7 +200,7 @@ app.controller("AddThreeNumbersCtrl", function ($uibModal, $document, $scope, $r
   }
 });
 
-app.controller('ModalDemoCtrl', function ($uibModal, $document, $rootScope) {
+angular.module('simpleMath').controller('ModalDemoCtrl', function ($uibModal, $document, $rootScope) {
   var $ctrl = this;
   $ctrl.items = "Hello From Controller";
 
@@ -233,7 +233,7 @@ app.controller('ModalDemoCtrl', function ($uibModal, $document, $rootScope) {
 });
 
 // The following is for the modal
-app.controller('ModalInstanceCtrl', function ($uibModalInstance, items, $rootScope) {
+angular.module('simpleMath').controller('ModalInstanceCtrl', function ($uibModalInstance, items, $rootScope) {
   const $ctrl = this;
   $ctrl.items = items;
 

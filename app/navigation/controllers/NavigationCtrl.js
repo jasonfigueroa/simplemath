@@ -1,4 +1,4 @@
-app.controller("NavigationCtrl", function ($scope, $rootScope, $location, Factory) {
+angular.module('simpleMath').controller("NavigationCtrl", function ($scope, $rootScope, $location, Factory) {
   $rootScope.currentPath = $location.path();
   
   // $rootScope.test = 'hello';

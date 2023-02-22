@@ -1,4 +1,4 @@
-app.controller("GroupsOfTen10Ctrl", function ($scope, $location) {
+angular.module('simpleMath').controller("GroupsOfTen10Ctrl", function ($scope, $location) {
 
   $scope.tenFrame = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
   $scope.tens = [1, 2, 3, 4, 5];

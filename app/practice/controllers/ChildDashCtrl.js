@@ -1,4 +1,4 @@
-app.controller("ChildDashCtrl", function ($scope, $rootScope, Factory, $location) {
+angular.module('simpleMath').controller("ChildDashCtrl", function ($scope, $rootScope, Factory, $location) {
   // $rootScope.test = 'changed';
   // console.log($rootScope.test);
   // NavigationCtrl.$scope.activeChildUsernmame = 'hello';

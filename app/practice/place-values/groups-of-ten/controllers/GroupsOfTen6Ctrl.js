@@ -1,4 +1,4 @@
-app.controller("GroupsOfTen6Ctrl", function ($scope, $location) {
+angular.module('simpleMath').controller("GroupsOfTen6Ctrl", function ($scope, $location) {
 
   $scope.userAnswer = '';
   const answer = '11';

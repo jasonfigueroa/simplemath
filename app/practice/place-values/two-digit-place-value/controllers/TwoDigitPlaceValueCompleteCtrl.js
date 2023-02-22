@@ -1,3 +1,3 @@
-app.controller("TwoDigitPlaceValueCompleteCtrl", function ($scope, $location) {
+angular.module('simpleMath').controller("TwoDigitPlaceValueCompleteCtrl", function ($scope, $location) {
   
 });

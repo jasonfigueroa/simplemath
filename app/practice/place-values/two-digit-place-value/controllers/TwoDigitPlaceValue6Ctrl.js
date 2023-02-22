@@ -1,4 +1,4 @@
-app.controller("TwoDigitPlaceValue6Ctrl", function ($scope, $location) {
+angular.module('simpleMath').controller("TwoDigitPlaceValue6Ctrl", function ($scope, $location) {
   
   const answers = [
     '9 tens + 2 ones',

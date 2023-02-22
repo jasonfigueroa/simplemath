@@ -1,4 +1,4 @@
-app.controller("SelectChildCtrl", function ($scope, $rootScope, $location, SelectChildFactory) {
+angular.module('simpleMath').controller("SelectChildCtrl", function ($scope, $rootScope, $location, SelectChildFactory) {
   
   $rootScope.currentPath = $location.path();
   

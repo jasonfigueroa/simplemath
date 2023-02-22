@@ -1,4 +1,4 @@
-app.controller("TwoDigitPlaceValue1Ctrl", function ($scope, $location) {
+angular.module('simpleMath').controller("TwoDigitPlaceValue1Ctrl", function ($scope, $location) {
   const answer = 'true';
   $scope.userAnswer = null;
   

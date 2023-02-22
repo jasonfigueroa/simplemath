@@ -1,4 +1,4 @@
-app.controller("TwoDigitPlaceValue4Ctrl", function ($scope, $location) {
+angular.module('simpleMath').controller("TwoDigitPlaceValue4Ctrl", function ($scope, $location) {
   
   const answers = [
     '10 + 10 + 10 + 1 + 1 + 1 + 1',

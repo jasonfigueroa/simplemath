@@ -1,3 +1,3 @@
-app.controller("PlaceValuesCompleteCtrl", function ($scope, $location) {
+angular.module('simpleMath').controller("PlaceValuesCompleteCtrl", function ($scope, $location) {
 
 });

@@ -1,4 +1,4 @@
-app.controller("CategorySubmissionCtrl", function ($scope, CategorySubmissionFactory) {
+angular.module('simpleMath').controller("CategorySubmissionCtrl", function ($scope, CategorySubmissionFactory) {
   $scope.category = {
     name: '',
     rank: '',

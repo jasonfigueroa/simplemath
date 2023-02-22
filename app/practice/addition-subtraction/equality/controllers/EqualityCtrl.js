@@ -1,4 +1,4 @@
-app.controller("EqualityCtrl", function ($scope, $rootScope, $location, EqualityFactory, Factory, toaster) {
+angular.module('simpleMath').controller("EqualityCtrl", function ($scope, $rootScope, $location, EqualityFactory, Factory, toaster) {
   
   /*************/
   /* Functions */
@@ -253,7 +253,7 @@ app.controller("EqualityCtrl", function ($scope, $rootScope, $location, Equality
   });
 });
 
-app.controller('ModalDemoCtrl', function ($uibModal, $document, $rootScope) {
+angular.module('simpleMath').controller('ModalDemoCtrl', function ($uibModal, $document, $rootScope) {
   var $ctrl = this;
   $ctrl.items = "Hello From Controller";
 
@@ -286,7 +286,7 @@ app.controller('ModalDemoCtrl', function ($uibModal, $document, $rootScope) {
 });
 
 // The following is for the modal
-app.controller('ModalInstanceCtrl', function ($uibModalInstance, items, $rootScope) {
+angular.module('simpleMath').controller('ModalInstanceCtrl', function ($uibModalInstance, items, $rootScope) {
   const $ctrl = this;
   $ctrl.items = items;
 

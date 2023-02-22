@@ -1,4 +1,4 @@
-app.factory("ViewChildrenFactory", function ($http) {
+angular.module('simpleMath').factory("ViewChildrenFactory", function ($http) {
   return Object.create(null, {
     "cache": {
       value: null,

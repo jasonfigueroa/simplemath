@@ -1,3 +1,3 @@
-app.controller("GroupsOfTenCompleteCtrl", function ($scope, $location) {
+angular.module('simpleMath').controller("GroupsOfTenCompleteCtrl", function ($scope, $location) {
   
   });

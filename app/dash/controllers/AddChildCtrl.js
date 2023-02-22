@@ -1,4 +1,4 @@
-app.controller("AddChildCtrl", function ($scope, AddChildFactory, $location) {
+angular.module('simpleMath').controller("AddChildCtrl", function ($scope, AddChildFactory, $location) {
   let userEmail = null;
 
   $scope.newChild = {};

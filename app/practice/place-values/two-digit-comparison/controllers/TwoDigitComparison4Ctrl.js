@@ -1,4 +1,4 @@
-app.controller("TwoDigitComparison4Ctrl", function ($scope, $location) {
+angular.module('simpleMath').controller("TwoDigitComparison4Ctrl", function ($scope, $location) {
   
   $scope.userAnswer = '';
   const answer = 'greater than';
