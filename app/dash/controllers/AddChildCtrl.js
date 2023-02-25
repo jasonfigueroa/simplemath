@@ -168,7 +168,7 @@ angular.module('simpleMath').controller("AddChildCtrl", function ($scope, AddChi
     let keyPrefix = 'image_';
     let key = null;
     for(let i = 0; i < document.images.length; i++) {
-      if(document.images[i].id !== 'nav_active_child_avatar') {
+      if(document.images[i].id !== 'nav-active-child-avatar') {
         let image = document.images[i];
         image.src = "../assets/clear.png"
         let downloadingImage = new Image();

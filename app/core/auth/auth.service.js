@@ -11,11 +11,16 @@
     let user;
 
     return {
+      getLoggedInUserId: getLoggedInUserId,
       setUser: setUser,
       unsetUser: unsetUser,
       isLoggedIn: isLoggedIn,
       validateUserIsLoggedIn: validateUserIsLoggedIn
     };
+
+    function getLoggedInUserId() {
+      return user ? user.id : null;
+    }
 
     function setUser(aUser) {
       user = aUser;
@@ -37,7 +42,7 @@
 
       // If user is logged in
       if (value) {
-        $location.path('/todo');
+        $location.path('/dash');
       }
     }
   }

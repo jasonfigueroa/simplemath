@@ -20,7 +20,7 @@
 </head>
 <body ng-app="simpleMath">
 
-  <nav ng-include="'navigation/partials/navigation.html'"></nav>
+  <nav ng-include="'navigation/navigation.template.html'"></nav>
   
   <div class="container" ng-view></div>
 
@@ -57,9 +57,10 @@
   <script src="core/core.module.js"></script>
   <script src="core/auth/auth.module.js"></script>
   <script src="core/auth/auth.service.js"></script>
+  <script src="core/child/child.module.js"></script>
+  <script src="core/child/child.service.js"></script>
 
-  <script src="navigation/controllers/NavigationCtrl.js"></script>
-  <script src="navigation/factories/NavigationFactory.js"></script>
+  <script src="navigation/navigation.controller.js"></script>
   
   <script src="footer/footer.controller.js"></script>
   

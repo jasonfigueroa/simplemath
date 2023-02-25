@@ -1,0 +1,15 @@
+<div id="nav-div" ng-controller="NavigationController as vm" ng-hide="vm.isLocationLogin()">
+  <div id="nav">
+    <div id="nav-links">
+      <a href="#!/dash/select-child" ng-hide="vm.hideUsersAndDashLinks()"><i class="fa fa-users fa-2x" aria-hidden="true"></i> Users</a>
+      <a href="#!/child-dash" ng-hide="vm.hideUsersAndDashLinks()"><i class="fa fa-graduation-cap fa-2x" aria-hidden="true"></i> Dash</a>
+      <a href="#!/dash"><i class="fa fa-tachometer fa-2x" aria-hidden="true"></i> Parents</a>
+      <a href="#!/login" ng-click="vm.logout()"><i class="fa fa-sign-out fa-2x" aria-hidden="true"></i> Logout</a>
+    </div>
+    <div id="username-avatar-div" ng-hide="currentPath === '/dash' || currentPath === '/dash/select-child'">
+      <h2 id="nav-active-child-username" ng-show="activeChild.userName">{{ activeChild.userName }}</h2>
+      <img id="nav-active-child-avatar" ng-src="{{ activeChild.avatarUrl }}" ng-show="activeChild.userName">
+    </div>
+    <h1 id="nav-brand-logo"><i class="fa fa-rocket" aria-hidden="true"></i>S1mple Math</h1>
+  </div>
+</div>

@@ -1,5 +1,5 @@
 (function () {
   'use strict';
 
-  angular.module('core', ['core.auth']);
+  angular.module('core', ['core.auth', 'core.child']);
 })();
