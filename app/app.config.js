@@ -13,16 +13,14 @@
         template: '<login></login>'
       })
       .when('/dash', {
-        templateUrl: "dash/partials/dash.html",
-        controller: "DashCtrl"
+        template: '<dash></dash>'
       })
       .when('/dash/add-child', {
         templateUrl: "dash/partials/add-child.html",
         controller: "AddChildCtrl"
       })
       .when('/dash/view-children', {
-        templateUrl: 'dash/partials/view-children.html',
-        controller: 'ViewChildrenCtrl'
+        template: '<view-children></view-children>'
       })
       .when('/dash/select-child', {
         templateUrl: 'practice/partials/select-child.html',

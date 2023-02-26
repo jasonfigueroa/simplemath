@@ -10,8 +10,8 @@
     'core',
     
     // Components
-    // 'todoList',
     'login',
-    // 'logout'
+    'dash',
+    'viewChildren',
   ]);
 })();

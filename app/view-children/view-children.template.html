@@ -1,0 +1,25 @@
+<h1>Registered Children</h1>
+<ul id="registeredChildrenList">
+  <li id="registeredChildListItem" ng-repeat="child in $ctrl.childrenList" class="listStyleNone">
+    <button class="btn btn-default" ng-click="$ctrl.removeChild(child)">Remove</button>
+    <h2>{{ child.userName }}</h2>
+    <br>
+    <h3>Progress</h3>
+
+    <h4>Place Value</h4>
+    <p style="color: red;" ng-hide="child.completedConcepts.placeValue.length">
+      {{ child.userName }} hasn't completed any Place Value concepts.
+    </p>
+    <ul ng-show="child.completedConcepts.placeValue.length">
+      <li ng-repeat="concept in child.completedConcepts.placeValue">{{ concept.conceptTitle }}</li>
+    </ul>
+
+    <h4>Addition and Subtraction</h4>
+    <p style="color: red;" ng-hide="child.completedConcepts.additionAndSubtraction.length">
+      {{ child.userName }} hasn't completed any Addition and Subtraction concepts.
+    </p>
+    <ul ng-show="child.completedConcepts.additionAndSubtraction.length">
+      <li ng-repeat="concept in child.completedConcepts.additionAndSubtraction">{{ concept.conceptTitle }}</li>
+    </ul>
+  </li>
+</ul>
