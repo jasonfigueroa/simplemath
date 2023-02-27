@@ -16,8 +16,7 @@
         template: '<dash></dash>'
       })
       .when('/dash/add-child', {
-        templateUrl: "dash/partials/add-child.html",
-        controller: "AddChildCtrl"
+        template: '<add-child></add-child>'
       })
       .when('/dash/view-children', {
         template: '<view-children></view-children>'

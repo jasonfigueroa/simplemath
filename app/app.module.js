@@ -7,11 +7,14 @@
     'toaster',
     'ngAnimate',
     'ngRoute',
+    
+    // Services
     'core',
     
     // Components
     'login',
     'dash',
     'viewChildren',
+    'addChild',
   ]);
 })();

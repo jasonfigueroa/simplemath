@@ -13,7 +13,8 @@
 
     return {
       getChildren: getChildren,
-      removeChild: removeChild
+      removeChild: removeChild,
+      addChild: addChild
     };
 
     function activate() {
@@ -81,6 +82,24 @@
       }
 
       children.splice(index, 1);
+    }
+
+    function addChild(newChild) {
+      newChild.id = getId();
+      newChild.isActive = false;
+      children.push(newChild);
+    }
+
+    function getId() {
+      var max = 0;
+
+      for (var child of children) {
+        if (child.id > max) {
+          max = child.id;
+        }
+      }
+
+      return ++max;
     }
   }
 })();

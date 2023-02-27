@@ -1,0 +1,43 @@
+<h1>Add Child</h1>
+<form>
+  <label class="form-group" for="new-child-username">Username:</label>
+  <input type="text" id="new-child-username" class="form-control" ng-model="$ctrl.newChild.userName" ng-enter="$ctrl.addChild()">
+  <hr>
+  <!-- Not sure if a form names are really needed here -->
+  <form name="myForm">
+    <label for="avatar-type-select">Avatar Type:</label>
+    <select name="avatar-type-select" id="avatar-type-select" class="form-control"
+      ng-options="type.name for type in $ctrl.avatar.types track by type.id"
+      ng-model="$ctrl.avatar.selectedType" ng-change="$ctrl.loadImages()">
+    </select>
+
+    <label for="background-select">Avatar Background:</label>
+    <select name="background-select" id="background-select" class="form-control"
+      ng-options="background.name for background in $ctrl.avatar.backgrounds track by background.id"
+      ng-model="$ctrl.avatar.selectedBackground" ng-change="$ctrl.loadImages()">
+    </select>
+  </form>
+  <hr>
+
+  <form name="avatarForm" id="avatar-select-form" class="form-group">
+    <label>
+      <input type="radio" value="image_1" ng-model="$ctrl.image.name" ng-change="$ctrl.updateSelectedImage()" ng-hide="true">
+      <span class="glyphicon" id="span_1"></span>
+      <img src="./assets/clear.png"></img>
+    </label>
+    <label>
+      <input type="radio" value="image_2" ng-model="$ctrl.image.name" ng-change="$ctrl.updateSelectedImage()" ng-hide="true">
+      <span class="glyphicon" id="span_2"></span>
+      <img src="./assets/clear.png"></img>
+    </label>
+    <label>
+      <input type="radio" value="image_3" ng-model="$ctrl.image.name" ng-change="$ctrl.updateSelectedImage()" ng-hide="true">
+      <span class="glyphicon" id="span_3"></span>
+      <img src="./assets/clear.png"></img>
+    </label>
+    <br>
+    
+  </form>
+  <hr>
+  <button class="btn btn-default" ng-click="$ctrl.addChild()">Submit</button>
+</form>

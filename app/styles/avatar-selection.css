@@ -4,9 +4,21 @@ img {
   margin: 10px;
 }
 
-#typeSelect,
-#backgroundSelect {
+#avatar-type-select,
+#background-select {
   width: 150px;
+}
+
+#avatar-select-form {
+  display: flex;
+  justify-content: space-between;
+  width: 60%;
+}
+
+#avatar-select-form > label {
+  width: 200px;
+  display: flex;
+  justify-content: flex-end;
 }
 
 /* not sure if I should negate the image in the navigation bar */
@@ -31,20 +43,10 @@ img:hover:not(#nav-active-child-avatar) {
   flex-wrap: wrap;
 }
 
-.wrapper {
-  display: relative;
-  width: 144px;
-  height: 144px;
-  margin: 10px;
-}
-
-.wrapper .glyphicon {
-  /* position: absolute; */
-  top: -162px;
-  right: -131px;
-}
-
 .glyphicon-ok {
-  color: rgb(240, 4, 122);
+  color: #FFA500; 
+  left: 1.5em;
+  top: .5em;
   font-size: 30px;
+  text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
 }
