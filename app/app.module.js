@@ -16,5 +16,7 @@
     'dash',
     'viewChildren',
     'addChild',
+    'selectChild',
+    'childDash',
   ]);
 })();

@@ -14,7 +14,8 @@
     return {
       getChildren: getChildren,
       removeChild: removeChild,
-      addChild: addChild
+      addChild: addChild,
+      activateChild: activateChild
     };
 
     function activate() {
@@ -31,7 +32,7 @@
           parentId: 1,
           userName: 'Sarah',
           avatarUrl: 'https://robohash.org/3',
-          isActive: true,
+          isActive: false,
           completedConcepts: {
             placeValue: [
               {
@@ -68,6 +69,24 @@
       }
 
       return parentsChildren;
+    }
+
+    function activateChild(parentId, childId) {
+      deactivateChildren(parentId);
+      for (const child of children) {
+        if (parentId === child.parentId && child.id === childId) {
+          child.isActive = true;
+          break;
+        }
+      }
+    }
+
+    function deactivateChildren(parentId) {
+      for (const child of children) {
+        if (child.parentId === parentId) {
+          child.isActive = false;
+        }
+      }
     }
 
     function removeChild(childId) {

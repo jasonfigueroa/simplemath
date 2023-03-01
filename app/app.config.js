@@ -22,12 +22,10 @@
         template: '<view-children></view-children>'
       })
       .when('/dash/select-child', {
-        templateUrl: 'practice/partials/select-child.html',
-        controller: 'SelectChildCtrl'
+        template: '<select-child></select-child>'
       })
       .when('/child-dash', {
-        templateUrl: 'practice/partials/child-dash.html',
-        controller: 'ChildDashCtrl'
+        template: '<child-dash></child-dash>'
       })
       .when('/practice/problems/add', {
         templateUrl: 'practice/problems/partials/problem-submission.html',
