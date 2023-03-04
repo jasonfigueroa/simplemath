@@ -7,8 +7,6 @@
 
   <p>
     What number is right before <span class="bold">77</span>? 
-    <span class="green bold" ng-show="vm.isUserCorrect">That's correct, awesome job!</span>
-    <span class="red bold" ng-show="!vm.isUserCorrect && vm.isUserSubmittedAnswer">Sorry that is incorrect, please try agin.</span>
   </p>
   <p>
     <input class="form-control width-50" type="text" ng-model="vm.userAnswer" ng-enter="vm.checkAnswer()">

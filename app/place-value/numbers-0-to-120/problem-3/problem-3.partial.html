@@ -9,8 +9,6 @@
 
   <p>
     <input class="form-control width-50 inline" type="text" ng-model="vm.userAnswer" ng-enter="vm.checkAnswer()"> , 1, 2, 3, 4, 5, 6, 7, 8, 9 
-    <span class="green bold" ng-show="vm.isUserCorrect">That's correct, awesome job!</span>
-    <span class="red bold" ng-show="!vm.isUserCorrect && vm.isUserSubmittedAnswer">Sorry that is incorrect, please try agin.</span>
   </p>
   <button class="btn btn-default" ng-click="vm.checkAnswer()" ng-disabled="vm.isUserCorrect">Submit</button>
   <button id="nextBtn" ng-click="vm.sharedService.nextQuestion()" class="btn btn-default" ng-show="vm.isUserCorrect">Next</button>
