@@ -18,5 +18,6 @@
     'addChild',
     'selectChild',
     'childDash',
+    'placeValue',
   ]);
 })();

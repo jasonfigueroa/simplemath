@@ -15,7 +15,8 @@
       getChildren: getChildren,
       removeChild: removeChild,
       addChild: addChild,
-      activateChild: activateChild
+      activateChild: activateChild,
+      addConceptToChildCompletedConcepts: addConceptToChildCompletedConcepts
     };
 
     function activate() {
@@ -101,6 +102,30 @@
       }
 
       children.splice(index, 1);
+    }
+
+    function addConceptToChildCompletedConcepts(childId, conceptCategory, conceptTitle) {
+      for (const child of children) {
+        if (child.id === childId) {
+          if (!child.completedConcepts) {
+            child.completedConcepts = {};
+          }
+
+          if (!child.completedConcepts[conceptCategory]) {
+            child.completedConcepts[conceptCategory] = [];
+          } 
+
+          for (const concept of child.completedConcepts[conceptCategory]) {
+            // If user has already completed the concept it will not get readded
+            if (concept.conceptTitle === conceptTitle) {
+              return;
+            }
+          }
+
+          child.completedConcepts[conceptCategory].push({ conceptTitle });
+          break;
+        }
+      }
     }
 
     function addChild(newChild) {

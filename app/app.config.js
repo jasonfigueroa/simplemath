@@ -31,49 +31,8 @@
         templateUrl: 'practice/problems/partials/problem-submission.html',
         controller: 'ProblemSubmissionCtrl'
       })
-      .when('/practice/place-value-1', {
-        templateUrl: 'practice/place-values/partials/place-value-problem-1.html',
-        controller: 'PlaceValueProblem1Ctrl'
-      })
-      .when('/practice/place-value-2', {
-        templateUrl: 'practice/place-values/partials/place-value-problem-2.html',
-        controller: 'PlaceValueProblem2Ctrl'
-      })
-      .when('/practice/place-value-3', {
-        templateUrl: 'practice/place-values/partials/place-value-problem-3.html',
-        controller: 'PlaceValueProblem3Ctrl'
-      })
-      .when('/practice/place-value-4', {
-        templateUrl: 'practice/place-values/partials/place-value-problem-4.html',
-        controller: 'PlaceValueProblem4Ctrl'
-      })
-      .when('/practice/place-value-5', {
-        templateUrl: 'practice/place-values/partials/place-value-problem-5.html',
-        controller: 'PlaceValueProblem5Ctrl'
-      })
-      .when('/practice/place-value-6', {
-        templateUrl: 'practice/place-values/partials/place-value-problem-6.html',
-        controller: 'PlaceValueProblem6Ctrl'
-      })
-      .when('/practice/place-value-7', {
-        templateUrl: 'practice/place-values/partials/place-value-problem-7.html',
-        controller: 'PlaceValueProblem7Ctrl'
-      })
-      .when('/practice/place-value-8', {
-        templateUrl: 'practice/place-values/partials/place-value-problem-8.html',
-        controller: 'PlaceValueProblem8Ctrl'
-      })
-      .when('/practice/place-value-9', {
-        templateUrl: 'practice/place-values/partials/place-value-problem-9.html',
-        controller: 'PlaceValueProblem9Ctrl'
-      })
-      .when('/practice/place-value-10', {
-        templateUrl: 'practice/place-values/partials/place-value-problem-10.html',
-        controller: 'PlaceValueProblem10Ctrl'
-      })
-      .when('/practice/place-values-complete', {
-        templateUrl: 'practice/place-values/partials/place-values-complete.html',
-        controller: 'PlaceValuesCompleteCtrl'
+      .when('/practice/place-value/numbers-0-to-120/:id', {
+        template: '<numbers-0-to-120></numbers-0-to-120>'
       })
       .when('/practice/place-values/groups-of-ten/groups-of-ten-1', {
         templateUrl: 'practice/place-values/groups-of-ten/partials/groups-of-ten-1.html',
