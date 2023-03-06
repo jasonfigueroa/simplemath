@@ -1,12 +1,15 @@
 (function () {
   angular
     .module('placeValue.numbers0To120')
-    .controller("Problem10Controller", Problem10Controller);
+    .component("problem10", {
+      templateUrl: 'place-value/numbers-0-to-120/problem-10/problem-10.template.html',
+      controller: Problem10Controller
+    });
 
   Problem10Controller.$inject = ['$rootScope', '$location', 'childService', 'toastService'];
 
   function Problem10Controller($rootScope, $location, childService, toastService) {
-    const vm = this;
+    const self = this;
     const correctAnswer = '103';
     const inputEl = document.querySelector('input');
     const showModalBtn = document.getElementById('showModalBtn');
@@ -16,12 +19,12 @@
     // angularjs way
     const congratsModal = angular.element(document.querySelector('#congratsModal'));
 
-    vm.userAnswer = '';
-    vm.isUserCorrect = false;
-    vm.isCompleteBtnClicked = false;
-    vm.checkAnswer = checkAnswer;
-    vm.showModal = showModal;
-    vm.completeSection = completeSection;
+    self.userAnswer = '';
+    self.isUserCorrect = false;
+    self.isCompleteBtnClicked = false;
+    self.checkAnswer = checkAnswer;
+    self.showModal = showModal;
+    self.completeSection = completeSection;
 
     activate();
 
@@ -30,9 +33,9 @@
     }
 
     function checkAnswer() {
-      vm.isUserCorrect = vm.userAnswer === correctAnswer;
+      self.isUserCorrect = self.userAnswer === correctAnswer;
 
-      if (vm.isUserCorrect) {
+      if (self.isUserCorrect) {
         toastService.success();
 
         inputEl.blur();
@@ -46,7 +49,7 @@
 
     function showModal() {
       congratsModal.removeClass('hidden');
-      vm.isCompleteBtnClicked = true;
+      self.isCompleteBtnClicked = true;
       completeSectionBtn.focus();
     };
 

@@ -1,0 +1,15 @@
+<div>
+  <h1>Place Value</h1>
+
+  <h2>Numbers 0 to 120</h2>
+
+  <p>Question 3 of 10.</p>
+
+  <p>What is the missing number?</p>
+
+  <p>
+    <input class="form-control width-50 inline" type="text" ng-model="$ctrl.userAnswer" ng-enter="$ctrl.checkAnswer()"> , 1, 2, 3, 4, 5, 6, 7, 8, 9 
+  </p>
+  <button class="btn btn-default" ng-click="$ctrl.checkAnswer()" ng-disabled="$ctrl.isUserCorrect">Submit</button>
+  <button id="nextBtn" ng-click="$ctrl.sharedService.nextQuestion()" class="btn btn-default" ng-show="$ctrl.isUserCorrect">Next</button>
+</div>

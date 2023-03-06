@@ -3,7 +3,10 @@
 
   angular
     .module('placeValue.numbers0To120')
-    .controller('Problem1Controller', Problem1Controller);
+    .component('problem1', {
+      templateUrl: 'place-value/numbers-0-to-120/problem-1/problem-1.template.html',
+      controller: Problem1Controller
+    });
 
   Problem1Controller.$inject = ['$scope', 'sharedService', 'toastService'];
 
@@ -11,15 +14,15 @@
     // The following is an example of how to access a member variable of a parent scope
     // const parentMessage = $scope.$parent.parentMessage;
     
-    const vm = this;
+    const self = this;
     const correctAnswer = '105';
     const inputEl = document.querySelector('input');
     const nextBtn = document.getElementById('nextBtn');
 
-    vm.userAnswer = '';
-    vm.isUserCorrect = false;
-    vm.checkAnswer = checkAnswer;
-    vm.sharedService = sharedService;
+    self.userAnswer = '';
+    self.isUserCorrect = false;
+    self.checkAnswer = checkAnswer;
+    self.sharedService = sharedService;
 
     activate();
 
@@ -28,9 +31,9 @@
     }
     
     function checkAnswer() {
-      vm.isUserCorrect = vm.userAnswer === correctAnswer;
+      self.isUserCorrect = self.userAnswer === correctAnswer;
       
-      if (vm.isUserCorrect) {
+      if (self.isUserCorrect) {
         toastService.success();
         
         inputEl.blur();

@@ -3,20 +3,23 @@
 
   angular
     .module('placeValue.numbers0To120')
-    .controller('Problem2Controller', Problem2Controller);
+    .component('problem2', {
+      templateUrl: 'place-value/numbers-0-to-120/problem-2/problem-2.template.html',
+      controller: Problem2Controller
+    });
 
   Problem2Controller.$inject = ['sharedService', 'toastService'];
 
   function Problem2Controller(sharedService, toastService) {
-    const vm = this;
+    const self = this;
     const correctAnswer = '54';
     const inputEl = document.querySelector('input');
     const nextBtn = document.getElementById('nextBtn');
 
-    vm.userAnswer = '';
-    vm.isUserCorrect = false;
-    vm.checkAnswer = checkAnswer;
-    vm.sharedService = sharedService;
+    self.userAnswer = '';
+    self.isUserCorrect = false;
+    self.checkAnswer = checkAnswer;
+    self.sharedService = sharedService;
 
     activate();
 
@@ -25,9 +28,9 @@
     }
 
     function checkAnswer() {
-      vm.isUserCorrect = vm.userAnswer === correctAnswer;
+      self.isUserCorrect = self.userAnswer === correctAnswer;
       
-      if (vm.isUserCorrect) {
+      if (self.isUserCorrect) {
         toastService.success();
         
         inputEl.blur();

@@ -1,12 +1,16 @@
-<div ng-controller="Problem9Controller as vm">
+<div>
+  <div id="congratsModal" class="green hidden">
+    <p>Congratulations you have completed this section!</p>
+    <button id="completeSectionBtn" ng-click="$ctrl.completeSection()">Continue</button>
+  </div>
+
   <h1>Place Value</h1>
 
   <h2>Numbers 0 to 120</h2>
 
-  <p>Question 9 of 10.</p>
+  <p>Question 10 of 10.</p>
 
   <p>What is the missing number in the table?</p>
-
   <table>
     <tr>
       <td>1</td>
@@ -119,7 +123,7 @@
     <tr>
       <td>101</td>
       <td>102</td>
-      <td>103</td>
+      <td class="blackout-td"></td>
       <td>104</td>
       <td>105</td>
       <td>106</td>
@@ -134,7 +138,7 @@
       <td>113</td>
       <td>114</td>
       <td>115</td>
-      <td class="blackout-td"></td>
+      <td>116</td>
       <td>117</td>
       <td>118</td>
       <td>119</td>
@@ -142,8 +146,8 @@
     </tr>
   </table>
   <p>
-    <input class="form-control width-50" type="text" ng-model="vm.userAnswer" ng-enter="vm.checkAnswer()"> 
+    <input class="form-control width-50" type="text" ng-model="$ctrl.userAnswer" ng-enter="$ctrl.checkAnswer()"> 
   </p>
-  <button class="btn btn-default" ng-click="vm.checkAnswer()" ng-disabled="vm.isUserCorrect">Submit</button>
-  <button id="nextBtn" ng-click="vm.sharedService.nextQuestion()" class="btn btn-default" ng-show="vm.isUserCorrect">Next</button>
+  <button class="btn btn-default" ng-click="$ctrl.checkAnswer()" ng-disabled="$ctrl.isUserCorrect">Submit</button>
+  <button id="showModalBtn" ng-click="$ctrl.showModal()" class="btn btn-default" ng-show="$ctrl.isUserCorrect" ng-disabled="$ctrl.isCompleteBtnClicked">Complete</button>
 </div>
