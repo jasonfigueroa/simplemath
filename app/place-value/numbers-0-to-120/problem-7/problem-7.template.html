@@ -9,8 +9,17 @@
     What number is right before <span class="bold">23</span>? 
   </p>
   <p>
-    <input class="form-control width-50" type="text" ng-model="$ctrl.userAnswer" ng-enter="$ctrl.checkAnswer()">
+    <input
+      class="form-control width-50"
+      type="text"
+      ng-model="$ctrl.userAnswer"
+      ng-enter="$ctrl.checkAnswer({ userAnswer: $ctrl.userAnswer, correctAnswer: $ctrl.correctAnswer })">
   </p>
-  <button class="btn btn-default" ng-click="$ctrl.checkAnswer()" ng-disabled="$ctrl.isUserCorrect">Submit</button>
-  <button id="nextBtn" ng-click="$ctrl.sharedService.nextQuestion()" class="btn btn-default" ng-show="$ctrl.isUserCorrect">Next</button>
+  <button
+    class="btn btn-default"
+    ng-click="$ctrl.checkAnswer({ userAnswer: $ctrl.userAnswer, correctAnswer: $ctrl.correctAnswer })"
+    ng-disabled="$ctrl.isUserCorrect">
+    Submit
+  </button>
+  <button id="nextBtn" ng-click="$ctrl.nextQuestion()" class="btn btn-default" ng-show="$ctrl.isUserCorrect">Next</button>
 </div>

@@ -4,42 +4,24 @@
   angular
     .module('placeValue.numbers0To120')
     .component('problem5', {
+      bindings: {
+        checkAnswer: '&',
+        isUserCorrect: '<',
+        nextQuestion: '&'
+      },
       templateUrl: 'place-value/numbers-0-to-120/problem-5/problem-5.template.html',
       controller: Problem5Controller
     });
 
-  Problem5Controller.$inject = ['sharedService', 'toastService'];
+  Problem5Controller.$inject = [];
 
-  function Problem5Controller(sharedService, toastService) {
+  function Problem5Controller() {
     const self = this;
-    const correctAnswer = '76';
-    const inputEl = document.querySelector('input');
-    const nextBtn = document.getElementById('nextBtn');
-
+    self.correctAnswer = '76';
     self.userAnswer = '';
-    self.isUserCorrect = false;
-    self.checkAnswer = checkAnswer;
-    self.sharedService = sharedService;
 
-    activate();
-
-    function activate() {
-      inputEl.focus();
-    }
-
-    function checkAnswer() {
-      self.isUserCorrect = self.userAnswer === correctAnswer;
-      
-      if (self.isUserCorrect) {
-        toastService.success();
-        
-        inputEl.blur();
-        
-        nextBtn.classList.remove('ng-hide');
-        nextBtn.focus();
-      } else {
-        toastService.error();
-      }
+    self.$onInit = function () {
+      document.querySelector('input').focus();
     }
   }
 })();
