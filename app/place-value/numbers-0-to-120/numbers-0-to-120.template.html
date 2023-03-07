@@ -1,10 +1,85 @@
-<div ng-if="$ctrl.isProblem1()" ng-include="'place-value/numbers-0-to-120/problem-1/problem-1.partial.html'"></div>
-<div ng-if="$ctrl.isProblem2()" ng-include="'place-value/numbers-0-to-120/problem-2/problem-2.partial.html'"></div>
-<div ng-if="$ctrl.isProblem3()" ng-include="'place-value/numbers-0-to-120/problem-3/problem-3.partial.html'"></div>
-<div ng-if="$ctrl.isProblem4()" ng-include="'place-value/numbers-0-to-120/problem-4/problem-4.partial.html'"></div>
-<div ng-if="$ctrl.isProblem5()" ng-include="'place-value/numbers-0-to-120/problem-5/problem-5.partial.html'"></div>
-<div ng-if="$ctrl.isProblem6()" ng-include="'place-value/numbers-0-to-120/problem-6/problem-6.partial.html'"></div>
-<div ng-if="$ctrl.isProblem7()" ng-include="'place-value/numbers-0-to-120/problem-7/problem-7.partial.html'"></div>
-<div ng-if="$ctrl.isProblem8()" ng-include="'place-value/numbers-0-to-120/problem-8/problem-8.partial.html'"></div>
-<div ng-if="$ctrl.isProblem9()" ng-include="'place-value/numbers-0-to-120/problem-9/problem-9.partial.html'"></div>
-<div ng-if="$ctrl.isProblem10()" ng-include="'place-value/numbers-0-to-120/problem-10/problem-10.partial.html'"></div>
+<div id="congratsModal" class="green hidden">
+  <p>Congratulations you have completed this section!</p>
+  <button id="completeSectionBtn" ng-click="$ctrl.completeSection()">Continue</button>
+</div>
+
+<div ng-if="$ctrl.isProblem1()">
+  <problem-1
+    check-answer="$ctrl.checkAnswer(userAnswer, correctAnswer)"
+    is-user-correct="$ctrl.isUserCorrect"
+    next-question="$ctrl.nextQuestion()"
+    ></problem-1>
+</div>
+
+<div ng-if="$ctrl.isProblem2()">
+  <problem-2
+    check-answer="$ctrl.checkAnswer(userAnswer, correctAnswer)"
+    is-user-correct="$ctrl.isUserCorrect"
+    next-question="$ctrl.nextQuestion()"
+  ></problem-2>
+</div>
+
+<div ng-if="$ctrl.isProblem3()">
+  <problem-3
+    check-answer="$ctrl.checkAnswer(userAnswer, correctAnswer)"
+    is-user-correct="$ctrl.isUserCorrect"
+    next-question="$ctrl.nextQuestion()"
+  ></problem-3>
+</div>
+
+<div ng-if="$ctrl.isProblem4()">
+  <problem-4
+    check-answer="$ctrl.checkAnswer(userAnswer, correctAnswer)"
+    is-user-correct="$ctrl.isUserCorrect"
+    next-question="$ctrl.nextQuestion()"
+  ></problem-4>
+</div>
+
+<div ng-if="$ctrl.isProblem5()">
+  <problem-5
+    check-answer="$ctrl.checkAnswer(userAnswer, correctAnswer)"
+    is-user-correct="$ctrl.isUserCorrect"
+    next-question="$ctrl.nextQuestion()"
+  ></problem-5>
+</div>
+
+<div ng-if="$ctrl.isProblem6()">
+  <problem-6
+    check-answer="$ctrl.checkAnswer(userAnswer, correctAnswer)"
+    is-user-correct="$ctrl.isUserCorrect"
+    next-question="$ctrl.nextQuestion()"
+  ></problem-6>
+</div>
+
+<div ng-if="$ctrl.isProblem7()">
+  <problem-7
+    check-answer="$ctrl.checkAnswer(userAnswer, correctAnswer)"
+    is-user-correct="$ctrl.isUserCorrect"
+    next-question="$ctrl.nextQuestion()"
+  ></problem-7>
+</div>
+
+<div ng-if="$ctrl.isProblem8()">
+  <problem-8
+    check-answer="$ctrl.checkAnswer(userAnswer, correctAnswer)"
+    is-user-correct="$ctrl.isUserCorrect"
+    next-question="$ctrl.nextQuestion()"
+  ></problem-8>
+</div>
+
+<div ng-if="$ctrl.isProblem9()">
+  <problem-9
+  check-answer="$ctrl.checkAnswer(userAnswer, correctAnswer)"
+  is-user-correct="$ctrl.isUserCorrect"
+  next-question="$ctrl.nextQuestion()"
+  ></problem-9>
+</div>
+
+<div ng-if="$ctrl.isProblem10()">
+  <problem-10
+    check-answer="$ctrl.checkAnswer(userAnswer, correctAnswer)"
+    is-user-correct="$ctrl.isUserCorrect"
+    show-modal="$ctrl.showModal()"
+    is-complete-btn-clicked="$ctrl.isCompleteBtnClicked"
+  ></problem-10>
+</div>

@@ -8,9 +8,9 @@
       controller: Numbers0To120
     });
 
-  Numbers0To120.$inject = ['$routeParams', '$location'];
+  Numbers0To120.$inject = ['$rootScope', '$routeParams', '$location', 'childService', 'toastService'];
 
-  function Numbers0To120($routeParams, $location) {
+  function Numbers0To120($rootScope, $routeParams, $location, childService, toastService) {
     const validIds = ['1', '2', '3', '4', '5', '6', '7', '8', '9', '10'];
     
     if (!$routeParams.id || !isValidId($routeParams.id)) {
@@ -19,10 +19,14 @@
     
     const self = this;
 
-    // The following was only left here as a clue to how to access member 
-    // variables of a parent scope. See place-value-problem-1.controller.js 
-    // to get a better idea.
-    // self.parentMessage = 'Luke I am your father.';
+    // Shared with child components
+    self.isCompleteBtnClicked = false;
+    self.isUserCorrect = false;
+    self.checkAnswer = checkAnswer;
+    self.nextQuestion = nextQuestion;
+    
+    self.showModal = showModal;
+    self.completeSection = completeSection;
 
     self.isProblem1 = isProblem1;
     self.isProblem2 = isProblem2;
@@ -84,5 +88,55 @@
     function isProblem10() {
       return $routeParams.id === '10';
     }
+
+    function checkAnswer(userAnswer, correctAnswer) {
+      self.isUserCorrect = userAnswer === correctAnswer;
+
+      if (self.isUserCorrect) {
+        toastService.success();
+
+        document.querySelector('input').blur();
+
+        if (!isProblem10()) {
+          // Had to explicitly remove this class here in order to make the next 
+          // button available for focus
+          document.getElementById('nextBtn').classList.remove('ng-hide');
+          document.getElementById('nextBtn').focus();
+        } else {
+          document.getElementById('showModalBtn').classList.remove('ng-hide');
+          document.getElementById('showModalBtn').focus();
+        }
+        
+      } else {
+        toastService.error();
+      }
+    }
+
+    function nextQuestion() {
+      const urlSegments = $location.path().split('/');
+      const currentId = urlSegments[urlSegments.length - 1];
+      const nextId = Number(currentId) + 1;
+
+      $location.url(`practice/place-value/numbers-0-to-120/${nextId}`);
+    };
+
+    function showModal() {
+      // The following was left here as a reference to how to select an element the 
+      // angularjs way
+      angular.element(document.querySelector('#congratsModal')).removeClass('hidden');
+      
+      self.isCompleteBtnClicked = true;
+      document.getElementById('completeSectionBtn').focus();
+    };
+
+    function completeSection() {
+      const childId = $rootScope.activeChild.id;
+      const sectionCategory = $rootScope.activeChild.activeConcept.category;
+      const sectionName = $rootScope.activeChild.activeConcept.name;
+
+      childService.addConceptToChildCompletedConcepts(childId, sectionCategory, sectionName);
+
+      $location.url('child-dash');
+    };
   }
 })();

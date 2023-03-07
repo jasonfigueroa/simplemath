@@ -1,0 +1,26 @@
+<div>
+  <h1>Place Value</h1>
+
+  <h2>Numbers 0 to 120</h2>
+
+  <p>Question 4 of 10.</p>
+
+  <p>What is the missing number?</p>
+
+  <p>
+    29, 30, 31, 32, 34, 35, 36, 
+    <input
+      class="form-control width-50 inline"
+      type="text"
+      ng-model="$ctrl.userAnswer"
+      ng-enter="$ctrl.checkAnswer({ userAnswer: $ctrl.userAnswer, correctAnswer: $ctrl.correctAnswer })">
+      , 38, 39 
+  </p>
+  <button
+    class="btn btn-default"
+    ng-click="$ctrl.checkAnswer({ userAnswer: $ctrl.userAnswer, correctAnswer: $ctrl.correctAnswer })"
+    ng-disabled="$ctrl.isUserCorrect">
+    Submit
+  </button>
+  <button id="nextBtn" ng-click="$ctrl.nextQuestion()" class="btn btn-default" ng-show="$ctrl.isUserCorrect">Next</button>
+</div>
