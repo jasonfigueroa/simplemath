@@ -8,9 +8,9 @@
       controller: Numbers0To120
     });
 
-  Numbers0To120.$inject = ['$rootScope', '$routeParams', '$location', 'childService', 'toastService'];
+  Numbers0To120.$inject = ['$rootScope', '$routeParams', '$location', '$uibModal', 'childService', 'toastService'];
 
-  function Numbers0To120($rootScope, $routeParams, $location, childService, toastService) {
+  function Numbers0To120($rootScope, $routeParams, $location, $uibModal, childService, toastService) {
     const validIds = ['1', '2', '3', '4', '5', '6', '7', '8', '9', '10'];
     
     if (!$routeParams.id || !isValidId($routeParams.id)) {
@@ -26,7 +26,6 @@
     self.nextQuestion = nextQuestion;
     
     self.showModal = showModal;
-    self.completeSection = completeSection;
 
     self.isProblem1 = isProblem1;
     self.isProblem2 = isProblem2;
@@ -120,13 +119,15 @@
       $location.url(`practice/place-value/numbers-0-to-120/${nextId}`);
     };
 
-    function showModal() {
-      // The following was left here as a reference to how to select an element the 
-      // angularjs way
-      angular.element(document.querySelector('#congratsModal')).removeClass('hidden');
-      
+    function showModal() {      
       self.isCompleteBtnClicked = true;
-      document.getElementById('completeSectionBtn').focus();
+
+      var modalInstance = $uibModal.open({
+        animation: true,
+        component: 'modal',
+      });
+
+      modalInstance.result.then(completeSection)
     };
 
     function completeSection() {

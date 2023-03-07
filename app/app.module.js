@@ -14,6 +14,7 @@
     // Components
     'login',
     'dash',
+    'modal',
     'viewChildren',
     'addChild',
     'selectChild',
