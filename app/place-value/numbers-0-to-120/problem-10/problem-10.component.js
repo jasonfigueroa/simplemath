@@ -20,7 +20,7 @@
     self.userAnswer = '';
 
     self.$onInit = function () {
-      document.querySelector('input').focus();
+      document.getElementById('numbers-0-to-120-input-10').focus();
     }
   }
 })();
