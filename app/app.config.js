@@ -5,9 +5,15 @@
     .module('simpleMath')
     .config(configure);
 
-  configure.$inject = ['$routeProvider'];
+  configure.$inject = ['$compileProvider', '$routeProvider'];
 
-  function configure($routeProvider) {
+  function configure($compileProvider, $routeProvider) {
+    // The following 3 lines were recommended by the following https://docs.angularjs.org/guide/production#!
+    // Doesn't seem to have any negative impact in production or development environments
+    $compileProvider.debugInfoEnabled(false);
+    $compileProvider.commentDirectivesEnabled(false);
+    $compileProvider.cssClassDirectivesEnabled(false);
+    
     $routeProvider
       .when('/login', {
         template: '<login></login>'

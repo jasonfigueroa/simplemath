@@ -18,7 +18,9 @@
   <title>S1mple Math</title>
   <link rel="shortcut icon" type="image/png" href="assets/rocket.png"/>
 </head>
-<body ng-app="simpleMath">
+<!-- Strict dependency injection, recommendation from https://docs.angularjs.org/guide/production#! -->
+<!-- Doesn't seem to have any negative impact in production or development environments -->
+<body ng-app="simpleMath" ng-strict-di>
 
   <!-- Placed toaster container here to make it available across the entire app -->
   <toaster-container></toaster-container>
